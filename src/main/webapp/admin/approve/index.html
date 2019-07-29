@@ -1,0 +1,557 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>后台管理</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<!--<script src="../../plugins/editor/xheditor/xheditor-1.1.12-zh-cn.min.js"></script>-->
+		<script src="../../plugins/timepicker/WdatePicker.js"></script>
+		<script src="../../themes/youyidai_admin/images/common.js"></script>
+		<script src="../../themes/youyidai_admin/images/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/base.js"></script>
+		<script src="../../themes/youyidai_admin/js/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/select2.js"></script>
+		<script src="../../themes/youyidai_admin/js/tipswindown.js"></script>
+
+		<link href="../../themes/youyidai_admin/css/select2.css" rel="stylesheet" type="text/css">
+		<link href="../../themes/youyidai_admin/css/tipswindown.css" rel="stylesheet" type="text/css">
+		<link rel="icon" href="../../../afavico.GIF" type="image/gif">
+		<link rel="shortcut icon" href="../../../favicon.ico">
+
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/admin.css">
+		<link href="../../plugins/timepicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body scroll="no">
+		<table width="100%" height="97%" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="2" height="80" valign="top">
+					<div id="header">
+						<div class="logo" style="float:left; width:150px">
+							<div class="png">
+								<a href="../../#"><img src="../../themes/youyidai_admin/images/logo.png" /></a>
+							</div>
+							<div class="lun">
+								<a href="../../index.html" target="_blank">网站首页</a>&nbsp;&#8211;&nbsp;
+								<a href="../index.html">后台首页</a>
+							</div>
+						</div>
+						<!--重点导航-->
+						<ul class="nav" style="float:right">
+							<li><img src="../../themes/youyidai_admin/images/nav_03.jpg" /></li>
+							<li class="home">
+								<a href="../index.html" style="height:35px;display:block">管理首页</a>
+							</li>
+							<li id="attestations">
+								<a style="cursor:pointer" href="../attestations/index.html" style="height:35px;display:block">资料审核</a>
+							</li>
+							<li id="account">
+								<a style="cursor:pointer" href="../account/index.html" style="height:35px;display:block">资金管理</a>
+							</li>
+							<li id="borrow">
+								<a style="cursor:pointer" href="../borrow/index.html" style="height:35px;display:block">借款管理</a>
+							</li>
+							<li id="approve">
+								<a style="cursor:pointer" href="../approve/index.html" style="height:35px;display:block">认证管理</a>
+							</li>
+							<li id="scrollpic">
+								<a style="cursor:pointer" href="../scrollpic/index.html" style="height:35px;display:block">flash大图管理</a>
+							</li>
+							<li id="payment">
+								<a style="cursor:pointer" href="../payment/index.html" style="height:35px;display:block">支付管理</a>
+							</li>
+							<li id="system">
+								<a style="cursor:pointer" href="../system/index.html" style="height:35px;display:block">系统管理</a>
+							</li>
+							<li id="site">
+								<a style="cursor:pointer" href="../site/index.html" style="height:35px;display:block">站点管理</a>
+							</li>
+							<li id="users">
+								<a style="cursor:pointer" href="../users/index.html" style="height:35px;display:block">用户管理</a>
+							</li>
+							<li id="articles">
+								<a style="cursor:pointer" href="../articles/index.html" style="height:35px;display:block">文章管理</a>
+							</li>
+							<li id="other">
+								<a style="cursor:pointer" href="../other/index.html" onClick="return initguide('other');" style="height:35px;display:block">其他功能</a>
+							</li>
+							<li><img src="../../themes/youyidai_admin/images/nav_07.jpg" /></li>
+
+						</ul>
+						<!--头部信息导航-->
+						<div id="guide">
+							<div class="wei fl">
+								<a href="../index.html">首页</a>&nbsp;&gt;&nbsp;
+								<a href="index.html">认证管理</a>&nbsp;&gt;&nbsp;
+								<a href="#">固定投资认证</a>
+							</div>
+							<ul class="fr">
+								<li class="home">欢迎您，用户名：zuikc(超级管理员) (分管分公司：
+									<font style="color:red">未限制</font>)</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="document.location.reload();" title="刷新该页面">刷新</a>
+								</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="history.go(-1);" title="后退到前一页">后退</a>
+								</li>
+								<li>
+									<a href="../login.html">退出</a>
+								</li>
+
+							</ul>
+						</div>
+						<!--头部信息导航结束-->
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" id="main-fl">
+					<div id="left" style="overflow:auto">
+						<h1>首页</h1>
+						<div class="cc"></div>
+						<ul>
+							<li class="one">
+								<a id="approv_fixed" href="index.html">固定投资认证</a>
+							</li>
+							<li class="">
+								<a id="approv_realname" href="approv_realname.html">实名认证</a>
+							</li>
+							<li class="">
+								<a id="approv_sms" href="approv_sms.html">手机认证</a>
+							</li>
+						</ul>
+					</div>
+
+				</td>
+				<td valign="top" id="mainright">
+					<!--右边开始-->
+					<div class="tt">
+
+						<!-- 
+ -->
+						<div class="admin_module">
+
+							<script>
+								function CheckExamine() {
+									if($("#verify_remark").val() == "") {
+										alert("备注不能为空");
+										return false;
+									}
+								}
+							</script>
+
+							<ul class="nav3">
+								<li style="background-color:white;border:1px solid #008C00;margin-right:0px;border-right:0px;">
+									<a>
+										<font style="color:#008C00;">请点击查看相应的状态：</font>
+									</a>
+								</li>
+								<li style="background-color:white;border:1px solid #008C00;margin-right:0px;border-right:0px;">
+									<a href="?admin&amp;q=code/approve/fixed">
+										<font style="color:red;">全部</font>
+									</a>
+								</li>
+								<li style="background-color:white;border:1px solid #008C00;margin-right:0px;border-right:0px;">
+									<a href="?admin&amp;q=code/approve/fixed&amp;p1s0=1">待审核</a>
+								</li>
+								<li style="background-color:white;border:1px solid #008C00;margin-right:0px;border-right:0px;">
+									<a href="?admin&amp;q=code/approve/fixed&amp;status=1">审核成功</a>
+								</li>
+								<li style="background-color:white;border:1px solid #008C00;margin-right:0px;border-right:0px;">
+									<a href="?admin&amp;q=code/approve/fixed&amp;status=2">审核失败</a>
+								</li>
+								<li style="background-color:white;border:1px solid #008C00;margin-right:0px;">
+									<a href="?admin&amp;q=code/approve/fixed&amp;p1sn=1">未申请</a>
+								</li>
+							</ul>
+
+							<div class="module_add">
+								<div style="float:left; width:98%; text-align:left">
+									<div class="module_add">
+										<div class="module_title"><strong>
+	<font color="#FF4500"> </font>固定投资人认证列表
+	(状态：
+	全部		 
+			)
+	
+			
+	</strong></div>
+									</div>
+									<table border="0" cellspacing="1" bgcolor="#CCCCCC" width="100%">
+										<tbody>
+											<tr>
+												<td width="" class="main_td">用户</td>
+												<td width="" class="main_td">真实姓名</td>
+												<td width="" class="main_td">所属分公司</td>
+												<td width="*" class="main_td">申请时间</td>
+												<td width="*" class="main_td">状态</td>
+												<td width="*" class="main_td">操作</td>
+											</tr>
+											<tr>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=370&amp;type=scene&quot;,700,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);">user09</a>
+												</td>
+												<td class="main_td1" align="center">
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=370&amp;username=user09" style="color:lightgray">暂未填写</a>
+												</td>
+												<td class="main_td1" align="center">
+													上海总公司 </td>
+												<td class="main_td1" align="center">
+													2016-11-07 16:20:34 </td>
+												<td class="main_td1" align="center">
+													<font style="color:#21B54A">待审核</font>
+													<!-- 待审核 -->
+												</td>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;固定投资认证人工审核 (用户:user09)&quot;,&quot;url:get??admin&amp;q=code/approve/fixed&amp;examine=370&quot;,500,230,&quot;true&quot;,&quot;&quot;,&quot;false&quot;,&quot;text&quot;);">
+														立刻审核
+													</a> |
+													<!-- /<a href="?admin&q=code/approve/fixed&user_id=370&page=">修改</a>  | -->
+
+													<font style="color:lightgray">审核成功才有其他操作</font>
+												</td>
+
+											</tr>
+											<tr class="tr2">
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=10&amp;type=scene&quot;,700,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);">user02</a>
+												</td>
+												<td class="main_td1" align="center">
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=10&amp;username=user02" style="color:lightgray">暂未填写</a>
+												</td>
+												<td class="main_td1" align="center">
+													<a href="../index.html&amp;q=code/users/info_edit&amp;user_id=10" style="color:lightgray">未分配</a>
+												</td>
+												<td class="main_td1" align="center">
+													2017-09-20 13:21:15 </td>
+												<td class="main_td1" align="center">
+													<font style="color:#21B54A">待审核</font>
+													<!-- 待审核 -->
+												</td>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;固定投资认证人工审核 (用户:user02)&quot;,&quot;url:get??admin&amp;q=code/approve/fixed&amp;examine=10&quot;,500,230,&quot;true&quot;,&quot;&quot;,&quot;false&quot;,&quot;text&quot;);">
+														立刻审核
+													</a> |
+													<!-- /<a href="?admin&q=code/approve/fixed&user_id=10&page=">修改</a>  | -->
+
+													<font style="color:lightgray">审核成功才有其他操作</font>
+												</td>
+
+											</tr>
+											<tr>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=9&amp;type=scene&quot;,700,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);">user18</a>
+												</td>
+												<td class="main_td1" align="center">
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=9&amp;username=user18" style="color:lightgray">暂未填写</a>
+												</td>
+												<td class="main_td1" align="center">
+													上海总公司 </td>
+												<td class="main_td1" align="center">
+													2017-09-11 10:00:59 </td>
+												<td class="main_td1" align="center">
+													<font style="color:#21B54A">待审核</font>
+													<!-- 待审核 -->
+												</td>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;固定投资认证人工审核 (用户:user18)&quot;,&quot;url:get??admin&amp;q=code/approve/fixed&amp;examine=9&quot;,500,230,&quot;true&quot;,&quot;&quot;,&quot;false&quot;,&quot;text&quot;);">
+														立刻审核
+													</a> |
+													<!-- /<a href="?admin&q=code/approve/fixed&user_id=9&page=">修改</a>  | -->
+
+													<font style="color:lightgray">审核成功才有其他操作</font>
+												</td>
+
+											</tr>
+											<tr class="tr2">
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=371&amp;type=scene&quot;,700,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);">user15</a>
+												</td>
+												<td class="main_td1" align="center">
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=371&amp;username=user15" style="color:lightgray">暂未填写</a>
+												</td>
+												<td class="main_td1" align="center">
+													昌平分公司 </td>
+												<td class="main_td1" align="center">
+													2016-11-07 14:24:02 </td>
+												<td class="main_td1" align="center">
+													<font style="color:red">审核成功</font>
+													<!-- 审核成功 -->
+												</td>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;固定投资认证人工审核 (用户:user15)&quot;,&quot;url:get??admin&amp;q=code/approve/fixed&amp;examine=371&quot;,500,230,&quot;true&quot;,&quot;&quot;,&quot;false&quot;,&quot;text&quot;);">
+														重新审核
+													</a> |
+													<!-- /<a href="?admin&q=code/approve/fixed&user_id=371&page=">修改</a>  | -->
+
+													<font style="color:lightgray">没有充值记录(<strong>0</strong>个)</font>
+													|
+
+													<font style="color:lightgray">没有收益计划(<strong>0</strong>个)</font>
+													|
+
+													<font style="color:lightgray">没有自动投标设置(<strong>0</strong>个)</font>
+													|
+													<a href="../index.html&amp;q=code/approve/fixed&amp;action=add&amp;user_id=371&amp;username=user15">添加自动投标(还能添加<strong style="color:red">3</strong>个)</a>
+
+												</td>
+
+											</tr>
+											<tr>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=369&amp;type=scene&quot;,700,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);">user10</a>
+												</td>
+												<td class="main_td1" align="center">
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=369&amp;username=user10" style="color:lightgray">暂未填写</a>
+												</td>
+												<td class="main_td1" align="center">
+													昌平分公司 </td>
+												<td class="main_td1" align="center">
+													2017-09-31 09:28:03 </td>
+												<td class="main_td1" align="center">
+													<font style="color:red">审核成功</font>
+													<!-- 审核成功 -->
+												</td>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;固定投资认证人工审核 (用户:user10)&quot;,&quot;url:get??admin&amp;q=code/approve/fixed&amp;examine=369&quot;,500,230,&quot;true&quot;,&quot;&quot;,&quot;false&quot;,&quot;text&quot;);">
+														重新审核
+													</a> |
+													<!-- /<a href="?admin&q=code/approve/fixed&user_id=369&page=">修改</a>  | -->
+
+													<font style="color:lightgray">没有充值记录(<strong>0</strong>个)</font>
+													|
+
+													<font style="color:lightgray">没有收益计划(<strong>0</strong>个)</font>
+													|
+
+													<font style="color:lightgray">没有自动投标设置(<strong>0</strong>个)</font>
+													|
+													<a href="../index.html&amp;q=code/approve/fixed&amp;action=add&amp;user_id=369&amp;username=user10">添加自动投标(还能添加<strong style="color:red">3</strong>个)</a>
+
+												</td>
+
+											</tr>
+											<tr class="tr2">
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=23&amp;type=scene&quot;,700,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);">user19</a>
+												</td>
+												<td class="main_td1" align="center">
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=23&amp;username=user19" style="color:lightgray">暂未填写</a>
+												</td>
+												<td class="main_td1" align="center">
+													上海总公司 </td>
+												<td class="main_td1" align="center">
+													2017-09-24 11:50:18 </td>
+												<td class="main_td1" align="center">
+													<font style="color:red">审核成功</font>
+													<!-- 审核成功 -->
+												</td>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;固定投资认证人工审核 (用户:user19)&quot;,&quot;url:get??admin&amp;q=code/approve/fixed&amp;examine=23&quot;,500,230,&quot;true&quot;,&quot;&quot;,&quot;false&quot;,&quot;text&quot;);">
+														重新审核
+													</a> |
+													<!-- /<a href="?admin&q=code/approve/fixed&user_id=23&page=">修改</a>  | -->
+
+													<font style="color:lightgray">没有充值记录(<strong>0</strong>个)</font>
+													|
+
+													<font style="color:lightgray">没有收益计划(<strong>0</strong>个)</font>
+													|
+
+													<font style="color:lightgray">没有自动投标设置(<strong>0</strong>个)</font>
+													|
+													<a href="../index.html&amp;q=code/approve/fixed&amp;action=add&amp;user_id=23&amp;username=user19">添加自动投标(还能添加<strong style="color:red">3</strong>个)</a>
+
+												</td>
+
+											</tr>
+											<tr>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=22&amp;type=scene&quot;,700,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);">user20</a>
+												</td>
+												<td class="main_td1" align="center">
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=22&amp;username=user20" style="color:lightgray">暂未填写</a>
+												</td>
+												<td class="main_td1" align="center">
+													上海总公司 </td>
+												<td class="main_td1" align="center">
+													2017-09-20 16:05:16 </td>
+												<td class="main_td1" align="center">
+													<font style="color:red">审核成功</font>
+													<!-- 审核成功 -->
+												</td>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;固定投资认证人工审核 (用户:user20)&quot;,&quot;url:get??admin&amp;q=code/approve/fixed&amp;examine=22&quot;,500,230,&quot;true&quot;,&quot;&quot;,&quot;false&quot;,&quot;text&quot;);">
+														重新审核
+													</a> |
+													<!-- /<a href="?admin&q=code/approve/fixed&user_id=22&page=">修改</a>  | -->
+
+													<font style="color:lightgray">没有充值记录(<strong>0</strong>个)</font>
+													|
+
+													<font style="color:lightgray">没有收益计划(<strong>0</strong>个)</font>
+													|
+
+													<font style="color:lightgray">没有自动投标设置(<strong>0</strong>个)</font>
+													|
+													<a href="../index.html&amp;q=code/approve/fixed&amp;action=add&amp;user_id=22&amp;username=user20">添加自动投标(还能添加<strong style="color:red">3</strong>个)</a>
+
+												</td>
+
+											</tr>
+											<tr class="tr2">
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=368&amp;type=scene&quot;,700,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);">user21</a>
+												</td>
+												<td class="main_td1" align="center">
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=368&amp;username=user21" style="color:lightgray">暂未填写</a>
+												</td>
+												<td class="main_td1" align="center">
+													昌平分公司 </td>
+												<td class="main_td1" align="center">
+													2017-09-19 11:45:52 </td>
+												<td class="main_td1" align="center">
+													<font style="color:red">审核成功</font>
+													<!-- 审核成功 -->
+												</td>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;固定投资认证人工审核 (用户:user21)&quot;,&quot;url:get??admin&amp;q=code/approve/fixed&amp;examine=368&quot;,500,230,&quot;true&quot;,&quot;&quot;,&quot;false&quot;,&quot;text&quot;);">
+														重新审核
+													</a> |
+													<!-- /<a href="?admin&q=code/approve/fixed&user_id=368&page=">修改</a>  | -->
+
+													<font style="color:lightgray">没有充值记录(<strong>0</strong>个)</font>
+													|
+
+													<font style="color:lightgray">没有收益计划(<strong>0</strong>个)</font>
+													|
+
+													<font style="color:lightgray">没有自动投标设置(<strong>0</strong>个)</font>
+													|
+													<a href="../index.html&amp;q=code/approve/fixed&amp;action=add&amp;user_id=368&amp;username=user21">添加自动投标(还能添加<strong style="color:red">3</strong>个)</a>
+
+												</td>
+
+											</tr>
+											<tr>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=21&amp;type=scene&quot;,700,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);">user12</a>
+												</td>
+												<td class="main_td1" align="center">
+													许栾 </td>
+												<td class="main_td1" align="center">
+													上海总公司 </td>
+												<td class="main_td1" align="center">
+													2017-09-11 14:27:59 </td>
+												<td class="main_td1" align="center">
+													<font style="color:red">审核成功</font>
+													<!-- 审核成功 -->
+												</td>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;固定投资认证人工审核 (用户:user12)&quot;,&quot;url:get??admin&amp;q=code/approve/fixed&amp;examine=21&quot;,500,230,&quot;true&quot;,&quot;&quot;,&quot;false&quot;,&quot;text&quot;);">
+														重新审核
+													</a> |
+													<!-- /<a href="?admin&q=code/approve/fixed&user_id=21&page=">修改</a>  | -->
+
+													<a href="../index.html&amp;q=code/account/recharge&amp;username=user12&amp;fixed_status=1">查看充值记录(<strong style="color:red">2</strong>个)</a>
+													|
+
+													<a href="../index.html&amp;q=code/account/fixed&amp;user_id=21&amp;username=user12">查看收益计划(<strong style="color:red">1</strong>个)</a>
+													|
+
+													<a href="../index.html&amp;q=code/approve/fixed&amp;action=list&amp;user_id=21&amp;username=user12">查看自动投标列表(<strong style="color:red">1</strong>个)</a>
+													|
+													<a href="../index.html&amp;q=code/approve/fixed&amp;action=add&amp;user_id=21&amp;username=user12">添加自动投标(还能添加<strong style="color:red">2</strong>个)</a>
+
+												</td>
+
+											</tr>
+											<tr class="tr2">
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=12&amp;type=scene&quot;,700,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);">user16</a>
+												</td>
+												<td class="main_td1" align="center">
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=12&amp;username=user16" style="color:lightgray">暂未填写</a>
+												</td>
+												<td class="main_td1" align="center">
+													<a href="../index.html&amp;q=code/users/info_edit&amp;user_id=12" style="color:lightgray">未分配</a>
+												</td>
+												<td class="main_td1" align="center">
+													2017-09-22 17:02:41 </td>
+												<td class="main_td1" align="center">
+													审核失败
+													<!-- 审核失败 -->
+												</td>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;固定投资认证人工审核 (用户:user16)&quot;,&quot;url:get??admin&amp;q=code/approve/fixed&amp;examine=12&quot;,500,230,&quot;true&quot;,&quot;&quot;,&quot;false&quot;,&quot;text&quot;);">
+														重新审核
+													</a> |
+													<!-- /<a href="?admin&q=code/approve/fixed&user_id=12&page=">修改</a>  | -->
+
+													<font style="color:lightgray">审核成功才有其他操作</font>
+												</td>
+
+											</tr>
+											<tr>
+												<td colspan="15" class="action">
+													<div class="floatl">
+														<script>
+															var url = '?admin&q=code/approve/fixed';
+
+															function sousuo() {
+																var username = $("#username").val();
+																var realname = $("#realname").val();
+																var assigned_branch_id_1 = $("#assigned_branch_id_1").val();
+																location.href = url + "&username=" + username + "&realname=" + realname + "&assigned_branch_id_1=" + assigned_branch_id_1;
+															}
+														</script>
+
+													</div>
+													<div class="floatr">
+														用户名：<input type="text" name="username" id="username" size="14" value="" autocomplete="off"> 真实名：
+														<input type="text" name="realname" id="realname" size="14" value=""> 分公司：
+														<select name="assigned_branch_id_1" id="assigned_branch_id_1">
+															<option value="">全部</option>
+															<option value="1">上海总公司</option>
+															<option value="2">昌平分公司</option>
+														</select>
+														<input type="button" value="搜索" onclick="sousuo()">
+													</div>
+												</td>
+											</tr>
+
+											<tr align="center">
+												<td colspan="14" align="center">
+													<div align="center">共 26 条记录 <span class="">上一页</span> <span class="curr">1</span>
+														<a href="../index.html&amp;q=code/approve/fixed&amp;page=2">2</a>
+														<a href="../index.html&amp;q=code/approve/fixed&amp;page=3">3</a>
+														<a href="../index.html&amp;q=code/approve/fixed&amp;page=2">下一页</a> 第
+														<select id="PB_Page_Select" onchange="window.location.href = './admin/index.html&amp;q=code/approve/fixed&amp;page='+this.value;">
+															<option value="1" selected="">1</option>
+															<option value="2">2</option>
+															<option value="3">3</option>
+														</select>页</div>
+												</td>
+											</tr>
+
+										</tbody>
+									</table>
+									<!--菜单列表 结束-->
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<iframe name="notice" frameborder="0" style="height:0;width:0;"></iframe>
+		<div id="menu" style="display:none"></div>
+		<div id="showmenu" style="display:none"></div>
+	</body>
+
+</html>

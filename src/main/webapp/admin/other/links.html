@@ -1,0 +1,359 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>后台管理</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<!--<script src="../../plugins/editor/xheditor/xheditor-1.1.12-zh-cn.min.js"></script>-->
+		<script src="../../plugins/timepicker/WdatePicker.js"></script>
+		<script src="../../themes/youyidai_admin/images/common.js"></script>
+		<script src="../../themes/youyidai_admin/images/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/base.js"></script>
+		<script src="../../themes/youyidai_admin/js/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/select2.js"></script>
+		<script src="../../themes/youyidai_admin/js/tipswindown.js"></script>
+
+		<link href="../../themes/youyidai_admin/css/select2.css" rel="stylesheet" type="text/css">
+		<link href="../../themes/youyidai_admin/css/tipswindown.css" rel="stylesheet" type="text/css">
+		<link rel="icon" href="../../../afavico.GIF" type="image/gif">
+		<link rel="shortcut icon" href="../../../favicon.ico">
+
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/admin.css">
+		<link href="../../plugins/timepicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body scroll="no">
+		<table width="100%" height="97%" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="2" height="80" valign="top">
+					<div id="header">
+						<div class="logo" style="float:left; width:150px">
+							<div class="png">
+								<a href="../../#"><img src="../../themes/youyidai_admin/images/logo.png" /></a>
+							</div>
+							<div class="lun">
+								<a href="../../index.html" target="_blank">网站首页</a>&nbsp;&#8211;&nbsp;
+								<a href="../index.html">后台首页</a>
+							</div>
+						</div>
+						<!--重点导航-->
+						<ul class="nav" style="float:right">
+							<li><img src="../../themes/youyidai_admin/images/nav_03.jpg" /></li>
+							<li class="home">
+								<a href="../index.html" style="height:35px;display:block">管理首页</a>
+							</li>
+							<li id="attestations">
+								<a style="cursor:pointer" href="../attestations/index.html" style="height:35px;display:block">资料审核</a>
+							</li>
+							<li id="account">
+								<a style="cursor:pointer" href="../account/index.html" style="height:35px;display:block">资金管理</a>
+							</li>
+							<li id="borrow">
+								<a style="cursor:pointer" href="../borrow/index.html" style="height:35px;display:block">借款管理</a>
+							</li>
+							<li id="approve">
+								<a style="cursor:pointer" href="../approve/index.html" style="height:35px;display:block">认证管理</a>
+							</li>
+							<li id="scrollpic">
+								<a style="cursor:pointer" href="../scrollpic/index.html" style="height:35px;display:block">flash大图管理</a>
+							</li>
+							<li id="payment">
+								<a style="cursor:pointer" href="../payment/index.html" style="height:35px;display:block">支付管理</a>
+							</li>
+							<li id="system">
+								<a style="cursor:pointer" href="../system/index.html" style="height:35px;display:block">系统管理</a>
+							</li>
+							<li id="site">
+								<a style="cursor:pointer" href="../site/index.html" style="height:35px;display:block">站点管理</a>
+							</li>
+							<li id="users">
+								<a style="cursor:pointer" href="../users/index.html" style="height:35px;display:block">用户管理</a>
+							</li>
+							<li id="articles">
+								<a style="cursor:pointer" href="../articles/index.html" style="height:35px;display:block">文章管理</a>
+							</li>
+							<li id="other">
+								<a style="cursor:pointer" href="../other/index.html" onClick="return initguide('other');" style="height:35px;display:block">其他功能</a>
+							</li>
+							<li><img src="../../themes/youyidai_admin/images/nav_07.jpg" /></li>
+
+						</ul>
+						<!--头部信息导航-->
+						<div id="guide">
+							<div class="wei fl">
+								<a href="../index.html">首页</a>&nbsp;&gt;&nbsp;
+								<a href="index.html">其他功能</a>&nbsp;&gt;&nbsp;
+								<a href="#">友情链接</a>
+							</div>
+							<ul class="fr">
+								<li class="home">欢迎您，用户名：zuikc(超级管理员) (分管分公司：
+									<font style="color:red">未限制</font>)</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="document.location.reload();" title="刷新该页面">刷新</a>
+								</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="history.go(-1);" title="后退到前一页">后退</a>
+								</li>
+								<li>
+									<a href="../login.html">退出</a>
+								</li>
+
+							</ul>
+						</div>
+						<!--头部信息导航结束-->
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" id="main-fl">
+					<div id="left" style="overflow:auto">
+						<h1>首页</h1>
+						<div class="cc"></div>
+
+						<ul>
+							<li class="">
+								<a id="vote" href="index.html">投票管理</a>
+							</li>
+							<li class="">
+								<a id="credit" href="credit.html">积分管理</a>
+							</li>
+							<li class="">
+								<a id="remind" href="remind.html">提醒设置</a>
+							</li>
+							<li class="">
+								<a id="rating" href="rating.html">用户资料</a>
+							</li>
+							<li class="one">
+								<a id="links" href="links.html">友情链接</a>
+							</li>
+							<li class="">
+								<a id="comments" href="comments.html">评论管理</a>
+							</li>
+
+							<li class="">
+								<a id="message" href="message.html">短消息</a>
+							</li>
+							<li class="">
+								<a id="areas" href="areas.html">地区管理</a>
+							</li>
+							<li class="">
+								<a id="linkages" href="linkages.html">联动管理</a>
+							</li>
+						</ul>
+
+					</div>
+
+				</td>
+				<td valign="top" id="mainright">
+					<!--右边开始-->
+					<div class="tt">
+
+						<!-- 
+<div style="background-color:#ffffff; line-height:30px; border-bottom:1px solid #2364a4; border-top:1px solid #2364a4; margin-bottom:10px;">
+<span style="margin:5px"><a href="?admin&q=code/links/list">友情链接列表</a></span>
+<span style="margin:5px"><a href="?admin&q=code/links/type">友情链接列表</a></span>
+</div>
+ -->
+						<div class="admin_module">
+							<ul class="nav3">
+								<li>
+									<a href="?admin&amp;q=code/links/list" id="c_so">友情链接列表</a>
+								</li>
+								<li>
+									<a href="?admin&amp;q=code/links/new">添加友情链接</a>
+								</li>
+								<li>
+									<a href="?admin&amp;q=code/links/type">类型设置</a>
+								</li>
+							</ul>
+							<table border="0" cellspacing="1" bgcolor="#CCCCCC" width="100%">
+								<form action="?admin&amp;q=code/links/order" method="post"></form>
+								<tbody>
+									<tr>
+										<td width="" class="main_td">ID</td>
+										<td width="*" class="main_td">网站名称</td>
+										<td width="" class="main_td">类型</td>
+										<td width="" class="main_td">状态</td>
+										<td width="" class="main_td">排序</td>
+										<td width="" class="main_td">添加时间</td>
+										<td width="" class="main_td">网站logo</td>
+										<td width="" class="main_td">操作
+
+										</td>
+									</tr>
+									<tr>
+										<td class="main_td1" align="center" width="18">1</td>
+										<td class="main_td1" align="center">通联支付</td>
+										<td class="main_td1" align="center" width="96">—网贷工具—</td>
+										<td class="main_td1" align="center" width="50">显示</td>
+										<td class="main_td1" align="center" width="50"><input type="text" value="10" name="order[]" size="5"><input type="hidden" name="id[]" value="1"></td>
+										<td class="main_td1" align="center" width="90">2017-11-29</td>
+										<td class="main_td1" align="center" width="80">无logo</td>
+										<td class="main_td1" align="center" width="130">
+											<a href="?admin&amp;q=code/links/edit&amp;id=1">修改</a> /
+											<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/links/del&amp;id=1'">删除</a>
+
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td class="main_td1" align="center" width="18">2</td>
+										<td class="main_td1" align="center">工商银行</td>
+										<td class="main_td1" align="center" width="96">—网贷工具—</td>
+										<td class="main_td1" align="center" width="50">显示</td>
+										<td class="main_td1" align="center" width="50"><input type="text" value="10" name="order[]" size="5"><input type="hidden" name="id[]" value="2"></td>
+										<td class="main_td1" align="center" width="90">2017-07-10</td>
+										<td class="main_td1" align="center" width="80">无logo</td>
+										<td class="main_td1" align="center" width="130">
+											<a href="?admin&amp;q=code/links/edit&amp;id=2">修改</a> /
+											<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/links/del&amp;id=2'">删除</a>
+
+										</td>
+									</tr>
+									<tr>
+										<td class="main_td1" align="center" width="18">3</td>
+										<td class="main_td1" align="center">农业银行</td>
+										<td class="main_td1" align="center" width="96">—网贷综合平台—</td>
+										<td class="main_td1" align="center" width="50">显示</td>
+										<td class="main_td1" align="center" width="50"><input type="text" value="10" name="order[]" size="5"><input type="hidden" name="id[]" value="3"></td>
+										<td class="main_td1" align="center" width="90">2017-07-10</td>
+										<td class="main_td1" align="center" width="80">无logo</td>
+										<td class="main_td1" align="center" width="130">
+											<a href="?admin&amp;q=code/links/edit&amp;id=3">修改</a> /
+											<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/links/del&amp;id=3'">删除</a>
+
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td class="main_td1" align="center" width="18">4</td>
+										<td class="main_td1" align="center">建设银行</td>
+										<td class="main_td1" align="center" width="96">—网贷综合平台—</td>
+										<td class="main_td1" align="center" width="50">显示</td>
+										<td class="main_td1" align="center" width="50"><input type="text" value="10" name="order[]" size="5"><input type="hidden" name="id[]" value="4"></td>
+										<td class="main_td1" align="center" width="90">2017-07-10</td>
+										<td class="main_td1" align="center" width="80">无logo</td>
+										<td class="main_td1" align="center" width="130">
+											<a href="?admin&amp;q=code/links/edit&amp;id=4">修改</a> /
+											<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/links/del&amp;id=4'">删除</a>
+
+										</td>
+									</tr>
+									<tr>
+										<td class="main_td1" align="center" width="18">5</td>
+										<td class="main_td1" align="center">中国银行</td>
+										<td class="main_td1" align="center" width="96">—网贷综合平台—</td>
+										<td class="main_td1" align="center" width="50">显示</td>
+										<td class="main_td1" align="center" width="50"><input type="text" value="10" name="order[]" size="5"><input type="hidden" name="id[]" value="5"></td>
+										<td class="main_td1" align="center" width="90">2017-07-10</td>
+										<td class="main_td1" align="center" width="80">无logo</td>
+										<td class="main_td1" align="center" width="130">
+											<a href="?admin&amp;q=code/links/edit&amp;id=5">修改</a> /
+											<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/links/del&amp;id=5'">删除</a>
+
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td class="main_td1" align="center" width="18">6</td>
+										<td class="main_td1" align="center">招商银行</td>
+										<td class="main_td1" align="center" width="96">—网贷综合平台—</td>
+										<td class="main_td1" align="center" width="50">显示</td>
+										<td class="main_td1" align="center" width="50"><input type="text" value="10" name="order[]" size="5"><input type="hidden" name="id[]" value="6"></td>
+										<td class="main_td1" align="center" width="90">2017-11-29</td>
+										<td class="main_td1" align="center" width="80">无logo</td>
+										<td class="main_td1" align="center" width="130">
+											<a href="?admin&amp;q=code/links/edit&amp;id=6">修改</a> /
+											<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/links/del&amp;id=6'">删除</a>
+
+										</td>
+									</tr>
+									<tr>
+										<td class="main_td1" align="center" width="18">7</td>
+										<td class="main_td1" align="center">交通银行</td>
+										<td class="main_td1" align="center" width="96">—网贷综合平台—</td>
+										<td class="main_td1" align="center" width="50">显示</td>
+										<td class="main_td1" align="center" width="50"><input type="text" value="10" name="order[]" size="5"><input type="hidden" name="id[]" value="7"></td>
+										<td class="main_td1" align="center" width="90">2017-11-29</td>
+										<td class="main_td1" align="center" width="80">无logo</td>
+										<td class="main_td1" align="center" width="130">
+											<a href="?admin&amp;q=code/links/edit&amp;id=7">修改</a> /
+											<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/links/del&amp;id=7'">删除</a>
+
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td class="main_td1" align="center" width="18">8</td>
+										<td class="main_td1" align="center">民生银行</td>
+										<td class="main_td1" align="center" width="96">—网贷综合平台—</td>
+										<td class="main_td1" align="center" width="50">显示</td>
+										<td class="main_td1" align="center" width="50"><input type="text" value="10" name="order[]" size="5"><input type="hidden" name="id[]" value="8"></td>
+										<td class="main_td1" align="center" width="90">2017-11-29</td>
+										<td class="main_td1" align="center" width="80">无logo</td>
+										<td class="main_td1" align="center" width="130">
+											<a href="?admin&amp;q=code/links/edit&amp;id=8">修改</a> /
+											<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/links/del&amp;id=8'">删除</a>
+
+										</td>
+									</tr>
+									<tr>
+										<td class="main_td1" align="center" width="18">9</td>
+										<td class="main_td1" align="center">中信银行</td>
+										<td class="main_td1" align="center" width="96">—网贷综合平台—</td>
+										<td class="main_td1" align="center" width="50">显示</td>
+										<td class="main_td1" align="center" width="50"><input type="text" value="10" name="order[]" size="5"><input type="hidden" name="id[]" value="9"></td>
+										<td class="main_td1" align="center" width="90">2017-11-29</td>
+										<td class="main_td1" align="center" width="80">无logo</td>
+										<td class="main_td1" align="center" width="130">
+											<a href="?admin&amp;q=code/links/edit&amp;id=9">修改</a> /
+											<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/links/del&amp;id=9'">删除</a>
+
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td class="main_td1" align="center" width="18">10</td>
+										<td class="main_td1" align="center">兴业银行</td>
+										<td class="main_td1" align="center" width="96">—网贷综合平台—</td>
+										<td class="main_td1" align="center" width="50">显示</td>
+										<td class="main_td1" align="center" width="50"><input type="text" value="10" name="order[]" size="5"><input type="hidden" name="id[]" value="10"></td>
+										<td class="main_td1" align="center" width="90">2017-11-29</td>
+										<td class="main_td1" align="center" width="80">无logo</td>
+										<td class="main_td1" align="center" width="130">
+											<a href="?admin&amp;q=code/links/edit&amp;id=10">修改</a> /
+											<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/links/del&amp;id=10'">删除</a>
+
+										</td>
+									</tr>
+									<tr>
+										<td colspan="8" class="submit">
+											<input type="submit" name="submit" value="确认提交">
+										</td>
+									</tr>
+									<tr>
+										<td colspan="8" class="page">
+											共 24 条记录 <span class="">上一页</span> <span class="curr">1</span>
+											<a href="../index.html&amp;q=code/links&amp;page=2">2</a>
+											<a href="../index.html&amp;q=code/links&amp;page=3">3</a>
+											<a href="../index.html&amp;q=code/links&amp;page=2">下一页</a> 第
+											<select id="PB_Page_Select" onchange="window.location.href = './admin/index.html&amp;q=code/links&amp;page='+this.value;">
+												<option value="1" selected="">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+											</select>页 </td>
+									</tr>
+
+								</tbody>
+							</table>
+
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<iframe name="notice" frameborder="0" style="height:0;width:0;"></iframe>
+		<div id="menu" style="display:none"></div>
+		<div id="showmenu" style="display:none"></div>
+	</body>
+
+</html>

@@ -1,0 +1,865 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>后台管理</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<!--<script src="../../plugins/editor/xheditor/xheditor-1.1.12-zh-cn.min.js"></script>-->
+		<script src="../../plugins/timepicker/WdatePicker.js"></script>
+		<script src="../../themes/youyidai_admin/images/common.js"></script>
+		<script src="../../themes/youyidai_admin/images/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/base.js"></script>
+		<script src="../../themes/youyidai_admin/js/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/select2.js"></script>
+		<script src="../../themes/youyidai_admin/js/tipswindown.js"></script>
+
+		<link href="../../themes/youyidai_admin/css/select2.css" rel="stylesheet" type="text/css">
+		<link href="../../themes/youyidai_admin/css/tipswindown.css" rel="stylesheet" type="text/css">
+		<link rel="icon" href="../../../afavico.GIF" type="image/gif">
+		<link rel="shortcut icon" href="../../../favicon.ico">
+
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/admin.css">
+		<link href="../../plugins/timepicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body scroll="no">
+		<table width="100%" height="97%" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="2" height="80" valign="top">
+					<div id="header">
+						<div class="logo" style="float:left; width:150px">
+							<div class="png">
+								<a href="../../#"><img src="../../themes/youyidai_admin/images/logo.png" /></a>
+							</div>
+							<div class="lun">
+								<a href="../../index.html" target="_blank">网站首页</a>&nbsp;&#8211;&nbsp;
+								<a href="../index.html">后台首页</a>
+							</div>
+						</div>
+						<!--重点导航-->
+						<ul class="nav" style="float:right">
+							<li><img src="../../themes/youyidai_admin/images/nav_03.jpg" /></li>
+							<li class="home">
+								<a href="../index.html" style="height:35px;display:block">管理首页</a>
+							</li>
+							<li id="attestations">
+								<a style="cursor:pointer" href="../attestations/index.html" style="height:35px;display:block">资料审核</a>
+							</li>
+							<li id="account">
+								<a style="cursor:pointer" href="../account/index.html" style="height:35px;display:block">资金管理</a>
+							</li>
+							<li id="borrow">
+								<a style="cursor:pointer" href="../borrow/index.html" style="height:35px;display:block">借款管理</a>
+							</li>
+							<li id="approve">
+								<a style="cursor:pointer" href="../approve/index.html" style="height:35px;display:block">认证管理</a>
+							</li>
+							<li id="scrollpic">
+								<a style="cursor:pointer" href="../scrollpic/index.html" style="height:35px;display:block">flash大图管理</a>
+							</li>
+							<li id="payment">
+								<a style="cursor:pointer" href="../payment/index.html" style="height:35px;display:block">支付管理</a>
+							</li>
+							<li id="system">
+								<a style="cursor:pointer" href="../system/index.html" style="height:35px;display:block">系统管理</a>
+							</li>
+							<li id="site">
+								<a style="cursor:pointer" href="../site/index.html" style="height:35px;display:block">站点管理</a>
+							</li>
+							<li id="users">
+								<a style="cursor:pointer" href="../users/index.html" style="height:35px;display:block">用户管理</a>
+							</li>
+							<li id="articles">
+								<a style="cursor:pointer" href="../articles/index.html" style="height:35px;display:block">文章管理</a>
+							</li>
+							<li id="other">
+								<a style="cursor:pointer" href="../other/index.html" onClick="return initguide('other');" style="height:35px;display:block">其他功能</a>
+							</li>
+							<li><img src="../../themes/youyidai_admin/images/nav_07.jpg" /></li>
+
+						</ul>
+						<!--头部信息导航-->
+						<div id="guide">
+							<div class="wei fl">
+								<a href="../index.html">首页</a>&nbsp;&gt;&nbsp;
+								<a href="index.html">借款管理</a>&nbsp;&gt;&nbsp;
+								<a href="#">逾期垫付</a>
+							</div>
+							<ul class="fr">
+								<li class="home">欢迎您，用户名：zuikc(超级管理员) (分管分公司：
+									<font style="color:red">未限制</font>)</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="document.location.reload();" title="刷新该页面">刷新</a>
+								</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="history.go(-1);" title="后退到前一页">后退</a>
+								</li>
+								<li>
+									<a href="../login.html">退出</a>
+								</li>
+
+							</ul>
+						</div>
+						<!--头部信息导航结束-->
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" id="main-fl">
+					<div id="left" style="overflow:auto">
+						<h1>首页</h1>
+						<div class="cc"></div>
+						<ul>
+							<li class="">
+								<a id="borrow_all" href="index.html">所有借款</a>
+							</li>
+							<li class="">
+								<a id="borrow_shenqing" href="borrow_shenqing.html">添加借款</a>
+							</li>
+							<li class="">
+								<a id="borrow_first" href="borrow_first.html">初审借款</a>
+							</li>
+							<li class="">
+								<a id="borrow_full" href="borrow_full.html">满标借款</a>
+							</li>
+							<li class="one">
+								<a id="borrow_repay" href="borrow_repay.html">逾期垫付</a>
+							</li>
+							<li class="">
+								<a id="borrow_amount" href="borrow_amount.html">借款额度</a>
+							</li>
+							<li class="">
+								<a id="borrow_change" href="borrow_change.html">风险池</a>
+							</li>
+						</ul>
+					</div>
+
+				</td>
+				<td valign="top" id="mainright">
+					<!--右边开始-->
+					<div class="tt">
+
+						<!-- 
+<div style="background-color:#ffffff; line-height:30px; border-bottom:1px solid #2364a4; border-top:1px solid #2364a4; margin-bottom:10px;">
+<span style="margin:5px"><a href="?admin&q=code/borrow">所有借款</a></span>
+<span style="margin:5px"><a href="?admin&q=code/borrow/shenqing">添加借款</a></span>
+<span style="margin:5px"><a href="?admin&q=code/borrow/first">初审借款</a></span>
+<span style="margin:5px"><a href="?admin&q=code/borrow/full">满标借款</a></span>
+<span style="margin:5px"><a href="?admin&q=code/borrow/repay">逾期垫付</a></span>
+<span style="margin:5px"><a href="?admin&q=code/borrow/amount">借款额度</a></span>
+<span style="margin:5px"><a href="?admin&q=code/borrow/fengxianchi">风险池</a></span>
+<span style="margin:5px"><a href="?admin&q=code/borrow/tool">检测工具</a></span>
+</div>
+ -->
+						<div class="admin_module">
+
+							<ul class="nav3">
+								<li>
+									<a href="?admin&amp;q=code/borrow/repay" id="c_so">逾期列表</a>
+								</li>
+								<li>
+									<a href="?admin&amp;q=code/borrow/bad_account">坏账池</a>
+								</li>
+							</ul>
+							<div class="module_add">
+								<div class="module_title"><strong>逾期列表
+					</strong>
+									<div style="float:right">
+										<a href="?admin&amp;q=code/borrow/repay&amp;type_e=excel&amp;page=1&amp;username=&amp;repay_time=&amp;borrow_name=&amp;realname=&amp;borrow_nid=">导出当前</a>
+										<a href="?admin&amp;q=code/borrow/repay&amp;type_e=excel&amp;username=&amp;repay_time=&amp;borrow_name=&amp;realname=&amp;borrow_nid=">导出全部</a>&nbsp;&nbsp;&nbsp;</div>
+								</div>
+							</div>
+							<table border="0" cellspacing="1" bgcolor="#CCCCCC" width="100%">
+								<form action="" method="post"></form>
+								<tbody>
+									<tr>
+										<td width="" class="main_td">ID</td>
+										<td width="*" class="main_td">用户名称</td>
+										<td width="*" class="main_td">真实姓名</td>
+										<td width="*" class="main_td">所属分公司</td>
+										<td width="*" class="main_td">用户积分</td>
+										<td width="*" class="main_td">贷款号</td>
+										<td width="" class="main_td">借款标题</td>
+										<td width="" class="main_td">借款类型</td>
+										<td width="" class="main_td">还款本息</td>
+										<td width="" class="main_td">待还金额</td>
+										<td width="" class="main_td">逾期天数</td>
+										<td width="" class="main_td">逾期罚息</td>
+										<td width="" class="main_td">状态</td>
+										<td width="" class="main_td">加入坏账池</td>
+									</tr>
+									<tr>
+
+										<!-- ID -->
+										<td>1<input type="hidden" name="id[]" value="1"></td>
+
+										<!-- 用户名称 -->
+										<td class="main_td1" align="center">
+											<!-- user17-->
+											<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=13&amp;type=scene&quot;,600,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);"> user17</a>
+										</td>
+
+										<!-- 真实姓名 -->
+										<td>
+											王家兴 </td>
+
+										<td>
+											上海总公司 </td>
+
+										<!-- 用户积分 -->
+										<td title=""><img src="/data/images/credit/credit_hr.gif" title="15分"></td>
+
+										<!-- 贷款号 -->
+										<td>20161019410</td>
+
+										<!-- 借款标题 -->
+										<td title="">
+											<a href="?admin&amp;q=code/borrow&amp;view=20161019410">测试1</a>(第1期)
+										</td>
+
+										<!-- 借款类型 -->
+										<td>
+											普通标借款
+										</td>
+
+										<!-- 还款本息 -->
+										<td>2000.67元</td>
+
+										<!-- 待还金额 -->
+										<td>0.00元</td>
+
+										<!-- 逾期天数 -->
+										<td>
+											388天
+										</td>
+
+										<!-- 逾期罚息 -->
+										<td>
+											0.00元
+										</td>
+
+										<!-- 状态 
+			现在此处问题记录：
+			1、一直显示风险金不足，$floop.all_money不知道是个什么
+			2、手动垫付之后，状态未相应发生改变成【某状态】(已垫付)
+			3、elseif $item.repay_web!=1 应该显示什么样的状态
+
+			-->
+										<td>
+											已还款
+										</td>
+
+										<!-- 加入坏账池 -->
+										<td>
+											<!-- 
+						<a href="#" onclick="javascript:if(confirm('你确定要加入坏账池吗？')) location.href='?admin&q=code/borrow/joinbad&borrow_nid=20161019410'">加入坏账池</a>
+						-->
+
+										</td>
+									</tr>
+									<tr class="tr2">
+
+										<!-- ID -->
+										<td>2<input type="hidden" name="id[]" value="2"></td>
+
+										<!-- 用户名称 -->
+										<td class="main_td1" align="center">
+											<!-- user01-->
+											<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=365&amp;type=scene&quot;,600,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);"> user01</a>
+										</td>
+
+										<!-- 真实姓名 -->
+										<td>
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=365&amp;username=" style="color:lightgray">暂未填写</a>
+										</td>
+
+										<td>
+											<a href="../index.html&amp;q=code/users/info_edit&amp;user_id=365" style="color:lightgray">未分配</a>
+										</td>
+
+										<!-- 用户积分 -->
+										<td title=""><img src="/data/images/credit/credit_hr.gif" title="12分"></td>
+
+										<!-- 贷款号 -->
+										<td>20161019411</td>
+
+										<!-- 借款标题 -->
+										<td title="">
+											<a href="?admin&amp;q=code/borrow&amp;view=20161019411">好好学习天天向上</a>(第1期)
+										</td>
+
+										<!-- 借款类型 -->
+										<td>
+											普通标借款
+										</td>
+
+										<!-- 还款本息 -->
+										<td>2200.49元</td>
+
+										<!-- 待还金额 -->
+										<td>0.00元</td>
+
+										<!-- 逾期天数 -->
+										<td>
+											388天
+										</td>
+
+										<!-- 逾期罚息 -->
+										<td>
+											0.00元
+										</td>
+
+										<!-- 状态 
+			现在此处问题记录：
+			1、一直显示风险金不足，$floop.all_money不知道是个什么
+			2、手动垫付之后，状态未相应发生改变成【某状态】(已垫付)
+			3、elseif $item.repay_web!=1 应该显示什么样的状态
+
+			-->
+										<td>
+											已还款
+										</td>
+
+										<!-- 加入坏账池 -->
+										<td>
+											<!-- 
+						<a href="#" onclick="javascript:if(confirm('你确定要加入坏账池吗？')) location.href='?admin&q=code/borrow/joinbad&borrow_nid=20161019411'">加入坏账池</a>
+						-->
+
+										</td>
+									</tr>
+									<tr>
+
+										<!-- ID -->
+										<td>3<input type="hidden" name="id[]" value="3"></td>
+
+										<!-- 用户名称 -->
+										<td class="main_td1" align="center">
+											<!-- user01-->
+											<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=365&amp;type=scene&quot;,600,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);"> user01</a>
+										</td>
+
+										<!-- 真实姓名 -->
+										<td>
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=365&amp;username=" style="color:lightgray">暂未填写</a>
+										</td>
+
+										<td>
+											<a href="../index.html&amp;q=code/users/info_edit&amp;user_id=365" style="color:lightgray">未分配</a>
+										</td>
+
+										<!-- 用户积分 -->
+										<td title=""><img src="/data/images/credit/credit_hr.gif" title="12分"></td>
+
+										<!-- 贷款号 -->
+										<td>20161019413</td>
+
+										<!-- 借款标题 -->
+										<td title="">
+											<a href="?admin&amp;q=code/borrow&amp;view=20161019413">测试3</a>(第1期)
+										</td>
+
+										<!-- 借款类型 -->
+										<td>
+											普通标借款
+										</td>
+
+										<!-- 还款本息 -->
+										<td>500.14元</td>
+
+										<!-- 待还金额 -->
+										<td>0.00元</td>
+
+										<!-- 逾期天数 -->
+										<td>
+											388天
+										</td>
+
+										<!-- 逾期罚息 -->
+										<td>
+											6.00元
+										</td>
+
+										<!-- 状态 
+			现在此处问题记录：
+			1、一直显示风险金不足，$floop.all_money不知道是个什么
+			2、手动垫付之后，状态未相应发生改变成【某状态】(已垫付)
+			3、elseif $item.repay_web!=1 应该显示什么样的状态
+
+			-->
+										<td>
+											已还款
+										</td>
+
+										<!-- 加入坏账池 -->
+										<td>
+											<!-- 
+						<a href="#" onclick="javascript:if(confirm('你确定要加入坏账池吗？')) location.href='?admin&q=code/borrow/joinbad&borrow_nid=20161019413'">加入坏账池</a>
+						-->
+
+										</td>
+									</tr>
+									<tr class="tr2">
+
+										<!-- ID -->
+										<td>4<input type="hidden" name="id[]" value="4"></td>
+
+										<!-- 用户名称 -->
+										<td class="main_td1" align="center">
+											<!-- user02-->
+											<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=10&amp;type=scene&quot;,600,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);"> user02</a>
+										</td>
+
+										<!-- 真实姓名 -->
+										<td>
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=10&amp;username=" style="color:lightgray">暂未填写</a>
+										</td>
+
+										<td>
+											<a href="../index.html&amp;q=code/users/info_edit&amp;user_id=10" style="color:lightgray">未分配</a>
+										</td>
+
+										<!-- 用户积分 -->
+										<td title=""><img src="/data/images/credit/credit_hr.gif" title="14分"></td>
+
+										<!-- 贷款号 -->
+										<td>20161038778</td>
+
+										<!-- 借款标题 -->
+										<td title="">
+											<a href="?admin&amp;q=code/borrow&amp;view=20161038778">100</a>(第1期)
+										</td>
+
+										<!-- 借款类型 -->
+										<td>
+											普通标借款
+										</td>
+
+										<!-- 还款本息 -->
+										<td>100.03元</td>
+
+										<!-- 待还金额 -->
+										<td>0.00元</td>
+
+										<!-- 逾期天数 -->
+										<td>
+											384天
+										</td>
+
+										<!-- 逾期罚息 -->
+										<td>
+											2.40元
+										</td>
+
+										<!-- 状态 
+			现在此处问题记录：
+			1、一直显示风险金不足，$floop.all_money不知道是个什么
+			2、手动垫付之后，状态未相应发生改变成【某状态】(已垫付)
+			3、elseif $item.repay_web!=1 应该显示什么样的状态
+
+			-->
+										<td>
+											已还款
+										</td>
+
+										<!-- 加入坏账池 -->
+										<td>
+											<!-- 
+						<a href="#" onclick="javascript:if(confirm('你确定要加入坏账池吗？')) location.href='?admin&q=code/borrow/joinbad&borrow_nid=20161038778'">加入坏账池</a>
+						-->
+
+										</td>
+									</tr>
+									<tr>
+
+										<!-- ID -->
+										<td>6<input type="hidden" name="id[]" value="6"></td>
+
+										<!-- 用户名称 -->
+										<td class="main_td1" align="center">
+											<!-- user01-->
+											<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=365&amp;type=scene&quot;,600,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);"> user01</a>
+										</td>
+
+										<!-- 真实姓名 -->
+										<td>
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=365&amp;username=" style="color:lightgray">暂未填写</a>
+										</td>
+
+										<td>
+											<a href="../index.html&amp;q=code/users/info_edit&amp;user_id=365" style="color:lightgray">未分配</a>
+										</td>
+
+										<!-- 用户积分 -->
+										<td title=""><img src="/data/images/credit/credit_hr.gif" title="12分"></td>
+
+										<!-- 贷款号 -->
+										<td>20161100002</td>
+
+										<!-- 借款标题 -->
+										<td title="">
+											<a href="?admin&amp;q=code/borrow&amp;view=20161100002">测试5</a>(第1期)
+										</td>
+
+										<!-- 借款类型 -->
+										<td>
+											普通标借款
+										</td>
+
+										<!-- 还款本息 -->
+										<td>500.17元</td>
+
+										<!-- 待还金额 -->
+										<td>500.17元</td>
+
+										<!-- 逾期天数 -->
+										<td>
+											<font color="#ff0000">377天</font>
+										</td>
+
+										<!-- 逾期罚息 -->
+										<td>
+											<font color="#ff0000">754.26元</font>
+										</td>
+
+										<!-- 状态 
+			现在此处问题记录：
+			1、一直显示风险金不足，$floop.all_money不知道是个什么
+			2、手动垫付之后，状态未相应发生改变成【某状态】(已垫付)
+			3、elseif $item.repay_web!=1 应该显示什么样的状态
+
+			-->
+										<td>
+
+											<a href="#" onclick="javascript:if(confirm('你确定要垫付此借款吗？')) location.href='?admin&amp;q=code/borrow/repay&amp;borrow_nid=20161100002&amp;id=6'">垫付</a>
+										</td>
+
+										<!-- 加入坏账池 -->
+										<td>
+											<!-- 
+						<a href="#" onclick="javascript:if(confirm('你确定要加入坏账池吗？')) location.href='?admin&q=code/borrow/joinbad&borrow_nid=20161100002'">加入坏账池</a>
+						-->
+
+											<a href="#" onclick="javascript:if(confirm('你确定要加入坏账池吗？')) location.href='?admin&amp;q=code/borrow/joinbad&amp;borrow_nid=20161100002'">加入坏账池</a>
+
+										</td>
+									</tr>
+									<tr class="tr2">
+
+										<!-- ID -->
+										<td>7<input type="hidden" name="id[]" value="7"></td>
+
+										<!-- 用户名称 -->
+										<td class="main_td1" align="center">
+											<!-- user00-->
+											<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=364&amp;type=scene&quot;,600,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);"> user00</a>
+										</td>
+
+										<!-- 真实姓名 -->
+										<td>
+											陆敏 </td>
+
+										<td>
+											昌平分公司 </td>
+
+										<!-- 用户积分 -->
+										<td title=""><img src="/data/images/credit/credit_hr.gif" title="7分"></td>
+
+										<!-- 贷款号 -->
+										<td>20161194597</td>
+
+										<!-- 借款标题 -->
+										<td title="">
+											<a href="?admin&amp;q=code/borrow&amp;view=20161194597">200</a>(第1期)
+										</td>
+
+										<!-- 借款类型 -->
+										<td>
+											普通标借款
+										</td>
+
+										<!-- 还款本息 -->
+										<td>100.00元</td>
+
+										<!-- 待还金额 -->
+										<td>100.00元</td>
+
+										<!-- 逾期天数 -->
+										<td>
+											<font color="#ff0000">377天</font>
+										</td>
+
+										<!-- 逾期罚息 -->
+										<td>
+											<font color="#ff0000">150.8元</font>
+										</td>
+
+										<!-- 状态 
+			现在此处问题记录：
+			1、一直显示风险金不足，$floop.all_money不知道是个什么
+			2、手动垫付之后，状态未相应发生改变成【某状态】(已垫付)
+			3、elseif $item.repay_web!=1 应该显示什么样的状态
+
+			-->
+										<td>
+
+											<a href="#" onclick="javascript:if(confirm('你确定要垫付此借款吗？')) location.href='?admin&amp;q=code/borrow/repay&amp;borrow_nid=20161194597&amp;id=7'">垫付</a>
+										</td>
+
+										<!-- 加入坏账池 -->
+										<td>
+											<!-- 
+						<a href="#" onclick="javascript:if(confirm('你确定要加入坏账池吗？')) location.href='?admin&q=code/borrow/joinbad&borrow_nid=20161194597'">加入坏账池</a>
+						-->
+
+											<a href="#" onclick="javascript:if(confirm('你确定要加入坏账池吗？')) location.href='?admin&amp;q=code/borrow/joinbad&amp;borrow_nid=20161194597'">加入坏账池</a>
+
+										</td>
+									</tr>
+									<tr>
+
+										<!-- ID -->
+										<td>5<input type="hidden" name="id[]" value="5"></td>
+
+										<!-- 用户名称 -->
+										<td class="main_td1" align="center">
+											<!-- user01-->
+											<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=365&amp;type=scene&quot;,600,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);"> user01</a>
+										</td>
+
+										<!-- 真实姓名 -->
+										<td>
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=365&amp;username=" style="color:lightgray">暂未填写</a>
+										</td>
+
+										<td>
+											<a href="../index.html&amp;q=code/users/info_edit&amp;user_id=365" style="color:lightgray">未分配</a>
+										</td>
+
+										<!-- 用户积分 -->
+										<td title=""><img src="/data/images/credit/credit_hr.gif" title="12分"></td>
+
+										<!-- 贷款号 -->
+										<td>20161100001</td>
+
+										<!-- 借款标题 -->
+										<td title="">
+											<a href="?admin&amp;q=code/borrow&amp;view=20161100001">测试4</a>(第1期)
+										</td>
+
+										<!-- 借款类型 -->
+										<td>
+											普通标借款
+										</td>
+
+										<!-- 还款本息 -->
+										<td>3004.17元</td>
+
+										<!-- 待还金额 -->
+										<td>0.00元</td>
+
+										<!-- 逾期天数 -->
+										<td>
+											373天
+										</td>
+
+										<!-- 逾期罚息 -->
+										<td>
+											0.00元
+										</td>
+
+										<!-- 状态 
+			现在此处问题记录：
+			1、一直显示风险金不足，$floop.all_money不知道是个什么
+			2、手动垫付之后，状态未相应发生改变成【某状态】(已垫付)
+			3、elseif $item.repay_web!=1 应该显示什么样的状态
+
+			-->
+										<td>
+											已还款
+										</td>
+
+										<!-- 加入坏账池 -->
+										<td>
+											<!-- 
+						<a href="#" onclick="javascript:if(confirm('你确定要加入坏账池吗？')) location.href='?admin&q=code/borrow/joinbad&borrow_nid=20161100001'">加入坏账池</a>
+						-->
+
+										</td>
+									</tr>
+									<tr class="tr2">
+
+										<!-- ID -->
+										<td>8<input type="hidden" name="id[]" value="8"></td>
+
+										<!-- 用户名称 -->
+										<td class="main_td1" align="center">
+											<!-- user05-->
+											<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=367&amp;type=scene&quot;,600,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);"> user05</a>
+										</td>
+
+										<!-- 真实姓名 -->
+										<td>
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=367&amp;username=" style="color:lightgray">暂未填写</a>
+										</td>
+
+										<td>
+											昌平分公司 </td>
+
+										<!-- 用户积分 -->
+										<td title=""><img src="/data/images/credit/credit_hr.gif" title="0分"></td>
+
+										<!-- 贷款号 -->
+										<td>20161210749</td>
+
+										<!-- 借款标题 -->
+										<td title="">
+											<a href="?admin&amp;q=code/borrow&amp;view=20161210749">100万元</a>(第1期)
+										</td>
+
+										<!-- 借款类型 -->
+										<td>
+											普通标借款
+										</td>
+
+										<!-- 还款本息 -->
+										<td>3000.08元</td>
+
+										<!-- 待还金额 -->
+										<td>3000.08元</td>
+
+										<!-- 逾期天数 -->
+										<td>
+											<font color="#ff0000">333天</font>
+										</td>
+
+										<!-- 逾期罚息 -->
+										<td>
+											<font color="#ff0000">3996.11元</font>
+										</td>
+
+										<!-- 状态 
+			现在此处问题记录：
+			1、一直显示风险金不足，$floop.all_money不知道是个什么
+			2、手动垫付之后，状态未相应发生改变成【某状态】(已垫付)
+			3、elseif $item.repay_web!=1 应该显示什么样的状态
+
+			-->
+										<td>
+
+											<a href="#" onclick="javascript:if(confirm('你确定要垫付此借款吗？')) location.href='?admin&amp;q=code/borrow/repay&amp;borrow_nid=20161210749&amp;id=8'">垫付</a>
+										</td>
+
+										<!-- 加入坏账池 -->
+										<td>
+											<!-- 
+						<a href="#" onclick="javascript:if(confirm('你确定要加入坏账池吗？')) location.href='?admin&q=code/borrow/joinbad&borrow_nid=20161210749'">加入坏账池</a>
+						-->
+
+											<a href="#" onclick="javascript:if(confirm('你确定要加入坏账池吗？')) location.href='?admin&amp;q=code/borrow/joinbad&amp;borrow_nid=20161210749'">加入坏账池</a>
+
+										</td>
+									</tr>
+									<tr>
+										<td colspan="15" class="action">
+											<div class="floatl">
+
+											</div>
+											<div class="floatr">
+												标题：<input type="text" name="borrow_name" id="borrow_name" value="" size="12"> 用户名：
+												<input type="text" name="username" id="username" value="" size="12"> 真实名：
+												<input type="text" name="realname" id="realname" value="" size="12"> 贷款号：
+												<input type="text" name="borrow_nid" id="borrow_nid" value="" size="12">
+												<select id="is_vouch">
+													<option value="">借款类型</option>
+													<option value="1">担保标</option>
+													<option value="0">普通标</option>
+												</select>
+												分公司：
+												<select name="assigned_branch_id_1" id="assigned_branch_id_1">
+													<option value="">全部</option>
+													<option value="1">上海总公司</option>
+													<option value="2">昌平分公司</option>
+												</select>
+												<input type="button" value="搜索" class="submit" onclick="sousuo('?admin&amp;q=code/borrow/repay&amp;status=')">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="14" class="page">
+											共 8 条记录 <span class="">上一页</span> <span class="curr">1</span>
+											<span class="">下一页</span> 第
+											<select id="PB_Page_Select" onchange="window.location.href = './admin/index.html&amp;q=code/borrow/repay&amp;page='+this.value;">
+												<option value="1" selected="">1</option>
+											</select>页 </td>
+									</tr>
+
+								</tbody>
+							</table>
+
+							<script>
+								var urls = '?admin&q=code/borrow/first';
+
+								function sousuo(url) {
+									var sou = "";
+									var username = $("#username").val();
+									if(username != "" && username != null) {
+										sou += "&username=" + username;
+									}
+									var realname = $("#realname").val();
+									if(realname != "" && realname != null) {
+										sou += "&realname=" + realname;
+									}
+									var keywords = $("#keywords").val();
+									if(keywords != "" && keywords != null) {
+										sou += "&keywords=" + keywords;
+									}
+									var borrow_name = $("#borrow_name").val();
+									if(borrow_name != "" && borrow_name != null) {
+										sou += "&borrow_name=" + borrow_name;
+									}
+									var borrow_nid = $("#borrow_nid").val();
+									if(borrow_nid != "" && borrow_nid != null) {
+										sou += "&borrow_nid=" + borrow_nid;
+									}
+									var dotime1 = $("#dotime1").val();
+									if(dotime1 != "" && dotime1 != null) {
+										sou += "&dotime1=" + dotime1;
+									}
+									var dotime2 = $("#dotime2").val();
+									if(dotime2 != "" && dotime2 != null) {
+										sou += "&dotime2=" + dotime2;
+									}
+									var status = $("#status").val();
+									if(status != "" && status != null) {
+										sou += "&status=" + status;
+									}
+									var is_vouch = $("#is_vouch").val();
+									if(is_vouch != "" && is_vouch != null) {
+										sou += "&is_vouch=" + is_vouch;
+									}
+									var assigned_branch_id_1 = $("#assigned_branch_id_1").val();
+									if(assigned_branch_id_1 != null) {
+										sou += "&assigned_branch_id_1=" + assigned_branch_id_1;
+									}
+
+									location.href = url + sou;
+
+								}
+							</script>
+
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<iframe name="notice" frameborder="0" style="height:0;width:0;"></iframe>
+		<div id="menu" style="display:none"></div>
+		<div id="showmenu" style="display:none"></div>
+	</body>
+
+</html>

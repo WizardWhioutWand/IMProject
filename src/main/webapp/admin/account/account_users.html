@@ -1,0 +1,590 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>后台管理</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<!--<script src="../../plugins/editor/xheditor/xheditor-1.1.12-zh-cn.min.js"></script>-->
+		<script src="../../plugins/timepicker/WdatePicker.js"></script>
+		<script src="../../themes/youyidai_admin/images/common.js"></script>
+		<script src="../../themes/youyidai_admin/images/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/base.js"></script>
+		<script src="../../themes/youyidai_admin/js/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/select2.js"></script>
+		<script src="../../themes/youyidai_admin/js/tipswindown.js"></script>
+
+		<link href="../../themes/youyidai_admin/css/select2.css" rel="stylesheet" type="text/css">
+		<link href="../../themes/youyidai_admin/css/tipswindown.css" rel="stylesheet" type="text/css">
+		<link rel="icon" href="../../../afavico.GIF" type="image/gif">
+		<link rel="shortcut icon" href="../../../favicon.ico">
+
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/admin.css">
+		<link href="../../plugins/timepicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body scroll="no">
+		<table width="100%" height="97%" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="2" height="80" valign="top">
+					<div id="header">
+						<div class="logo" style="float:left; width:150px">
+							<div class="png">
+								<a href="../../#"><img src="../../themes/youyidai_admin/images/logo.png" /></a>
+							</div>
+							<div class="lun">
+								<a href="../../index.html" target="_blank">网站首页</a>&nbsp;&#8211;&nbsp;
+								<a href="../index.html">后台首页</a>
+							</div>
+						</div>
+						<!--重点导航-->
+						<ul class="nav" style="float:right">
+							<li><img src="../../themes/youyidai_admin/images/nav_03.jpg" /></li>
+							<li class="home">
+								<a href="../index.html" style="height:35px;display:block">管理首页</a>
+							</li>
+							<li id="attestations">
+								<a style="cursor:pointer" href="../attestations/index.html" style="height:35px;display:block">资料审核</a>
+							</li>
+							<li id="account">
+								<a style="cursor:pointer" href="../account/index.html" style="height:35px;display:block">资金管理</a>
+							</li>
+							<li id="borrow">
+								<a style="cursor:pointer" href="../borrow/index.html" style="height:35px;display:block">借款管理</a>
+							</li>
+							<li id="approve">
+								<a style="cursor:pointer" href="../approve/index.html" style="height:35px;display:block">认证管理</a>
+							</li>
+							<li id="scrollpic">
+								<a style="cursor:pointer" href="../scrollpic/index.html" style="height:35px;display:block">flash大图管理</a>
+							</li>
+							<li id="payment">
+								<a style="cursor:pointer" href="../payment/index.html" style="height:35px;display:block">支付管理</a>
+							</li>
+							<li id="system">
+								<a style="cursor:pointer" href="../system/index.html" style="height:35px;display:block">系统管理</a>
+							</li>
+							<li id="site">
+								<a style="cursor:pointer" href="../site/index.html" style="height:35px;display:block">站点管理</a>
+							</li>
+							<li id="users">
+								<a style="cursor:pointer" href="../users/index.html" style="height:35px;display:block">用户管理</a>
+							</li>
+							<li id="articles">
+								<a style="cursor:pointer" href="../articles/index.html" style="height:35px;display:block">文章管理</a>
+							</li>
+							<li id="other">
+								<a style="cursor:pointer" href="../other/index.html" onClick="return initguide('other');" style="height:35px;display:block">其他功能</a>
+							</li>
+							<li><img src="../../themes/youyidai_admin/images/nav_07.jpg" /></li>
+
+						</ul>
+						<!--头部信息导航-->
+						<div id="guide">
+							<div class="wei fl">
+								<a href="../index.html">首页</a>&nbsp;&gt;&nbsp;
+								<a href="index.html">资金管理</a>&nbsp;&gt;&nbsp;
+								<a href="#">用户费用</a>
+							</div>
+							<ul class="fr">
+								<li class="home">欢迎您，用户名：zuikc(超级管理员) (分管分公司：
+									<font style="color:red">未限制</font>)</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="document.location.reload();" title="刷新该页面">刷新</a>
+								</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="history.go(-1);" title="后退到前一页">后退</a>
+								</li>
+								<li>
+									<a href="../login.html">退出</a>
+								</li>
+
+							</ul>
+						</div>
+						<!--头部信息导航结束-->
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" id="main-fl">
+					<div id="left" style="overflow:auto">
+						<h1>首页</h1>
+						<div class="cc"></div>
+						<ul>
+							<li class="">
+								<a id="account_list" href="index.html">资金账号管理</a>
+							</li>
+							<li class="">
+								<a id="account_log" href="account_log.html">资金记录</a>
+							</li>
+							<li class="">
+								<a id="account_bank" href="account_bank.html">账号管理</a>
+							</li>
+							<li class="">
+								<a id="account_recharge" href="account_recharge.html">充值管理</a>
+							</li>
+							<li class="">
+								<a id="account_cash" href="account_cash.html">提现管理</a>
+							</li>
+							<li class="">
+								<a id="account_recharge_new" href="account_recharge_new.html">添加充值</a>
+							</li>
+							<li class="">
+								<a id="account_web" href="account_web.html">网站费用</a>
+							</li>
+							<li class="one">
+								<a id="account_users" href="account_users.html">用户费用</a>
+							</li>
+							<li class="">
+								<a id="account_fixed" href="account_fixed.html">固定用户收益计划</a>
+							</li>
+						</ul>
+					</div>
+
+				</td>
+				<td valign="top" id="mainright">
+					<!--右边开始-->
+					<div class="tt">
+
+						<!-- 
+ -->
+						<div class="admin_module">
+
+							<div class="module_add">
+								<div class="module_title"><strong>用户收支列表</strong>
+									<div style="float:right">
+										<a href="?admin&amp;q=code/account/users&amp;type=excel&amp;page=1&amp;username=&amp;status=">导出当前</a>
+										<a href="?admin&amp;q=code/account/users&amp;type=excel&amp;username=&amp;status=">导出全部</a>&nbsp;&nbsp;&nbsp;</div>
+								</div>
+							</div>
+							<table border="0" cellspacing="1" bgcolor="#CCCCCC" width="100%">
+								<form action="" method="post"></form>
+								<tbody>
+									<tr>
+										<td class="main_td" width="30px">ID</td>
+										<td class="main_td" width="48px">用户名称</td>
+										<td class="main_td" width="48px">真实姓名</td>
+										<td class="main_td" width="60px">类型</td>
+										<!--<td class="main_td">总金额</td>-->
+										<td class="main_td">操作金额</td>
+										<td class="main_td">余额</td>
+										<td class="main_td">收入</td>
+										<td class="main_td">支出</td>
+										<td class="main_td">待收</td>
+										<td class="main_td">冻结</td>
+										<td class="main_td">备注</td>
+										<td class="main_td">操作时间</td>
+										<td class="main_td">操作IP</td>
+									</tr>
+									<tr>
+										<td>204</td>
+										<td>user06</td>
+										<td>
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=375&amp;username=user06" style="color:lightgray">暂未填写</a>
+										</td>
+										<td>投标冻结</td>
+										<!--<td >￥21000.00</td>-->
+										<td>￥100.00</td>
+										<td>￥19000.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥100.00</td>
+										<td>投标[
+											<a href="/invest/a20171115707.html" target="_blank">测试</a>]所冻结资金</td>
+										<td>2017-11-14 14:16:15</td>
+										<td>
+											<a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><br>
+											<!-- (不明) -->
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td>203</td>
+										<td>user01</td>
+										<td>
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=365&amp;username=user01" style="color:lightgray">暂未填写</a>
+										</td>
+										<td>实名认证费</td>
+										<!--<td >￥24361.60</td>-->
+										<td>￥0.00</td>
+										<td>￥10294.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>实名认证超过0次，收费0元</td>
+										<td>2017-11-14 10:30:47</td>
+										<td>
+											<a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><br>
+											<!-- (不明) -->
+										</td>
+									</tr>
+									<tr>
+										<td>202</td>
+										<td>user02</td>
+										<td>
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=10&amp;username=user02" style="color:lightgray">暂未填写</a>
+										</td>
+										<td>投标冻结</td>
+										<!--<td >￥50400.00</td>-->
+										<td>￥500.00</td>
+										<td>￥50000.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥500.00</td>
+										<td>投标[
+											<a href="/invest/a20161263382.html" target="_blank">1000_1001</a>]所冻结资金</td>
+										<td>2016-12-21 15:49:48</td>
+										<td>
+											<a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><br>
+											<!-- (不明) -->
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td>201</td>
+										<td>user02</td>
+										<td>
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=10&amp;username=user02" style="color:lightgray">暂未填写</a>
+										</td>
+										<td>投标冻结</td>
+										<!--<td >￥50400.00</td>-->
+										<td>￥500.00</td>
+										<td>￥50000.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥500.00</td>
+										<td>投标[
+											<a href="/invest/a20161263382.html" target="_blank">1000_1001</a>]所冻结资金</td>
+										<td>2016-12-21 15:49:16</td>
+										<td>
+											<a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><br>
+											<!-- (不明) -->
+										</td>
+									</tr>
+									<tr>
+										<td>200</td>
+										<td>user02</td>
+										<td>
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=10&amp;username=user02" style="color:lightgray">暂未填写</a>
+										</td>
+										<td>投标冻结</td>
+										<!--<td >￥50400.00</td>-->
+										<td>￥200.00</td>
+										<td>￥50000.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥200.00</td>
+										<td>投标[
+											<a href="/invest/a20161231533.html" target="_blank">1000_1000</a>]所冻结资金</td>
+										<td>2016-12-21 15:40:48</td>
+										<td>
+											<a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><br>
+											<!-- (不明) -->
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td>199</td>
+										<td>user02</td>
+										<td>
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=10&amp;username=user02" style="color:lightgray">暂未填写</a>
+										</td>
+										<td>投标冻结</td>
+										<!--<td >￥50400.00</td>-->
+										<td>￥100.00</td>
+										<td>￥50000.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥100.00</td>
+										<td>投标[
+											<a href="/invest/a20161233760.html" target="_blank">10000_2</a>]所冻结资金</td>
+										<td>2016-12-19 11:32:52</td>
+										<td>
+											<a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><br>
+											<!-- (不明) -->
+										</td>
+									</tr>
+									<tr>
+										<td>198</td>
+										<td>user02</td>
+										<td>
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=10&amp;username=user02" style="color:lightgray">暂未填写</a>
+										</td>
+										<td>投标冻结</td>
+										<!--<td >￥50400.00</td>-->
+										<td>￥100.00</td>
+										<td>￥50000.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥100.00</td>
+										<td>投标[
+											<a href="/invest/a20161233760.html" target="_blank">10000_2</a>]所冻结资金</td>
+										<td>2016-12-19 10:47:03</td>
+										<td>
+											<a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><br>
+											<!-- (不明) -->
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td>197</td>
+										<td>user02</td>
+										<td>
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=10&amp;username=user02" style="color:lightgray">暂未填写</a>
+										</td>
+										<td>投标冻结</td>
+										<!--<td >￥50400.00</td>-->
+										<td>￥150.00</td>
+										<td>￥50000.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥150.00</td>
+										<td>投标[
+											<a href="/invest/a20161233760.html" target="_blank">10000_2</a>]所冻结资金</td>
+										<td>2016-12-19 10:20:25</td>
+										<td>
+											<a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><br>
+											<!-- (不明) -->
+										</td>
+									</tr>
+									<tr>
+										<td>196</td>
+										<td>user02</td>
+										<td>
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=10&amp;username=user02" style="color:lightgray">暂未填写</a>
+										</td>
+										<td>投标冻结</td>
+										<!--<td >￥50400.00</td>-->
+										<td>￥100.00</td>
+										<td>￥50000.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥100.00</td>
+										<td>投标[
+											<a href="/invest/a20161233760.html" target="_blank">10000_2</a>]所冻结资金</td>
+										<td>2016-12-19 09:10:34</td>
+										<td>
+											<a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><br>
+											<!-- (不明) -->
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td>195</td>
+										<td>user02</td>
+										<td>
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=10&amp;username=user02" style="color:lightgray">暂未填写</a>
+										</td>
+										<td>减少资金变动</td>
+										<!--<td >￥50400.00</td>-->
+										<td>￥94.57</td>
+										<td>￥50000.00</td>
+										<td>￥0.00</td>
+										<td>￥94.57</td>
+										<td>￥0.00</td>
+										<td>￥250.00</td>
+										<td>管理员减少资金，变动原因：111</td>
+										<td>2016-12-19 09:06:36</td>
+										<td>
+											<a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><br>
+											<!-- (不明) -->
+										</td>
+									</tr>
+									<tr>
+										<td colspan="13" class="action">
+											<div class="floatl">
+
+											</div>
+											<div class="floatr">
+												类型：
+												<select name="type" id="type" style="">
+													<option value="">不限</option>
+													<option value="recharge">充值</option>
+													<option value="cash_frost">提现冻结</option>
+													<option value="tender_success">投资成功解冻金</option>
+													<option value="borrow_success">借款成功</option>
+													<option value="tender_success_frost">投资成功</option>
+													<option value="tender_repay_yes">投资收到还款</option>
+													<option value="vip_success">Vip会员费</option>
+													<option value="borrow_repay">还款</option>
+													<option value="tender">投标冻结</option>
+													<option value="fengxianchi_tender">投资风险金</option>
+													<option value="fengxianchi_borrow">借款风险金</option>
+													<option value="borrow_success_manage">成交费</option>
+													<option value="borrow_success_account">账户管理费</option>
+													<option value="borrow_change_sell_fee">债权转让成交费</option>
+													<option value="borrow_change_sell">债权转让成功</option>
+													<option value="cash_fee">提现手续费</option>
+													<option value="recharge_fee">充值手续费</option>
+													<option value="borrow_repay_late">逾期罚息</option>
+													<option value="cash">申请提现</option>
+													<option value="tender_spread">投资推广</option>
+													<option value="borrow_spread">借款推广</option>
+													<option value="system_repayment">网站垫付</option>
+													<option value="tender_late_repay_yes">客户逾期还款罚息收入</option>
+													<option value="fengxianchi">利息风险金</option>
+													<option value="borrow_change_buy">债权购买</option>
+													<option value="borrow_change_buy_fee">债权购买手续费</option>
+													<option value="tender_false">所投资借款标复审失败</option>
+													<option value="fengxianchi_dianfu">逾期垫付扣除</option>
+													<option value="realname_fee">实名认证费</option>
+													<option value="borrow_advance_repay">借款提前还款</option>
+													<option value="tender_advance_repay_yes">投资提前还款</option>
+													<option value="tender_advance_repay_interest">投资提前还款违约金收入</option>
+													<option value="borrow_interest_advance_repay">提前还款扣除违约金</option>
+													<option value="cash_success">提现成功</option>
+													<option value="cash_false">提现失败</option>
+													<option value="tender_user_cancel">投资撤回</option>
+													<option value="web_daicha">网站信用报告代查费</option>
+													<option value="tender_spread_add">投资推广费</option>
+													<option value="borrow_spread_add">借款推广费</option>
+													<option value="online_recharge">在线充值</option>
+													<option value="realname_fee">实名认证费</option>
+													<option value="edu_fee">学历认证费</option>
+													<option value="tender_award_add">投标奖励</option>
+													<option value="recharge_jiangli">线下充值奖励</option>
+													<option value="borrow_award_lower">扣除借款奖励</option>
+													<option value="change_add">添加资金变动</option>
+													<option value="change_lessen">减少资金变动</option>
+												</select>
+												用户名：<input type="text" name="username" id="username" value=""> 真实名：
+												<input type="text" name="realname" id="realname" value=""> 操作时间：
+												<input type="text" name="dotime1" id="dotime1" value="" size="15" onclick="change_picktime()"> 到 <input type="text" name="dotime2" value="" id="dotime2" size="15" onclick="change_picktime()"> <input type="button" value="搜索" onclick="sousuo()">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="12" class="page">
+											共 202 条记录 <span class="">上一页</span> <span class="curr">1</span>
+											<a href="../index.html&amp;q=code/account/users&amp;page=2">2</a>
+											<a href="../index.html&amp;q=code/account/users&amp;page=3">3</a>
+											<a href="../index.html&amp;q=code/account/users&amp;page=4">4</a>
+											<a href="../index.html&amp;q=code/account/users&amp;page=5">5</a>
+											<a href="../index.html&amp;q=code/account/users&amp;page=6">6</a>
+											<a href="../index.html&amp;q=code/account/users&amp;page=7">7</a>
+											<a href="../index.html&amp;q=code/account/users&amp;page=8">8</a>
+											<a href="../index.html&amp;q=code/account/users&amp;page=9">9</a>
+											<a href="../index.html&amp;q=code/account/users&amp;page=10">10</a>
+											<a href="../index.html&amp;q=code/account/users&amp;page=2">下一页</a> 第
+											<select id="PB_Page_Select" onchange="window.location.href = './admin/index.html&amp;q=code/account/users&amp;page='+this.value;">
+												<option value="1" selected="">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+												<option value="5">5</option>
+												<option value="6">6</option>
+												<option value="7">7</option>
+												<option value="8">8</option>
+												<option value="9">9</option>
+												<option value="10">10</option>
+												<option value="11">11</option>
+												<option value="12">12</option>
+												<option value="13">13</option>
+												<option value="14">14</option>
+												<option value="15">15</option>
+												<option value="16">16</option>
+												<option value="17">17</option>
+												<option value="18">18</option>
+												<option value="19">19</option>
+												<option value="20">20</option>
+												<option value="21">21</option>
+											</select>页
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+							<script>
+								var url = '?admin&q=code/account/users';
+
+								function sousuo(_url) {
+									var sou = "";
+									if($("#username")[0]) {
+										var username = $("#username").val();
+										if(username != "") {
+											sou += "&username=" + username;
+										}
+									}
+									if($("#realname")[0]) {
+										var realname = $("#realname").val();
+										if(realname != "") {
+											sou += "&realname=" + realname;
+										}
+									}
+									if($("#email")[0]) {
+										var email = $("#email").val();
+										if(email != "") {
+											sou += "&email=" + email;
+										}
+									}
+									if($("#status")[0]) {
+										var status = $("#status").val();
+										if(status != "" && status != null) {
+											sou += "&status=" + status;
+										}
+									}
+									if($("#p4f")[0]) {
+										var p4f = $("#p4f").val();
+										if(p4f != "" && p4f != null) {
+											sou += "&p4f=" + p4f;
+										}
+									}
+									if($("#fixed_status")[0]) {
+										var fixed_status = $("#fixed_status").val();
+										if(p4f != "" && fixed_status != null) {
+											sou += "&fixed_status=" + fixed_status;
+										}
+									}
+									var dotime1 = $("#dotime1").val();
+									var keywords = $("#keywords").val();
+									var username = $("#username").val();
+									var dotime2 = $("#dotime2").val();
+									var type = $("#type").val();
+									if(username != null) {
+										sou += "&username=" + username;
+									}
+									if(keywords != null) {
+										sou += "&keywords=" + keywords;
+									}
+									if(dotime1 != null) {
+										sou += "&dotime1=" + dotime1;
+									}
+									if(dotime2 != null) {
+										sou += "&dotime2=" + dotime2;
+									}
+									if(type != null) {
+										sou += "&type=" + type;
+									}
+									var assigned_branch_id_1 = $("#assigned_branch_id_1").val();
+									if(assigned_branch_id_1 != null) {
+										sou += "&assigned_branch_id_1=" + assigned_branch_id_1;
+									}
+									//	if (_url!=""){
+									//		url = _url;
+									//		
+									//	}
+									if(sou != "") {
+										location.href = url + sou;
+
+									}
+								}
+							</script>
+
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<iframe name="notice" frameborder="0" style="height:0;width:0;"></iframe>
+		<div id="menu" style="display:none"></div>
+		<div id="showmenu" style="display:none"></div>
+	</body>
+
+</html>

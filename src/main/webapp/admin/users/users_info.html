@@ -1,0 +1,292 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>后台管理</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<!--<script src="../../plugins/editor/xheditor/xheditor-1.1.12-zh-cn.min.js"></script>-->
+		<script src="../../plugins/timepicker/WdatePicker.js"></script>
+		<script src="../../themes/youyidai_admin/images/common.js"></script>
+		<script src="../../themes/youyidai_admin/images/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/base.js"></script>
+		<script src="../../themes/youyidai_admin/js/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/select2.js"></script>
+		<script src="../../themes/youyidai_admin/js/tipswindown.js"></script>
+
+		<link href="../../themes/youyidai_admin/css/select2.css" rel="stylesheet" type="text/css">
+		<link href="../../themes/youyidai_admin/css/tipswindown.css" rel="stylesheet" type="text/css">
+		<link rel="icon" href="../../../afavico.GIF" type="image/gif">
+		<link rel="shortcut icon" href="../../../favicon.ico">
+
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/admin.css">
+		<link href="../../plugins/timepicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body scroll="no">
+		<table width="100%" height="97%" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="2" height="80" valign="top">
+					<div id="header">
+						<div class="logo" style="float:left; width:150px">
+							<div class="png">
+								<a href="../../#"><img src="../../themes/youyidai_admin/images/logo.png" /></a>
+							</div>
+							<div class="lun">
+								<a href="../../index.html" target="_blank">网站首页</a>&nbsp;&#8211;&nbsp;
+								<a href="../index.html">后台首页</a>
+							</div>
+						</div>
+						<!--重点导航-->
+						<ul class="nav" style="float:right">
+							<li><img src="../../themes/youyidai_admin/images/nav_03.jpg" /></li>
+							<li class="home">
+								<a href="../index.html" style="height:35px;display:block">管理首页</a>
+							</li>
+							<li id="attestations">
+								<a style="cursor:pointer" href="../attestations/index.html" style="height:35px;display:block">资料审核</a>
+							</li>
+							<li id="account">
+								<a style="cursor:pointer" href="../account/index.html" style="height:35px;display:block">资金管理</a>
+							</li>
+							<li id="borrow">
+								<a style="cursor:pointer" href="../borrow/index.html" style="height:35px;display:block">借款管理</a>
+							</li>
+							<li id="approve">
+								<a style="cursor:pointer" href="../approve/index.html" style="height:35px;display:block">认证管理</a>
+							</li>
+							<li id="scrollpic">
+								<a style="cursor:pointer" href="../scrollpic/index.html" style="height:35px;display:block">flash大图管理</a>
+							</li>
+							<li id="payment">
+								<a style="cursor:pointer" href="../payment/index.html" style="height:35px;display:block">支付管理</a>
+							</li>
+							<li id="system">
+								<a style="cursor:pointer" href="../system/index.html" style="height:35px;display:block">系统管理</a>
+							</li>
+							<li id="site">
+								<a style="cursor:pointer" href="../site/index.html" style="height:35px;display:block">站点管理</a>
+							</li>
+							<li id="users">
+								<a style="cursor:pointer" href="../users/index.html" style="height:35px;display:block">用户管理</a>
+							</li>
+							<li id="articles">
+								<a style="cursor:pointer" href="../articles/index.html" style="height:35px;display:block">文章管理</a>
+							</li>
+							<li id="other">
+								<a style="cursor:pointer" href="../other/index.html" onClick="return initguide('other');" style="height:35px;display:block">其他功能</a>
+							</li>
+							<li><img src="../../themes/youyidai_admin/images/nav_07.jpg" /></li>
+
+						</ul>
+						<!--头部信息导航-->
+						<div id="guide">
+							<div class="wei fl">
+								<a href="../index.html">首页</a>&nbsp;&gt;&nbsp;
+								<a href="index.html">用户管理</a>&nbsp;&gt;&nbsp;
+								<a href="#">用户类型</a>
+							</div>
+							<ul class="fr">
+								<li class="home">欢迎您，用户名：zuikc(超级管理员) (分管分公司：
+									<font style="color:red">未限制</font>)</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="document.location.reload();" title="刷新该页面">刷新</a>
+								</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="history.go(-1);" title="后退到前一页">后退</a>
+								</li>
+								<li>
+									<a href="../login.html">退出</a>
+								</li>
+
+							</ul>
+						</div>
+						<!--头部信息导航结束-->
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" id="main-fl">
+					<div id="left" style="overflow:auto">
+						<h1>首页</h1>
+						<div class="cc"></div>
+						<ul>
+							<li class="">
+								<a id="users_list" href="index.html">用户信息</a>
+							</li>
+							<li class="">
+								<a id="users_type" href="users_type.html">用户列表</a>
+							</li>
+							<li class="">
+								<a id="users_new" href="users_new.html">添加用户</a>
+							</li>
+							<li class="one">
+								<a id="users_info" href="users_info.html">用户类型</a>
+							</li>
+							<li class="">
+								<a id="users_vip" href="users_vip.html">VIP管理</a>
+							</li>
+							<li class="">
+								<a id="users_examine" href="users_examine.html">审核记录列表</a>
+							</li>
+							<li class="">
+								<a id="users_rebut" href="users_rebut.html">用户举报</a>
+							</li>
+						</ul>
+					</div>
+
+				</td>
+				<td valign="top" id="mainright">
+					<!--右边开始-->
+					<div class="tt">
+
+						<!-- 
+ -->
+						<div class="admin_module">
+							<!--用户列表 开始-->
+
+							<div class="module_add">
+								<div class="module_title"><strong>用户类型</strong></div>
+								<div style="margin-top:10px;">
+									<div style="float:left; width:30%;">
+
+										<div style="border:1px solid #CCCCCC; ">
+
+											<form action="?admin&amp;q=code/users/type" method="post">
+												<div class="module_title"><strong>添加用户类型</strong></div>
+
+												<div class="module_border">
+													<div class="l">类型名称：</div>
+													<div class="c">
+														<input type="text" name="name" value="">
+													</div>
+												</div>
+
+												<div class="module_border">
+													<div class="l">标识名：</div>
+													<div class="c">
+														<input type="text" name="nid" value="" onkeyup="value=value.replace(/[^a-z0-9_]/g,'')">
+													</div>
+												</div>
+												<div class="module_border">
+													<div class="l">默&nbsp;&nbsp;认：</div>
+													<div class="c">
+														<input type="radio" value="0" name="checked" checked="checked"> 否<input type="radio" value="1" name="checked"> 是（注册的时候用户默认的类型）
+													</div>
+												</div>
+												<div class="module_border">
+													<div class="l">描述：</div>
+													<div class="c">
+														<textarea name="remark" rows="5" cols="30"></textarea>
+													</div>
+												</div>
+
+												<div class="module_border">
+													<div class="l">排序：</div>
+													<div class="c">
+														<input type="text" name="order" value="10" size="8">
+													</div>
+												</div>
+
+												<div class="module_border">
+													<div class="l">验证码：</div>
+													<div class="c">
+														<input name="valicode" type="text" size="11" maxlength="4" data-novalid="no">
+
+														<img src="/?plugins&amp;q=imgcode" id="valicode" alt="点击刷新" title="点击刷新" onclick="this.src='/?plugins&amp;q=imgcode&amp;t=' + Math.random();" align="absmiddle" style="cursor:pointer">
+													</div>
+												</div>
+
+												<div class="module_submit"><input type="submit" value="确认提交" class="submit_button"></div>
+											</form>
+										</div>
+									</div>
+								</div>
+								<div style="float:right; width:67%; text-align:left">
+									<div class="module_add">
+
+										<div class="module_title"><strong>用户类型列表</strong></div>
+									</div>
+									<table border="0" cellspacing="1" bgcolor="#CCCCCC" width="100%">
+										<tbody>
+											<tr>
+												<td width="" class="main_td">ID</td>
+												<td width="" class="main_td">名称</td>
+												<td width="" class="main_td">标识名</td>
+												<td width="*" class="main_td">添加时间</td>
+												<td width="*" class="main_td">是否默认</td>
+												<td width="*" class="main_td">排序</td>
+												<td width="*" class="main_td">操作</td>
+											</tr>
+											<tr>
+												<td class="main_td1" align="center">2</td>
+												<td class="main_td1" align="center">中级用户</td>
+												<td class="main_td1" align="center">middle</td>
+												<td class="main_td1" align="center">2017-07-10 10:30:02</td>
+												<td class="main_td1" align="center">是</td>
+												<td class="main_td1" align="center">10</td>
+												<td class="main_td1" align="center">
+													<a href="?admin&amp;q=code/users/type&amp;edit=2">修改</a>/
+													<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/users/type&amp;del=2'">删除</a>
+												</td>
+											</tr>
+											<tr class="tr2">
+												<td class="main_td1" align="center">3</td>
+												<td class="main_td1" align="center">高级用户</td>
+												<td class="main_td1" align="center">admin</td>
+												<td class="main_td1" align="center">2016-05-14 14:29:59</td>
+												<td class="main_td1" align="center">
+													<a href="?admin&amp;q=code/users/type&amp;checked=3" title="设为默认">否</a>
+												</td>
+												<td class="main_td1" align="center">10</td>
+												<td class="main_td1" align="center">
+													<a href="?admin&amp;q=code/users/type&amp;edit=3">修改</a>/
+													<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/users/type&amp;del=3'">删除</a>
+												</td>
+											</tr>
+											<tr>
+												<td class="main_td1" align="center">1</td>
+												<td class="main_td1" align="center">普通用户</td>
+												<td class="main_td1" align="center">common</td>
+												<td class="main_td1" align="center">2017-07-10 10:30:02</td>
+												<td class="main_td1" align="center">
+													<a href="?admin&amp;q=code/users/type&amp;checked=1" title="设为默认">否</a>
+												</td>
+												<td class="main_td1" align="center">10</td>
+												<td class="main_td1" align="center">
+													<a href="?admin&amp;q=code/users/type&amp;edit=1">修改</a>/
+													<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/users/type&amp;del=1'">删除</a>
+												</td>
+											</tr>
+
+											<tr align="center">
+												<td colspan="10" align="center">
+													<div align="center">共 3 条记录 <span class="">上一页</span> <span class="curr">1</span>
+														<span class="">下一页</span> 第
+														<select id="PB_Page_Select" onchange="window.location.href = './admin/index.html&amp;q=code/users/type&amp;page='+this.value;">
+															<option value="1" selected="">1</option>
+														</select>页</div>
+												</td>
+											</tr>
+
+										</tbody>
+									</table>
+
+									<!--菜单列表 结束-->
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<iframe name="notice" frameborder="0" style="height:0;width:0;"></iframe>
+		<div id="menu" style="display:none"></div>
+		<div id="showmenu" style="display:none"></div>
+	</body>
+
+</html>

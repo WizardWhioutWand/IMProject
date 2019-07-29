@@ -1,0 +1,469 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>后台管理</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<!--<script src="../../plugins/editor/xheditor/xheditor-1.1.12-zh-cn.min.js"></script>-->
+		<script src="../../plugins/timepicker/WdatePicker.js"></script>
+		<script src="../../themes/youyidai_admin/images/common.js"></script>
+		<script src="../../themes/youyidai_admin/images/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/base.js"></script>
+		<script src="../../themes/youyidai_admin/js/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/select2.js"></script>
+		<script src="../../themes/youyidai_admin/js/tipswindown.js"></script>
+
+		<link href="../../themes/youyidai_admin/css/select2.css" rel="stylesheet" type="text/css">
+		<link href="../../themes/youyidai_admin/css/tipswindown.css" rel="stylesheet" type="text/css">
+		<link rel="icon" href="../../../afavico.GIF" type="image/gif">
+		<link rel="shortcut icon" href="../../../favicon.ico">
+
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/admin.css">
+		<link href="../../plugins/timepicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body scroll="no">
+		<table width="100%" height="97%" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="2" height="80" valign="top">
+					<div id="header">
+						<div class="logo" style="float:left; width:150px">
+							<div class="png">
+								<a href="../../#"><img src="../../themes/youyidai_admin/images/logo.png" /></a>
+							</div>
+							<div class="lun">
+								<a href="../../index.html" target="_blank">网站首页</a>&nbsp;&#8211;&nbsp;
+								<a href="../index.html">后台首页</a>
+							</div>
+						</div>
+						<!--重点导航-->
+						<ul class="nav" style="float:right">
+							<li><img src="../../themes/youyidai_admin/images/nav_03.jpg" /></li>
+							<li class="home">
+								<a href="../index.html" style="height:35px;display:block">管理首页</a>
+							</li>
+							<li id="attestations">
+								<a style="cursor:pointer" href="../attestations/index.html" style="height:35px;display:block">资料审核</a>
+							</li>
+							<li id="account">
+								<a style="cursor:pointer" href="../account/index.html" style="height:35px;display:block">资金管理</a>
+							</li>
+							<li id="borrow">
+								<a style="cursor:pointer" href="../borrow/index.html" style="height:35px;display:block">借款管理</a>
+							</li>
+							<li id="approve">
+								<a style="cursor:pointer" href="../approve/index.html" style="height:35px;display:block">认证管理</a>
+							</li>
+							<li id="scrollpic">
+								<a style="cursor:pointer" href="../scrollpic/index.html" style="height:35px;display:block">flash大图管理</a>
+							</li>
+							<li id="payment">
+								<a style="cursor:pointer" href="../payment/index.html" style="height:35px;display:block">支付管理</a>
+							</li>
+							<li id="system">
+								<a style="cursor:pointer" href="../system/index.html" style="height:35px;display:block">系统管理</a>
+							</li>
+							<li id="site">
+								<a style="cursor:pointer" href="../site/index.html" style="height:35px;display:block">站点管理</a>
+							</li>
+							<li id="users">
+								<a style="cursor:pointer" href="../users/index.html" style="height:35px;display:block">用户管理</a>
+							</li>
+							<li id="articles">
+								<a style="cursor:pointer" href="../articles/index.html" style="height:35px;display:block">文章管理</a>
+							</li>
+							<li id="other">
+								<a style="cursor:pointer" href="../other/index.html" onClick="return initguide('other');" style="height:35px;display:block">其他功能</a>
+							</li>
+							<li><img src="../../themes/youyidai_admin/images/nav_07.jpg" /></li>
+
+						</ul>
+						<!--头部信息导航-->
+						<div id="guide">
+							<div class="wei fl">
+								<a href="../index.html">首页</a>&nbsp;&gt;&nbsp;
+								<a href="index.html">资金管理</a>&nbsp;&gt;&nbsp;
+								<a href="#">网站费用</a>
+							</div>
+							<ul class="fr">
+								<li class="home">欢迎您，用户名：zuikc(超级管理员) (分管分公司：
+									<font style="color:red">未限制</font>)</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="document.location.reload();" title="刷新该页面">刷新</a>
+								</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="history.go(-1);" title="后退到前一页">后退</a>
+								</li>
+								<li>
+									<a href="../login.html">退出</a>
+								</li>
+
+							</ul>
+						</div>
+						<!--头部信息导航结束-->
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" id="main-fl">
+					<div id="left" style="overflow:auto">
+						<h1>首页</h1>
+						<div class="cc"></div>
+						<ul>
+							<li class="">
+								<a id="account_list" href="index.html">资金账号管理</a>
+							</li>
+							<li class="">
+								<a id="account_log" href="account_log.html">资金记录</a>
+							</li>
+							<li class="">
+								<a id="account_bank" href="account_bank.html">账号管理</a>
+							</li>
+							<li class="">
+								<a id="account_recharge" href="account_recharge.html">充值管理</a>
+							</li>
+							<li class="">
+								<a id="account_cash" href="account_cash.html">提现管理</a>
+							</li>
+							<li class="">
+								<a id="account_recharge_new" href="account_recharge_new.html">添加充值</a>
+							</li>
+							<li class="one">
+								<a id="account_web" href="account_web.html">网站费用</a>
+							</li>
+							<li class="">
+								<a id="account_users" href="account_users.html">用户费用</a>
+							</li>
+							<li class="">
+								<a id="account_fixed" href="account_fixed.html">固定用户收益计划</a>
+							</li>
+						</ul>
+					</div>
+
+				</td>
+				<td valign="top" id="mainright">
+					<!--右边开始-->
+					<div class="tt">
+
+						<!-- 
+ -->
+						<div class="admin_module">
+
+							<ul class="nav3">
+								<li>
+									<a href="?admin&amp;q=code/account/web" id="c_so">网站费用</a>
+								</li>
+								<li>
+									<a href="?admin&amp;q=code/account/web&amp;action=account">网站垫付</a>
+								</li>
+								<li>
+									<a href="?admin&amp;q=code/account/web&amp;action=repay">网站应收明细账</a>
+								</li>
+							</ul>
+							<div class="module_add">
+								<div class="module_title"><strong>网站费用</strong>
+									<div style="float:right">
+										<a href="?admin&amp;q=code/account/web&amp;type=excel&amp;page=1&amp;username=&amp;status=&amp;dotime1=&amp;dotime2=">导出当前</a>
+										<a href="?admin&amp;q=code/account/web&amp;type=excel&amp;username=&amp;status=&amp;dotime1=&amp;dotime2=">导出全部</a>&nbsp;&nbsp;&nbsp;</div>
+								</div>
+							</div>
+							<table border="0" cellspacing="1" bgcolor="#CCCCCC" width="100%">
+								<form action="" method="post"></form>
+								<tbody>
+									<tr>
+										<td class="main_td">ID</td>
+										<td class="main_td">类型</td>
+										<td class="main_td">操作金额</td>
+										<td class="main_td">收入</td>
+										<td class="main_td">支出</td>
+										<td class="main_td">备注</td>
+										<td class="main_td">操作时间</td>
+										<td class="main_td">操作IP</td>
+									</tr>
+									<tr>
+										<td>203</td>
+										<td>实名认证费</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>
+											<font style="color:#FF4500">user01</font>实名认证超过0次，收费0元</td>
+										<td>2017-11-14 10:30:47</td>
+										<td>
+											<a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a>
+											<!-- (不明) -->
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td>131</td>
+										<td>借款成交费</td>
+										<td>￥90.00</td>
+										<td>￥90.00</td>
+										<td>￥0.00</td>
+										<td>
+											<font style="color:#FF4500">user05</font>成功借款[
+											<a href="/invest/a20161210749.html" target="_blank" style="color:blue">100万元</a>]的成交费</td>
+										<td>2016-12-16 09:07:22</td>
+										<td>
+											<a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a>
+											<!-- (不明) -->
+										</td>
+									</tr>
+									<tr>
+										<td>132</td>
+										<td>账户管理费</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>
+											<font style="color:#FF4500">user05</font>成功借款[
+											<a href="/invest/a20161210749.html" target="_blank" style="color:blue">100万元</a>]的账户管理费</td>
+										<td>2016-12-16 09:07:22</td>
+										<td>
+											<a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a>
+											<!-- (不明) -->
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td>116</td>
+										<td>借款成交费</td>
+										<td>￥60.00</td>
+										<td>￥60.00</td>
+										<td>￥0.00</td>
+										<td>
+											<font style="color:#FF4500">user18</font>成功借款[
+											<a href="/invest/a20161139330.html" target="_blank" style="color:blue">1000</a>]的成交费</td>
+										<td>2016-11-02 17:08:23</td>
+										<td>
+											<a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a>
+											<!-- (不明) -->
+										</td>
+									</tr>
+									<tr>
+										<td>117</td>
+										<td>账户管理费</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>
+											<font style="color:#FF4500">user18</font>成功借款[
+											<a href="/invest/a20161139330.html" target="_blank" style="color:blue">1000</a>]的账户管理费</td>
+										<td>2016-11-02 17:08:23</td>
+										<td>
+											<a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a>
+											<!-- (不明) -->
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td>108</td>
+										<td>借款成交费</td>
+										<td>￥2.00</td>
+										<td>￥2.00</td>
+										<td>￥0.00</td>
+										<td>
+											<font style="color:#FF4500">user00</font>成功借款[
+											<a href="/invest/a20161194597.html" target="_blank" style="color:blue">200</a>]的成交费</td>
+										<td>2016-11-02 16:58:41</td>
+										<td>
+											<a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a>
+											<!-- (不明) -->
+										</td>
+									</tr>
+									<tr>
+										<td>109</td>
+										<td>账户管理费</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>
+											<font style="color:#FF4500">user00</font>成功借款[
+											<a href="/invest/a20161194597.html" target="_blank" style="color:blue">200</a>]的账户管理费</td>
+										<td>2016-11-02 16:58:41</td>
+										<td>
+											<a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a>
+											<!-- (不明) -->
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td>103</td>
+										<td>借款成交费</td>
+										<td>￥2.00</td>
+										<td>￥2.00</td>
+										<td>￥0.00</td>
+										<td>
+											<font style="color:#FF4500">user00</font>成功借款[
+											<a href="/invest/a20161199412.html" target="_blank" style="color:blue">100</a>]的成交费</td>
+										<td>2016-11-02 16:56:54</td>
+										<td>
+											<a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a>
+											<!-- (不明) -->
+										</td>
+									</tr>
+									<tr>
+										<td>104</td>
+										<td>账户管理费</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>￥0.00</td>
+										<td>
+											<font style="color:#FF4500">user00</font>成功借款[
+											<a href="/invest/a20161199412.html" target="_blank" style="color:blue">100</a>]的账户管理费</td>
+										<td>2016-11-02 16:56:54</td>
+										<td>
+											<a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a>
+											<!-- (不明) -->
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td>94</td>
+										<td>借款成交费</td>
+										<td>￥10.00</td>
+										<td>￥10.00</td>
+										<td>￥0.00</td>
+										<td>
+											<font style="color:#FF4500">user01</font>成功借款[
+											<a href="/invest/a20161100002.html" target="_blank" style="color:blue">测试5</a>]的成交费</td>
+										<td>2016-11-02 15:54:06</td>
+										<td>
+											<a href="http://www.baidu.com/s?wd=116.231.71.191" target="_blank">116.231.71.191</a>
+											<!-- (不明) -->
+										</td>
+									</tr>
+									<tr>
+										<td colspan="9" class="action">
+											<div class="floatl">
+												公益基金总计：1元 总计：345.20元
+											</div>
+											<div class="floatr">
+												类型：
+												<select name="type" id="type" style="">
+													<option value="">不限</option>
+													<option value="borrow_success_manage">借款成交费</option>
+													<option value="borrow_success_account">账户管理费</option>
+													<option value="borrow_change_sell_fee">出售债权转让成交费</option>
+													<option value="vip_success">VIP会员费</option>
+													<option value="recharge_fee">充值手续费</option>
+													<option value="cash_fee">提现手续费</option>
+													<option value="late_repay_web">逾期还款罚息收入</option>
+													<option value="borrow_change_buy_fee">购买债权转让成交费</option>
+													<option value="advance_web">提前还款违约金收入</option>
+													<option value="web_daicha">网站信用报告代查收入</option>
+													<option value="web_tender_late_repay_yes">网站购买债权逾期罚息</option>
+													<option value="realname_fee">实名认证费</option>
+													<option value="edu_fee">学历认证费</option>
+													<option value="recharge_jiangli">线下充值奖励</option>
+												</select>
+												<!-- 用户名：<input type="text" name="username" id="username" value=""/> -->
+												操作时间：<input type="text" name="dotime1" id="dotime1" value="" size="15" onclick="change_picktime()"> 到 <input type="text" name="dotime2" value="" id="dotime2" size="15" onclick="change_picktime()"> <input type="button" value="搜索" onclick="sousuo('')">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="9" class="page">
+											共 31 条记录 <span class="">上一页</span> <span class="curr">1</span>
+											<a href="../index.html&amp;q=code/account/web&amp;page=2">2</a>
+											<a href="../index.html&amp;q=code/account/web&amp;page=3">3</a>
+											<a href="../index.html&amp;q=code/account/web&amp;page=4">4</a>
+											<a href="../index.html&amp;q=code/account/web&amp;page=2">下一页</a> 第
+											<select id="PB_Page_Select" onchange="window.location.href = './admin/index.html&amp;q=code/account/web&amp;page='+this.value;">
+												<option value="1" selected="">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+												<option value="4">4</option>
+											</select>页
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+							<script>
+								var url = '?admin&q=code/account/web';
+
+								function sousuo(_url) {
+									var sou = "";
+									if($("#username")[0]) {
+										var username = $("#username").val();
+										if(username != "") {
+											sou += "&username=" + username;
+										}
+									}
+									if($("#realname")[0]) {
+										var realname = $("#realname").val();
+										if(realname != "") {
+											sou += "&realname=" + realname;
+										}
+									}
+									if($("#email")[0]) {
+										var email = $("#email").val();
+										if(email != "") {
+											sou += "&email=" + email;
+										}
+									}
+									if($("#status")[0]) {
+										var status = $("#status").val();
+										if(status != "" && status != null) {
+											sou += "&status=" + status;
+										}
+									}
+									if($("#p4f")[0]) {
+										var p4f = $("#p4f").val();
+										if(p4f != "" && p4f != null) {
+											sou += "&p4f=" + p4f;
+										}
+									}
+									if($("#fixed_status")[0]) {
+										var fixed_status = $("#fixed_status").val();
+										if(p4f != "" && fixed_status != null) {
+											sou += "&fixed_status=" + fixed_status;
+										}
+									}
+									var dotime1 = $("#dotime1").val();
+									var keywords = $("#keywords").val();
+									var username = $("#username").val();
+									var dotime2 = $("#dotime2").val();
+									var type = $("#type").val();
+									if(username != null) {
+										sou += "&username=" + username;
+									}
+									if(keywords != null) {
+										sou += "&keywords=" + keywords;
+									}
+									if(dotime1 != null) {
+										sou += "&dotime1=" + dotime1;
+									}
+									if(dotime2 != null) {
+										sou += "&dotime2=" + dotime2;
+									}
+									if(type != null) {
+										sou += "&type=" + type;
+									}
+									var assigned_branch_id_1 = $("#assigned_branch_id_1").val();
+									if(assigned_branch_id_1 != null) {
+										sou += "&assigned_branch_id_1=" + assigned_branch_id_1;
+									}
+									//	if (_url!=""){
+									//		url = _url;
+									//		
+									//	}
+									if(sou != "") {
+										location.href = url + sou;
+
+									}
+								}
+							</script>
+
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<iframe name="notice" frameborder="0" style="height:0;width:0;"></iframe>
+		<div id="menu" style="display:none"></div>
+		<div id="showmenu" style="display:none"></div>
+	</body>
+
+</html>

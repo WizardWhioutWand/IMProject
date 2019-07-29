@@ -1,0 +1,555 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>后台管理</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<!--<script src="../../plugins/editor/xheditor/xheditor-1.1.12-zh-cn.min.js"></script>-->
+		<script src="../../plugins/timepicker/WdatePicker.js"></script>
+		<script src="../../themes/youyidai_admin/images/common.js"></script>
+		<script src="../../themes/youyidai_admin/images/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/base.js"></script>
+		<script src="../../themes/youyidai_admin/js/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/select2.js"></script>
+		<script src="../../themes/youyidai_admin/js/tipswindown.js"></script>
+
+		<link href="../../themes/youyidai_admin/css/select2.css" rel="stylesheet" type="text/css">
+		<link href="../../themes/youyidai_admin/css/tipswindown.css" rel="stylesheet" type="text/css">
+		<link rel="icon" href="../../../afavico.GIF" type="image/gif">
+		<link rel="shortcut icon" href="../../../favicon.ico">
+
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/admin.css">
+		<link href="../../plugins/timepicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body scroll="no">
+		<table width="100%" height="97%" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="2" height="80" valign="top">
+					<div id="header">
+						<div class="logo" style="float:left; width:150px">
+							<div class="png">
+								<a href="../../#"><img src="../../themes/youyidai_admin/images/logo.png" /></a>
+							</div>
+							<div class="lun">
+								<a href="../../index.html" target="_blank">网站首页</a>&nbsp;&#8211;&nbsp;
+								<a href="../index.html">后台首页</a>
+							</div>
+						</div>
+						<!--重点导航-->
+						<ul class="nav" style="float:right">
+							<li><img src="../../themes/youyidai_admin/images/nav_03.jpg" /></li>
+							<li class="home">
+								<a href="../index.html" style="height:35px;display:block">管理首页</a>
+							</li>
+							<li id="attestations">
+								<a style="cursor:pointer" href="../attestations/index.html" style="height:35px;display:block">资料审核</a>
+							</li>
+							<li id="account">
+								<a style="cursor:pointer" href="../account/index.html" style="height:35px;display:block">资金管理</a>
+							</li>
+							<li id="borrow">
+								<a style="cursor:pointer" href="../borrow/index.html" style="height:35px;display:block">借款管理</a>
+							</li>
+							<li id="approve">
+								<a style="cursor:pointer" href="../approve/index.html" style="height:35px;display:block">认证管理</a>
+							</li>
+							<li id="scrollpic">
+								<a style="cursor:pointer" href="../scrollpic/index.html" style="height:35px;display:block">flash大图管理</a>
+							</li>
+							<li id="payment">
+								<a style="cursor:pointer" href="../payment/index.html" style="height:35px;display:block">支付管理</a>
+							</li>
+							<li id="system">
+								<a style="cursor:pointer" href="../system/index.html" style="height:35px;display:block">系统管理</a>
+							</li>
+							<li id="site">
+								<a style="cursor:pointer" href="../site/index.html" style="height:35px;display:block">站点管理</a>
+							</li>
+							<li id="users">
+								<a style="cursor:pointer" href="../users/index.html" style="height:35px;display:block">用户管理</a>
+							</li>
+							<li id="articles">
+								<a style="cursor:pointer" href="../articles/index.html" style="height:35px;display:block">文章管理</a>
+							</li>
+							<li id="other">
+								<a style="cursor:pointer" href="../other/index.html" onClick="return initguide('other');" style="height:35px;display:block">其他功能</a>
+							</li>
+							<li><img src="../../themes/youyidai_admin/images/nav_07.jpg" /></li>
+
+						</ul>
+						<!--头部信息导航-->
+						<div id="guide">
+							<div class="wei fl">
+								<a href="../index.html">首页</a>&nbsp;&gt;&nbsp;
+								<a href="index.html">用户管理</a>&nbsp;&gt;&nbsp;
+								<a href="#">用户列表</a>
+							</div>
+							<ul class="fr">
+								<li class="home">欢迎您，用户名：zuikc(超级管理员) (分管分公司：
+									<font style="color:red">未限制</font>)</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="document.location.reload();" title="刷新该页面">刷新</a>
+								</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="history.go(-1);" title="后退到前一页">后退</a>
+								</li>
+								<li>
+									<a href="../login.html">退出</a>
+								</li>
+
+							</ul>
+						</div>
+						<!--头部信息导航结束-->
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" id="main-fl">
+					<div id="left" style="overflow:auto">
+						<h1>首页</h1>
+						<div class="cc"></div>
+						<ul>
+							<li class="">
+								<a id="users_list" href="index.html">用户信息</a>
+							</li>
+							<li class="one">
+								<a id="users_type" href="users_type.html">用户列表</a>
+							</li>
+							<li class="">
+								<a id="users_new" href="users_new.html">添加用户</a>
+							</li>
+							<li class="">
+								<a id="users_info" href="users_info.html">用户类型</a>
+							</li>
+							<li class="">
+								<a id="users_vip" href="users_vip.html">VIP管理</a>
+							</li>
+							<li class="">
+								<a id="users_examine" href="users_examine.html">审核记录列表</a>
+							</li>
+							<li class="">
+								<a id="users_rebut" href="users_rebut.html">用户举报</a>
+							</li>
+						</ul>
+					</div>
+
+				</td>
+				<td valign="top" id="mainright">
+					<!--右边开始-->
+					<div class="tt">
+
+						<!-- 
+ -->
+						<div class="admin_module">
+							<!--用户列表 开始-->
+
+							<ul class="nav3">
+								<li>
+									<a href="?admin&amp;q=code/users/list" id="c_so">默认排序</a>
+								</li>
+								<li>
+									<a href="?admin&amp;q=code/users/list&amp;order=last_time">最后登录时间排序</a>
+								</li>
+								<li>
+									<a href="?admin&amp;q=code/users/list&amp;order=reg_time">按注册时间排序</a>
+								</li>
+							</ul>
+							<div class="module_add">
+								<div class="module_title"><strong>用户列表 
+					(<font style="color:#E09003">请点击用户名查看登录信息。</font>)</strong></div>
+							</div>
+							<table border="0" cellspacing="1" bgcolor="#CCCCCC" width="100%">
+								<tbody>
+									<tr>
+										<td width="" class="main_td">ID</td>
+										<td width="" class="main_td">用户名</td>
+										<td width="" class="main_td">真实姓名</td>
+										<td width="*" class="main_td">所属分公司</td>
+										<td width="" class="main_td">手机号码</td>
+										<td width="" class="main_td">邮箱</td>
+										<td width="" class="main_td">登录<br>次数</td>
+										<!--  <td width="" class="main_td">注册时间</td>
+		<td width="" class="main_td">注册ip</td>
+		<td width="" class="main_td">上次登录时间</td>
+		<td width="" class="main_td">上次登录IP</td>
+		<th width="" class="main_td">最后登录时间</th>
+		<th width="" class="main_td">最后登录IP</th>
+		<td width="" class="main_td">用户名</td>-->
+										<th width="" class="main_td" nowrap="nowrap">修改</th>
+									</tr>
+									<tr>
+										<td class="main_td1" align="center">376</td>
+										<td class="main_td1" align="center">
+											<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户登录信息查看&quot;,&quot;url:get??admin&amp;q=code/users/viewforlogin&amp;user_id=376&quot;,600,200,&quot;true&quot;,&quot;&quot;,&quot;&quot;,&quot;text&quot;);">user04</a>
+										</td>
+										<td class="main_td1" align="center">
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=376&amp;username=user04" style="color:lightgray">暂未填写</a>
+										</td>
+										<td>
+											<a href="../index.html&amp;q=code/users/info_edit&amp;user_id=376" style="color:lightgray">未分配</a>
+										</td>
+										<td class="main_td1" align="center">
+											<a href="../index.html&amp;q=code/approve/sms&amp;username=user04" style="color:lightgray">暂未填写</a>
+										</td>
+										<td class="main_td1" align="center">
+											<font style="color:lightgray">暂未填写</font>
+										</td>
+										<td class="main_td1" align="center">2</td>
+										<!-- <td class="main_td1" align="center" >2016-12-16 09:35:25</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><!--  (不明)-->
+										<!-- </td>
+		<td class="main_td1" align="center" >2016-12-16 09:35:25</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><!-- (不明) -->
+										<!--</td>
+		<td class="main_td1" align="center" >2016-12-16 09:37:31</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><!--  (不明)-->
+										<!--</td>
+		<td class="main_td1" align="center">user04</td> -->
+										<td class="main_td1" align="center">
+											<a href="?admin&amp;q=code/users/edit&amp;user_id=376">修改</a>
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td class="main_td1" align="center">375</td>
+										<td class="main_td1" align="center">
+											<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户登录信息查看&quot;,&quot;url:get??admin&amp;q=code/users/viewforlogin&amp;user_id=375&quot;,600,200,&quot;true&quot;,&quot;&quot;,&quot;&quot;,&quot;text&quot;);">user06</a>
+										</td>
+										<td class="main_td1" align="center">
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=375&amp;username=user06" style="color:lightgray">暂未填写</a>
+										</td>
+										<td>
+											<a href="../index.html&amp;q=code/users/info_edit&amp;user_id=375" style="color:lightgray">未分配</a>
+										</td>
+										<td class="main_td1" align="center">
+											<a href="../index.html&amp;q=code/approve/sms&amp;username=user06" style="color:lightgray">暂未填写</a>
+										</td>
+										<td class="main_td1" align="center">
+											<font style="color:lightgray">暂未填写</font>
+										</td>
+										<td class="main_td1" align="center">4</td>
+										<!-- <td class="main_td1" align="center" >2016-12-16 08:57:09</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><!--  (不明)-->
+										<!-- </td>
+		<td class="main_td1" align="center" >2016-12-16 09:55:52</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><!-- (不明) -->
+										<!--</td>
+		<td class="main_td1" align="center" >2017-11-14 11:23:04</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><!--  (不明)-->
+										<!--</td>
+		<td class="main_td1" align="center">user06</td> -->
+										<td class="main_td1" align="center">
+											<a href="?admin&amp;q=code/users/edit&amp;user_id=375">修改</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="main_td1" align="center">374</td>
+										<td class="main_td1" align="center">
+											<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户登录信息查看&quot;,&quot;url:get??admin&amp;q=code/users/viewforlogin&amp;user_id=374&quot;,600,200,&quot;true&quot;,&quot;&quot;,&quot;&quot;,&quot;text&quot;);">user07</a>
+										</td>
+										<td class="main_td1" align="center">
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=374&amp;username=user07" style="color:lightgray">暂未填写</a>
+										</td>
+										<td>
+											<a href="../index.html&amp;q=code/users/info_edit&amp;user_id=374" style="color:lightgray">未分配</a>
+										</td>
+										<td class="main_td1" align="center">
+											<a href="../index.html&amp;q=code/approve/sms&amp;username=user07" style="color:lightgray">暂未填写</a>
+										</td>
+										<td class="main_td1" align="center">
+											<font style="color:lightgray">暂未填写</font>
+										</td>
+										<td class="main_td1" align="center">4</td>
+										<!-- <td class="main_td1" align="center" >2016-12-16 08:56:57</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><!--  (不明)-->
+										<!-- </td>
+		<td class="main_td1" align="center" >2017-11-14 14:29:42</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><!-- (不明) -->
+										<!--</td>
+		<td class="main_td1" align="center" >2017-11-14 14:40:41</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><!--  (不明)-->
+										<!--</td>
+		<td class="main_td1" align="center">user07</td> -->
+										<td class="main_td1" align="center">
+											<a href="?admin&amp;q=code/users/edit&amp;user_id=374">修改</a>
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td class="main_td1" align="center">373</td>
+										<td class="main_td1" align="center">
+											<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户登录信息查看&quot;,&quot;url:get??admin&amp;q=code/users/viewforlogin&amp;user_id=373&quot;,600,200,&quot;true&quot;,&quot;&quot;,&quot;&quot;,&quot;text&quot;);">user08</a>
+										</td>
+										<td class="main_td1" align="center">
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=373&amp;username=user08" style="color:lightgray">暂未填写</a>
+										</td>
+										<td>
+											<a href="../index.html&amp;q=code/users/info_edit&amp;user_id=373" style="color:lightgray">未分配</a>
+										</td>
+										<td class="main_td1" align="center">
+											<a href="../index.html&amp;q=code/approve/sms&amp;username=user08" style="color:lightgray">暂未填写</a>
+										</td>
+										<td class="main_td1" align="center">
+											<font style="color:lightgray">暂未填写</font>
+										</td>
+										<td class="main_td1" align="center">3</td>
+										<!-- <td class="main_td1" align="center" >2016-12-16 08:56:43</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><!--  (不明)-->
+										<!-- </td>
+		<td class="main_td1" align="center" >2016-12-16 08:58:52</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><!-- (不明) -->
+										<!--</td>
+		<td class="main_td1" align="center" >2017-11-14 14:27:57</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><!--  (不明)-->
+										<!--</td>
+		<td class="main_td1" align="center">user08</td> -->
+										<td class="main_td1" align="center">
+											<a href="?admin&amp;q=code/users/edit&amp;user_id=373">修改</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="main_td1" align="center">372</td>
+										<td class="main_td1" align="center">
+											<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户登录信息查看&quot;,&quot;url:get??admin&amp;q=code/users/viewforlogin&amp;user_id=372&quot;,600,200,&quot;true&quot;,&quot;&quot;,&quot;&quot;,&quot;text&quot;);">user99</a>
+										</td>
+										<td class="main_td1" align="center">
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=372&amp;username=user99" style="color:lightgray">暂未填写</a>
+										</td>
+										<td>
+											上海总公司 </td>
+										<td class="main_td1" align="center">
+											<a href="../index.html&amp;q=code/approve/sms&amp;username=user99" style="color:lightgray">暂未填写</a>
+										</td>
+										<td class="main_td1" align="center">
+											<font style="color:lightgray">暂未填写</font>
+										</td>
+										<td class="main_td1" align="center">1</td>
+										<!-- <td class="main_td1" align="center" >2016-11-07 14:24:40</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><!--  (不明)-->
+										<!-- </td>
+		<td class="main_td1" align="center" >2016-11-07 14:24:40</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><!-- (不明) -->
+										<!--</td>
+		<td class="main_td1" align="center" >2016-11-07 14:24:40</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><!--  (不明)-->
+										<!--</td>
+		<td class="main_td1" align="center">user99</td> -->
+										<td class="main_td1" align="center">
+											<a href="?admin&amp;q=code/users/edit&amp;user_id=372">修改</a>
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td class="main_td1" align="center">371</td>
+										<td class="main_td1" align="center">
+											<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户登录信息查看&quot;,&quot;url:get??admin&amp;q=code/users/viewforlogin&amp;user_id=371&quot;,600,200,&quot;true&quot;,&quot;&quot;,&quot;&quot;,&quot;text&quot;);">user15</a>(
+											<font style="color:red">固</font>)</td>
+										<td class="main_td1" align="center">
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=371&amp;username=user15" style="color:lightgray">暂未填写</a>
+										</td>
+										<td>
+											昌平分公司 </td>
+										<td class="main_td1" align="center">
+											<a href="../index.html&amp;q=code/approve/sms&amp;username=user15" style="color:lightgray">暂未填写</a>
+										</td>
+										<td class="main_td1" align="center">
+											<font style="color:lightgray">暂未填写</font>
+										</td>
+										<td class="main_td1" align="center">1</td>
+										<!-- <td class="main_td1" align="center" >2016-11-07 14:24:02</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><!--  (不明)-->
+										<!-- </td>
+		<td class="main_td1" align="center" >2016-11-07 14:24:02</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><!-- (不明) -->
+										<!--</td>
+		<td class="main_td1" align="center" >2016-11-07 14:24:02</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><!--  (不明)-->
+										<!--</td>
+		<td class="main_td1" align="center">user15(<font style="color:red">固</font>)</td> -->
+										<td class="main_td1" align="center">
+											<a href="?admin&amp;q=code/users/edit&amp;user_id=371">修改</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="main_td1" align="center">370</td>
+										<td class="main_td1" align="center">
+											<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户登录信息查看&quot;,&quot;url:get??admin&amp;q=code/users/viewforlogin&amp;user_id=370&quot;,600,200,&quot;true&quot;,&quot;&quot;,&quot;&quot;,&quot;text&quot;);">user09</a>
+										</td>
+										<td class="main_td1" align="center">
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=370&amp;username=user09" style="color:lightgray">暂未填写</a>
+										</td>
+										<td>
+											上海总公司 </td>
+										<td class="main_td1" align="center">
+											<a href="../index.html&amp;q=code/approve/sms&amp;username=user09" style="color:lightgray">暂未填写</a>
+										</td>
+										<td class="main_td1" align="center">
+											<font style="color:lightgray">暂未填写</font>
+										</td>
+										<td class="main_td1" align="center">7</td>
+										<!-- <td class="main_td1" align="center" >2016-11-02 10:06:32</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=116.231.71.191" target="_blank">116.231.71.191</a><!--  (不明)-->
+										<!-- </td>
+		<td class="main_td1" align="center" >2016-11-02 16:19:59</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=116.231.71.191" target="_blank">116.231.71.191</a><!-- (不明) -->
+										<!--</td>
+		<td class="main_td1" align="center" >2016-11-02 17:05:53</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=::1" target="_blank">::1</a><!--  (不明)-->
+										<!--</td>
+		<td class="main_td1" align="center">user09</td> -->
+										<td class="main_td1" align="center">
+											<a href="?admin&amp;q=code/users/edit&amp;user_id=370">修改</a>
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td class="main_td1" align="center">369</td>
+										<td class="main_td1" align="center">
+											<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户登录信息查看&quot;,&quot;url:get??admin&amp;q=code/users/viewforlogin&amp;user_id=369&quot;,600,200,&quot;true&quot;,&quot;&quot;,&quot;&quot;,&quot;text&quot;);">user10</a>(
+											<font style="color:red">固</font>)</td>
+										<td class="main_td1" align="center">
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=369&amp;username=user10" style="color:lightgray">暂未填写</a>
+										</td>
+										<td>
+											昌平分公司 </td>
+										<td class="main_td1" align="center">
+											<a href="../index.html&amp;q=code/approve/sms&amp;username=user10" style="color:lightgray">暂未填写</a>
+										</td>
+										<td class="main_td1" align="center">
+											<font style="color:lightgray">暂未填写</font>
+										</td>
+										<td class="main_td1" align="center">2</td>
+										<!-- <td class="main_td1" align="center" >2017-09-31 09:28:03</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=101.81.239.41" target="_blank">101.81.239.41</a><!--  (不明)-->
+										<!-- </td>
+		<td class="main_td1" align="center" >2017-09-31 09:28:03</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=101.81.239.41" target="_blank">101.81.239.41</a><!-- (不明) -->
+										<!--</td>
+		<td class="main_td1" align="center" >2016-11-01 14:49:02</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=101.81.239.41" target="_blank">101.81.239.41</a><!--  (不明)-->
+										<!--</td>
+		<td class="main_td1" align="center">user10(<font style="color:red">固</font>)</td> -->
+										<td class="main_td1" align="center">
+											<a href="?admin&amp;q=code/users/edit&amp;user_id=369">修改</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="main_td1" align="center">368</td>
+										<td class="main_td1" align="center">
+											<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户登录信息查看&quot;,&quot;url:get??admin&amp;q=code/users/viewforlogin&amp;user_id=368&quot;,600,200,&quot;true&quot;,&quot;&quot;,&quot;&quot;,&quot;text&quot;);">user21</a>(
+											<font style="color:red">固</font>)</td>
+										<td class="main_td1" align="center">
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=368&amp;username=user21" style="color:lightgray">暂未填写</a>
+										</td>
+										<td>
+											昌平分公司 </td>
+										<td class="main_td1" align="center">
+											13456789875 </td>
+										<td class="main_td1" align="center">
+											<font style="color:lightgray">暂未填写</font>
+										</td>
+										<td class="main_td1" align="center">1</td>
+										<!-- <td class="main_td1" align="center" >2017-09-19 11:45:52</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=115.227.192.232" target="_blank">115.227.192.232</a><!--  (不明)-->
+										<!-- </td>
+		<td class="main_td1" align="center" >2017-09-19 11:45:52</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=115.227.192.232" target="_blank">115.227.192.232</a><!-- (不明) -->
+										<!--</td>
+		<td class="main_td1" align="center" >2017-09-19 11:45:52</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=115.227.192.232" target="_blank">115.227.192.232</a><!--  (不明)-->
+										<!--</td>
+		<td class="main_td1" align="center">user21(<font style="color:red">固</font>)</td> -->
+										<td class="main_td1" align="center">
+											<a href="?admin&amp;q=code/users/edit&amp;user_id=368">修改</a>
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td class="main_td1" align="center">367</td>
+										<td class="main_td1" align="center">
+											<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户登录信息查看&quot;,&quot;url:get??admin&amp;q=code/users/viewforlogin&amp;user_id=367&quot;,600,200,&quot;true&quot;,&quot;&quot;,&quot;&quot;,&quot;text&quot;);">user05</a>(
+											<font style="color:red">固</font>)</td>
+										<td class="main_td1" align="center">
+											<a href="../index.html&amp;q=code/approve/realname&amp;user_id=367&amp;username=user05" style="color:lightgray">暂未填写</a>
+										</td>
+										<td>
+											昌平分公司 </td>
+										<td class="main_td1" align="center">
+											13973980777 </td>
+										<td class="main_td1" align="center">
+											qs93313@sina.com </td>
+										<td class="main_td1" align="center">1</td>
+										<!-- <td class="main_td1" align="center" >2017-09-18 10:39:22</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=183.141.75.175" target="_blank">183.141.75.175</a><!--  (不明)-->
+										<!-- </td>
+		<td class="main_td1" align="center" >2017-09-18 10:39:22</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=183.141.75.175" target="_blank">183.141.75.175</a><!-- (不明) -->
+										<!--</td>
+		<td class="main_td1" align="center" >2017-09-18 10:39:22</td>
+		<td class="main_td1" align="center" ><a href="http://www.baidu.com/s?wd=183.141.75.175" target="_blank">183.141.75.175</a><!--  (不明)-->
+										<!--</td>
+		<td class="main_td1" align="center">user05(<font style="color:red">固</font>)</td> -->
+										<td class="main_td1" align="center">
+											<a href="?admin&amp;q=code/users/edit&amp;user_id=367">修改</a>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="13" class="action">
+											<div class="floatl">
+												<script>
+													var url = '?admin&q=code/users';
+
+													function sousuo() {
+														var username = $("#username").val();
+														var realname = $("#realname").val();
+														var email = $("#email").val();
+														var phone = $("#phone").val();
+														var assigned_branch_id_1 = $("#assigned_branch_id_1").val();
+														location.href = url + "&username=" + username + "&realname=" + realname + "&email=" + email + "&phone=" + phone + "&assigned_branch_id_1=" + assigned_branch_id_1;
+													}
+												</script>
+
+											</div>
+											<div style="margin-left: 200px;">
+												用户名：<input type="text" name="username" id="username" value="" style="width: 110px;"> 真实名：
+												<input type="text" name="realname" id="realname" value="" style="width: 110px;"> 邮箱：
+												<input type="text" name="email" id="email" value="" style="width: 110px;"> 手机号：
+												<input type="text" name="phone" id="phone" value="" style="width: 110px;"> 分公司：
+												<select name="assigned_branch_id_1" id="assigned_branch_id_1">
+													<option value="">全部</option>
+													<option value="1">上海总公司</option>
+													<option value="2">昌平分公司</option>
+												</select>
+												<input type="button" value="搜索" onclick="sousuo()">
+											</div>
+										</td>
+									</tr>
+									<tr align="center">
+										<td colspan="10" align="center">
+											<div align="center">共 27 条记录 <span class="">上一页</span> <span class="curr">1</span>
+												<a href="../index.html&amp;q=code/users/list&amp;page=2">2</a>
+												<a href="../index.html&amp;q=code/users/list&amp;page=3">3</a>
+												<a href="../index.html&amp;q=code/users/list&amp;page=2">下一页</a> 第
+												<select id="PB_Page_Select" onchange="window.location.href = './admin/index.html&amp;q=code/users/list&amp;page='+this.value;">
+													<option value="1" selected="">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+												</select>页</div>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+							<!--用户列表 结束-->
+
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<iframe name="notice" frameborder="0" style="height:0;width:0;"></iframe>
+		<div id="menu" style="display:none"></div>
+		<div id="showmenu" style="display:none"></div>
+	</body>
+
+</html>

@@ -1,0 +1,631 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>后台管理</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<!--<script src="../../plugins/editor/xheditor/xheditor-1.1.12-zh-cn.min.js"></script>-->
+		<script src="../../plugins/timepicker/WdatePicker.js"></script>
+		<script src="../../themes/youyidai_admin/images/common.js"></script>
+		<script src="../../themes/youyidai_admin/images/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/base.js"></script>
+		<script src="../../themes/youyidai_admin/js/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/select2.js"></script>
+		<script src="../../themes/youyidai_admin/js/tipswindown.js"></script>
+
+		<link href="../../themes/youyidai_admin/css/select2.css" rel="stylesheet" type="text/css">
+		<link href="../../themes/youyidai_admin/css/tipswindown.css" rel="stylesheet" type="text/css">
+		<link rel="icon" href="../../../afavico.GIF" type="image/gif">
+		<link rel="shortcut icon" href="../../../favicon.ico">
+
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/admin.css">
+		<link href="../../plugins/timepicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body scroll="no">
+		<table width="100%" height="97%" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="2" height="80" valign="top">
+					<div id="header">
+						<div class="logo" style="float:left; width:150px">
+							<div class="png">
+								<a href="../../#"><img src="../../themes/youyidai_admin/images/logo.png" /></a>
+							</div>
+							<div class="lun">
+								<a href="../../index.html" target="_blank">网站首页</a>&nbsp;&#8211;&nbsp;
+								<a href="../index.html">后台首页</a>
+							</div>
+						</div>
+						<!--重点导航-->
+						<ul class="nav" style="float:right">
+							<li><img src="../../themes/youyidai_admin/images/nav_03.jpg" /></li>
+							<li class="home">
+								<a href="../index.html" style="height:35px;display:block">管理首页</a>
+							</li>
+							<li id="attestations">
+								<a style="cursor:pointer" href="../attestations/index.html" style="height:35px;display:block">资料审核</a>
+							</li>
+							<li id="account">
+								<a style="cursor:pointer" href="../account/index.html" style="height:35px;display:block">资金管理</a>
+							</li>
+							<li id="borrow">
+								<a style="cursor:pointer" href="../borrow/index.html" style="height:35px;display:block">借款管理</a>
+							</li>
+							<li id="approve">
+								<a style="cursor:pointer" href="../approve/index.html" style="height:35px;display:block">认证管理</a>
+							</li>
+							<li id="scrollpic">
+								<a style="cursor:pointer" href="../scrollpic/index.html" style="height:35px;display:block">flash大图管理</a>
+							</li>
+							<li id="payment">
+								<a style="cursor:pointer" href="../payment/index.html" style="height:35px;display:block">支付管理</a>
+							</li>
+							<li id="system">
+								<a style="cursor:pointer" href="../system/index.html" style="height:35px;display:block">系统管理</a>
+							</li>
+							<li id="site">
+								<a style="cursor:pointer" href="../site/index.html" style="height:35px;display:block">站点管理</a>
+							</li>
+							<li id="users">
+								<a style="cursor:pointer" href="../users/index.html" style="height:35px;display:block">用户管理</a>
+							</li>
+							<li id="articles">
+								<a style="cursor:pointer" href="../articles/index.html" style="height:35px;display:block">文章管理</a>
+							</li>
+							<li id="other">
+								<a style="cursor:pointer" href="../other/index.html" onClick="return initguide('other');" style="height:35px;display:block">其他功能</a>
+							</li>
+							<li><img src="../../themes/youyidai_admin/images/nav_07.jpg" /></li>
+
+						</ul>
+						<!--头部信息导航-->
+						<div id="guide">
+							<div class="wei fl">
+								<a href="../index.html">首页</a>&nbsp;&gt;&nbsp;
+								<a href="index.html">系统管理</a>&nbsp;&gt;&nbsp;
+								<a href="#">管理员管理</a>
+							</div>
+							<ul class="fr">
+								<li class="home">欢迎您，用户名：zuikc(超级管理员) (分管分公司：
+									<font style="color:red">未限制</font>)</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="document.location.reload();" title="刷新该页面">刷新</a>
+								</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="history.go(-1);" title="后退到前一页">后退</a>
+								</li>
+								<li>
+									<a href="../login.html">退出</a>
+								</li>
+
+							</ul>
+						</div>
+						<!--头部信息导航结束-->
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" id="main-fl">
+					<div id="left" style="overflow:auto">
+						<h1>首页</h1>
+						<div class="cc"></div>
+						<ul>
+							<li class="">
+								<a id="system_clearcache" href="index.html">清空缓存</a>
+							</li>
+							<li class="">
+								<a id="system_info" href="system_info.html">系统参数</a>
+							</li>
+							<li class="">
+								<a id="system_watermark" href="system_watermark.html">图片水印</a>
+							</li>
+							<li class="">
+								<a id="system_email" href="system_email.html">邮箱设置</a>
+							</li>
+							<li class="">
+								<a id="system_upfiles" href="system_upfiles.html">图片管理</a>
+							</li>
+							<li class="one">
+								<a id="system_users_admin" href="system_users_admin.html">管理员管理</a>
+							</li>
+							<li class="">
+								<a id="system_users_admin_type" href="system_users_admin_type.html">管理员类型</a>
+							</li>
+							<li class="">
+								<a id="system_users_admin_log" href="system_users_admin_log.html">管理员记录</a>
+							</li>
+							<li class="">
+								<a id="system_branch" href="system_branch.html">分公司管理</a>
+							</li>
+						</ul>
+					</div>
+
+				</td>
+				<td valign="top" id="mainright">
+					<!--右边开始-->
+					<div class="tt">
+
+						<div class="admin_module">
+							<!--用户列表 开始-->
+
+							<!--管理记录列表 开始-->
+
+							<ul class="nav3">
+								<li>
+									<a href="system_users_admin.html" id="c_so">管理员信息</a>
+								</li>
+								<li>
+									<a href="system_users_admin_new.html" id="c_so">将用户设置成管理员</a>
+								</li>
+							</ul>
+
+							<div class="module_add">
+								<div style="margin-top:10px;">
+									<div style="float:right; width:25%;">
+
+										<div style="border:1px solid #CCCCCC; ">
+
+											<form action="?admin&amp;q=code/users/admin" method="post">
+												<div class="module_title"><strong>查找用户</strong>(将按顺序进行搜索)<input type="hidden" name="type" value="user_id"></div>
+
+												<div class="module_border">
+													<div class="l">用户名：</div>
+													<div class="c">
+														<input type="text" name="username" value="user02">
+													</div>
+												</div>
+
+												<div class="module_border">
+													<div class="l">用户ID：</div>
+													<div class="c">
+														<input type="text" name="user_id">
+													</div>
+												</div>
+
+												<div class="module_border">
+													<div class="l">邮箱：</div>
+													<div class="c">
+														<input type="text" name="email">
+													</div>
+												</div>
+
+												<div class="module_submit"><input type="submit" value="确认提交" class="submit_button"></div>
+											</form>
+										</div>
+									</div>
+								</div>
+								<div style="float:left; width:72%; text-align:left">
+
+									<div class="module_add">
+										<div class="module_title"><strong>管理员列表</strong></div>
+									</div>
+									<table border="0" cellspacing="1" bgcolor="#CCCCCC" width="100%">
+										<form action="" method="post"></form>
+										<tbody>
+											<tr>
+												<td class="main_td">ID</td>
+												<td class="main_td">用户名</td>
+												<td class="main_td">真实名</td>
+												<td class="main_td">管理员别名</td>
+												<td class="main_td">QQ</td>
+												<td class="main_td">电话</td>
+												<td class="main_td">管理类型</td>
+												<td class="main_td">短信接收</td>
+												<td class="main_td">分管公司</td>
+												<td class="main_td">操作</td>
+											</tr>
+											<tr>
+												<td>23</td>
+												<td>user18</td>
+												<td>
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=9&amp;username=user18" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>user18</td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=9" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=9" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>超级管理员</td>
+												<td>
+													-
+												</td>
+												<td>
+													上海总公司 </td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=9">修改</a> |
+													<!-- <a href="?admin&q=code/users/admin&action=del&user_id=9">删除</a>  -->
+
+													<script>
+														function deladmin(uid) {
+															var r = confirm("确认删除此管理员？\n");
+															if(r == true) {
+																//alert(uid);
+																window.location.href = "../index.html&q=code/users/admin&action=del&user_id=" + uid;
+															}
+														}
+													</script>
+
+													<a href="javascript:void(0)" onclick="deladmin(9);">删除</a>
+												</td>
+											</tr>
+											<tr class="tr2">
+												<td>21</td>
+												<td>user02</td>
+												<td>
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=10&amp;username=user02" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>zuikc</td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=10" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													13980617973 </td>
+												<td>超级管理员</td>
+												<td>
+													满标提醒
+												</td>
+												<td>
+													<font style="color:red">未限制</font>
+												</td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=10">修改</a> |
+													<!-- <a href="?admin&q=code/users/admin&action=del&user_id=10">删除</a>  -->
+
+													<script>
+														function deladmin(uid) {
+															var r = confirm("确认删除此管理员？\n");
+															if(r == true) {
+																//alert(uid);
+																window.location.href = "../index.html&q=code/users/admin&action=del&user_id=" + uid;
+															}
+														}
+													</script>
+
+													<a href="javascript:void(0)" onclick="deladmin(10);">删除</a>
+												</td>
+											</tr>
+											<tr>
+												<td>13</td>
+												<td>user12</td>
+												<td>
+													许栾 </td>
+												<td>zhh</td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=21" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													1057480310 </td>
+												<td>资料审核人员</td>
+												<td>
+													-
+												</td>
+												<td>
+													上海总公司 </td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=21">修改</a> |
+													<!-- <a href="?admin&q=code/users/admin&action=del&user_id=21">删除</a>  -->
+
+													<script>
+														function deladmin(uid) {
+															var r = confirm("确认删除此管理员？\n");
+															if(r == true) {
+																//alert(uid);
+																window.location.href = "../index.html&q=code/users/admin&action=del&user_id=" + uid;
+															}
+														}
+													</script>
+
+													<a href="javascript:void(0)" onclick="deladmin(21);">删除</a>
+												</td>
+											</tr>
+											<tr class="tr2">
+												<td>12</td>
+												<td>user23</td>
+												<td>
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=27&amp;username=user23" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>dfkh</td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=27" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=27" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>资料审核人员</td>
+												<td>
+													-
+												</td>
+												<td>
+													上海总公司 </td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=27">修改</a> |
+													<!-- <a href="?admin&q=code/users/admin&action=del&user_id=27">删除</a>  -->
+
+													<script>
+														function deladmin(uid) {
+															var r = confirm("确认删除此管理员？\n");
+															if(r == true) {
+																//alert(uid);
+																window.location.href = "../index.html&q=code/users/admin&action=del&user_id=" + uid;
+															}
+														}
+													</script>
+
+													<a href="javascript:void(0)" onclick="deladmin(27);">删除</a>
+												</td>
+											</tr>
+											<tr>
+												<td>11</td>
+												<td>user17</td>
+												<td>
+													王家兴 </td>
+												<td>adfadf</td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=13" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													13081231200 </td>
+												<td>财务人员</td>
+												<td>
+													-
+												</td>
+												<td>
+													上海总公司 </td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=13">修改</a> |
+													<!-- <a href="?admin&q=code/users/admin&action=del&user_id=13">删除</a>  -->
+
+													<script>
+														function deladmin(uid) {
+															var r = confirm("确认删除此管理员？\n");
+															if(r == true) {
+																//alert(uid);
+																window.location.href = "../index.html&q=code/users/admin&action=del&user_id=" + uid;
+															}
+														}
+													</script>
+
+													<a href="javascript:void(0)" onclick="deladmin(13);">删除</a>
+												</td>
+											</tr>
+											<tr class="tr2">
+												<td>10</td>
+												<td>user11</td>
+												<td>
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=19&amp;username=user11" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>客服001</td>
+												<td>
+													3213915545 </td>
+												<td>
+													1057480310 </td>
+												<td>超级客服</td>
+												<td>
+													-
+												</td>
+												<td>
+													上海总公司 </td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=19">修改</a> |
+													<!-- <a href="?admin&q=code/users/admin&action=del&user_id=19">删除</a>  -->
+
+													<script>
+														function deladmin(uid) {
+															var r = confirm("确认删除此管理员？\n");
+															if(r == true) {
+																//alert(uid);
+																window.location.href = "../index.html&q=code/users/admin&action=del&user_id=" + uid;
+															}
+														}
+													</script>
+
+													<a href="javascript:void(0)" onclick="deladmin(19);">删除</a>
+												</td>
+											</tr>
+											<tr>
+												<td>9</td>
+												<td>user19</td>
+												<td>
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=23&amp;username=user19" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>adfd</td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=23" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													13800312120 </td>
+												<td>管理员</td>
+												<td>
+													-
+												</td>
+												<td>
+													<font style="color:red">未限制</font>
+												</td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=23">修改</a> |
+													<!-- <a href="?admin&q=code/users/admin&action=del&user_id=23">删除</a>  -->
+
+													<script>
+														function deladmin(uid) {
+															var r = confirm("确认删除此管理员？\n");
+															if(r == true) {
+																//alert(uid);
+																window.location.href = "../index.html&q=code/users/admin&action=del&user_id=" + uid;
+															}
+														}
+													</script>
+
+													<a href="javascript:void(0)" onclick="deladmin(23);">删除</a>
+												</td>
+											</tr>
+											<tr class="tr2">
+												<td>8</td>
+												<td>user22</td>
+												<td>
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=20&amp;username=user22" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>adffd</td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=20" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=20" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>贷款业务员</td>
+												<td>
+													-
+												</td>
+												<td>
+													上海总公司 </td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=20">修改</a> |
+													<!-- <a href="?admin&q=code/users/admin&action=del&user_id=20">删除</a>  -->
+
+													<script>
+														function deladmin(uid) {
+															var r = confirm("确认删除此管理员？\n");
+															if(r == true) {
+																//alert(uid);
+																window.location.href = "../index.html&q=code/users/admin&action=del&user_id=" + uid;
+															}
+														}
+													</script>
+
+													<a href="javascript:void(0)" onclick="deladmin(20);">删除</a>
+												</td>
+											</tr>
+											<tr>
+												<td>7</td>
+												<td>user20</td>
+												<td>
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=22&amp;username=user20" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>dfdf</td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=22" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=22" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>贷款业务员</td>
+												<td>
+													-
+												</td>
+												<td>
+													上海总公司 </td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=22">修改</a> |
+													<!-- <a href="?admin&q=code/users/admin&action=del&user_id=22">删除</a>  -->
+
+													<script>
+														function deladmin(uid) {
+															var r = confirm("确认删除此管理员？\n");
+															if(r == true) {
+																//alert(uid);
+																window.location.href = "../index.html&q=code/users/admin&action=del&user_id=" + uid;
+															}
+														}
+													</script>
+
+													<a href="javascript:void(0)" onclick="deladmin(22);">删除</a>
+												</td>
+											</tr>
+											<tr class="tr2">
+												<td>6</td>
+												<td>user14</td>
+												<td>
+													王怀志 </td>
+												<td>user01</td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=17" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=17" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>系统管理员</td>
+												<td>
+													-
+												</td>
+												<td>
+													<font style="color:red">未限制</font>
+												</td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=17">修改</a> |
+													<!-- <a href="?admin&q=code/users/admin&action=del&user_id=17">删除</a>  -->
+
+													<script>
+														function deladmin(uid) {
+															var r = confirm("确认删除此管理员？\n");
+															if(r == true) {
+																//alert(uid);
+																window.location.href = "../index.html&q=code/users/admin&action=del&user_id=" + uid;
+															}
+														}
+													</script>
+
+													<a href="javascript:void(0)" onclick="deladmin(17);">删除</a>
+												</td>
+											</tr>
+											<tr>
+												<td>1</td>
+												<td>admin</td>
+												<td>
+													<font style="color:red">超级管理员</font>
+												</td>
+												<td>
+													<font style="\'color:green\'">系统管理员</font>
+												</td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=1" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													<a href="?admin&amp;q=code/users/admin&amp;action=edit&amp;user_id=1" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>超级管理员</td>
+												<td>
+													-
+												</td>
+												<td>
+													<font style="color:red">未限制</font>
+												</td>
+												<td>
+												</td>
+											</tr>
+
+											<tr>
+												<td colspan="9" class="page">
+													共 11 条记录 <span class="">上一页</span> <span class="curr">1</span>
+													<a href="../index.html&amp;q=code/users/admin&amp;page=2">2</a>
+													<a href="../index.html&amp;q=code/users/admin&amp;page=2">下一页</a> 第
+													<select id="PB_Page_Select" onchange="window.location.href = './admin/index.html&amp;q=code/users/admin&amp;page='+this.value;">
+														<option value="1" selected="">1</option>
+														<option value="2">2</option>
+													</select>页
+												</td>
+											</tr>
+
+										</tbody>
+									</table>
+								</div>
+
+								<!--管理类型列表 开始-->
+
+							</div>
+						</div>
+
+					</div>
+				</td>
+			</tr>
+		</table>
+		<iframe name="notice" frameborder="0" style="height:0;width:0;"></iframe>
+		<div id="menu" style="display:none"></div>
+		<div id="showmenu" style="display:none"></div>
+	</body>
+
+</html>

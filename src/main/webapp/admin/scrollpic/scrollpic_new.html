@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>后台管理</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<!--<script src="../../plugins/editor/xheditor/xheditor-1.1.12-zh-cn.min.js"></script>-->
+		<script src="../../plugins/timepicker/WdatePicker.js"></script>
+		<script src="../../themes/youyidai_admin/images/common.js"></script>
+		<script src="../../themes/youyidai_admin/images/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/base.js"></script>
+		<script src="../../themes/youyidai_admin/js/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/select2.js"></script>
+		<script src="../../themes/youyidai_admin/js/tipswindown.js"></script>
+
+		<link href="../../themes/youyidai_admin/css/select2.css" rel="stylesheet" type="text/css">
+		<link href="../../themes/youyidai_admin/css/tipswindown.css" rel="stylesheet" type="text/css">
+		<link rel="icon" href="../../../afavico.GIF" type="image/gif">
+		<link rel="shortcut icon" href="../../../favicon.ico">
+
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/admin.css">
+		<link href="../../plugins/timepicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body scroll="no">
+		<table width="100%" height="97%" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="2" height="80" valign="top">
+					<div id="header">
+						<div class="logo" style="float:left; width:150px">
+							<div class="png">
+								<a href="../../#"><img src="../../themes/youyidai_admin/images/logo.png" /></a>
+							</div>
+							<div class="lun">
+								<a href="../../index.html" target="_blank">网站首页</a>&nbsp;&#8211;&nbsp;
+								<a href="../index.html">后台首页</a>
+							</div>
+						</div>
+						<!--重点导航-->
+						<ul class="nav" style="float:right">
+							<li><img src="../../themes/youyidai_admin/images/nav_03.jpg" /></li>
+							<li class="home">
+								<a href="../index.html" style="height:35px;display:block">管理首页</a>
+							</li>
+							<li id="attestations">
+								<a style="cursor:pointer" href="../attestations/index.html" style="height:35px;display:block">资料审核</a>
+							</li>
+							<li id="account">
+								<a style="cursor:pointer" href="../account/index.html" style="height:35px;display:block">资金管理</a>
+							</li>
+							<li id="borrow">
+								<a style="cursor:pointer" href="../borrow/index.html" style="height:35px;display:block">借款管理</a>
+							</li>
+							<li id="approve">
+								<a style="cursor:pointer" href="../approve/index.html" style="height:35px;display:block">认证管理</a>
+							</li>
+							<li id="scrollpic">
+								<a style="cursor:pointer" href="../scrollpic/index.html" style="height:35px;display:block">flash大图管理</a>
+							</li>
+							<li id="payment">
+								<a style="cursor:pointer" href="../payment/index.html" style="height:35px;display:block">支付管理</a>
+							</li>
+							<li id="system">
+								<a style="cursor:pointer" href="../system/index.html" style="height:35px;display:block">系统管理</a>
+							</li>
+							<li id="site">
+								<a style="cursor:pointer" href="../site/index.html" style="height:35px;display:block">站点管理</a>
+							</li>
+							<li id="users">
+								<a style="cursor:pointer" href="../users/index.html" style="height:35px;display:block">用户管理</a>
+							</li>
+							<li id="articles">
+								<a style="cursor:pointer" href="../articles/index.html" style="height:35px;display:block">文章管理</a>
+							</li>
+							<li id="other">
+								<a style="cursor:pointer" href="../other/index.html" onClick="return initguide('other');" style="height:35px;display:block">其他功能</a>
+							</li>
+							<li><img src="../../themes/youyidai_admin/images/nav_07.jpg" /></li>
+
+						</ul>
+						<!--头部信息导航-->
+						<div id="guide">
+							<div class="wei fl">
+								<a href="../index.html">首页</a>&nbsp;&gt;&nbsp;
+								<a href="index.html">flash大图管理</a>&nbsp;&gt;&nbsp;
+								<a href="#">添加滚动</a>
+							</div>
+							<ul class="fr">
+								<li class="home">欢迎您，用户名：zuikc(超级管理员) (分管分公司：
+									<font style="color:red">未限制</font>)</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="document.location.reload();" title="刷新该页面">刷新</a>
+								</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="history.go(-1);" title="后退到前一页">后退</a>
+								</li>
+								<li>
+									<a href="../login.html">退出</a>
+								</li>
+
+							</ul>
+						</div>
+						<!--头部信息导航结束-->
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" id="main-fl">
+					<div id="left" style="overflow:auto">
+						<h1>首页</h1>
+						<div class="cc"></div>
+						<ul>
+							<li class="">
+								<a id="scrollpic_list" href="index.html">列表管理</a>
+							</li>
+							<li class="one">
+								<a id="scrollpic_new" href="scrollpic_new.html">添加滚动</a>
+							</li>
+							<li class="">
+								<a id="scrollpic_type" href="scrollpic_type.html">类型管理</a>
+							</li>
+						</ul>
+					</div>
+
+				</td>
+				<td valign="top" id="mainright">
+					<!--右边开始-->
+					<div class="tt">
+
+						<!-- 
+ -->
+						<div class="admin_module">
+							<div class="module_add">
+								<form name="form1" method="post" action="" onsubmit="return check_form();" enctype="multipart/form-data">
+									<div class="module_title"><strong>添加滚动图片</strong></div>
+
+									<div class="module_border">
+										<div class="l">标题：</div>
+										<div class="c">
+											<input type="text" name="name" class="input_border" value="" size="30">
+										</div>
+									</div>
+
+									<div class="module_border">
+										<div class="l">类别：</div>
+										<div class="c">
+											<select name="type_id">
+												<option value="1">首页flash图片</option>
+
+												<option value="2">手机端banner图片</option>
+
+											</select>
+										</div>
+									</div>
+
+									<div class="module_border">
+										<div class="l">状态：</div>
+										<div class="c">
+											<input type="radio" name="status" value="0" checked="checked">隐藏 <input type="radio" name="status" value="1" checked="checked">显示 </div>
+									</div>
+
+									<div class="module_border">
+										<div class="l">排序：</div>
+										<div class="c">
+											<input type="text" name="order" class="input_border" value="10" size="10">
+										</div>
+									</div>
+
+									<div class="module_border">
+										<div class="l">上传图片:</div>
+										<div class="c">
+											<input type="file" name="pic" class="input_border" size="20"> 高340，宽&gt;1440 </div>
+									</div>
+
+									<div class="module_border">
+										<div class="l">链接地址:</div>
+										<div class="c">
+											<input type="text" name="url" class="input_border" value="" size="30">请填写url地址
+										</div>
+									</div>
+
+									<div class="module_border">
+										<div class="l">网站简介:</div>
+										<div class="c">
+											<textarea name="summary" cols="40" rows="5"></textarea>
+										</div>
+									</div>
+
+									<div class="module_submit">
+										<input type="submit" name="submit" value="确认提交">
+										<input type="reset" name="reset" value="重置表单">
+									</div>
+								</form>
+							</div>
+
+						</div>
+
+						<script>
+							function check_form() {
+								var frm = document.forms['form1'];
+								var webname = frm.elements['webname'].value;
+								var url = frm.elements['url'].value;
+								var errorMsg = '';
+								if(webname.length == 0) {
+									errorMsg += '标题必须填写' + '\n';
+								}
+								if(url.length == 0) {
+									errorMsg += '地址不能为空' + '\n';
+								}
+								if(errorMsg.length > 0) {
+									alert(errorMsg);
+									return false;
+								} else {
+									return true;
+								}
+							}
+						</script>
+
+					</div>
+				</td>
+			</tr>
+		</table>
+		<iframe name="notice" frameborder="0" style="height:0;width:0;"></iframe>
+		<div id="menu" style="display:none"></div>
+		<div id="showmenu" style="display:none"></div>
+	</body>
+
+</html>

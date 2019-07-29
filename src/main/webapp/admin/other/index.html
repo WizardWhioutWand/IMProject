@@ -1,0 +1,350 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>后台管理</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<!--<script src="../../plugins/editor/xheditor/xheditor-1.1.12-zh-cn.min.js"></script>-->
+		<script src="../../plugins/timepicker/WdatePicker.js"></script>
+		<script src="../../themes/youyidai_admin/images/common.js"></script>
+		<script src="../../themes/youyidai_admin/images/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/base.js"></script>
+		<script src="../../themes/youyidai_admin/js/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/select2.js"></script>
+		<script src="../../themes/youyidai_admin/js/tipswindown.js"></script>
+
+		<link href="../../themes/youyidai_admin/css/select2.css" rel="stylesheet" type="text/css">
+		<link href="../../themes/youyidai_admin/css/tipswindown.css" rel="stylesheet" type="text/css">
+		<link rel="icon" href="../../../afavico.GIF" type="image/gif">
+		<link rel="shortcut icon" href="../../../favicon.ico">
+
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/admin.css">
+		<link href="../../plugins/timepicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body scroll="no">
+		<table width="100%" height="97%" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="2" height="80" valign="top">
+					<div id="header">
+						<div class="logo" style="float:left; width:150px">
+							<div class="png">
+								<a href="../../#"><img src="../../themes/youyidai_admin/images/logo.png" /></a>
+							</div>
+							<div class="lun">
+								<a href="../../index.html" target="_blank">网站首页</a>&nbsp;&#8211;&nbsp;
+								<a href="../index.html">后台首页</a>
+							</div>
+						</div>
+						<!--重点导航-->
+						<ul class="nav" style="float:right">
+							<li><img src="../../themes/youyidai_admin/images/nav_03.jpg" /></li>
+							<li class="home">
+								<a href="../index.html" style="height:35px;display:block">管理首页</a>
+							</li>
+							<li id="attestations">
+								<a style="cursor:pointer" href="../attestations/index.html" style="height:35px;display:block">资料审核</a>
+							</li>
+							<li id="account">
+								<a style="cursor:pointer" href="../account/index.html" style="height:35px;display:block">资金管理</a>
+							</li>
+							<li id="borrow">
+								<a style="cursor:pointer" href="../borrow/index.html" style="height:35px;display:block">借款管理</a>
+							</li>
+							<li id="approve">
+								<a style="cursor:pointer" href="../approve/index.html" style="height:35px;display:block">认证管理</a>
+							</li>
+							<li id="scrollpic">
+								<a style="cursor:pointer" href="../scrollpic/index.html" style="height:35px;display:block">flash大图管理</a>
+							</li>
+							<li id="payment">
+								<a style="cursor:pointer" href="../payment/index.html" style="height:35px;display:block">支付管理</a>
+							</li>
+							<li id="system">
+								<a style="cursor:pointer" href="../system/index.html" style="height:35px;display:block">系统管理</a>
+							</li>
+							<li id="site">
+								<a style="cursor:pointer" href="../site/index.html" style="height:35px;display:block">站点管理</a>
+							</li>
+							<li id="users">
+								<a style="cursor:pointer" href="../users/index.html" style="height:35px;display:block">用户管理</a>
+							</li>
+							<li id="articles">
+								<a style="cursor:pointer" href="../articles/index.html" style="height:35px;display:block">文章管理</a>
+							</li>
+							<li id="other">
+								<a style="cursor:pointer" href="../other/index.html" onClick="return initguide('other');" style="height:35px;display:block">其他功能</a>
+							</li>
+							<li><img src="../../themes/youyidai_admin/images/nav_07.jpg" /></li>
+
+						</ul>
+						<!--头部信息导航-->
+						<div id="guide">
+							<div class="wei fl">
+								<a href="../index.html">首页</a>&nbsp;&gt;&nbsp;
+								<a href="index.html">其他功能</a>&nbsp;&gt;&nbsp;
+								<a href="#">投票管理</a>
+							</div>
+							<ul class="fr">
+								<li class="home">欢迎您，用户名：zuikc(超级管理员) (分管分公司：
+									<font style="color:red">未限制</font>)</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="document.location.reload();" title="刷新该页面">刷新</a>
+								</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="history.go(-1);" title="后退到前一页">后退</a>
+								</li>
+								<li>
+									<a href="../login.html">退出</a>
+								</li>
+
+							</ul>
+						</div>
+						<!--头部信息导航结束-->
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" id="main-fl">
+					<div id="left" style="overflow:auto">
+						<h1>首页</h1>
+						<div class="cc"></div>
+
+						<ul>
+							<li class="one">
+								<a id="vote" href="index.html">投票管理</a>
+							</li>
+							<li class="">
+								<a id="credit" href="credit.html">积分管理</a>
+							</li>
+							<li class="">
+								<a id="remind" href="remind.html">提醒设置</a>
+							</li>
+							<li class="">
+								<a id="rating" href="rating.html">用户资料</a>
+							</li>
+							<li class="">
+								<a id="links" href="links.html">友情链接</a>
+							</li>
+							<li class="">
+								<a id="comments" href="comments.html">评论管理</a>
+							</li>
+							<li class="">
+								<a id="message" href="message.html">短消息</a>
+							</li>
+							<li class="">
+								<a id="areas" href="areas.html">地区管理</a>
+							</li>
+							<li class="">
+								<a id="linkages" href="linkages.html">联动管理</a>
+							</li>
+						</ul>
+
+					</div>
+
+				</td>
+				<td valign="top" id="mainright">
+					<!--右边开始-->
+					<div class="tt">
+
+						<!-- 
+<div style="background-color:#ffffff; line-height:30px; border-bottom:1px solid #2364a4; border-top:1px solid #2364a4; margin-bottom:10px;">
+<span style="margin:5px"><a href="?admin&q=code/vote/list">投票管理</a></span>
+<span style="margin:5px"><a href="?admin&q=code/vote/type">投票类型</a></span>
+</div>
+ -->
+						<div class="admin_module">
+							<ul class="nav3">
+								<li>
+									<a href="?admin&amp;q=code/vote" id="c_so">投票管理</a>
+								</li>
+								<li>
+									<a href="?admin&amp;q=code/vote&amp;action=new">添加投票</a>
+								</li>
+							</ul>
+							<div class="module_add">
+
+								<div class="module_title"><strong>投票管理</strong></div>
+							</div>
+							<table border="0" cellspacing="1" bgcolor="#CCCCCC" width="100%">
+								<tbody>
+									<tr>
+										<td width="" class="main_td">ID</td>
+										<td width="" class="main_td">标题</td>
+										<td width="*" class="main_td">问题类型</td>
+										<td width="" class="main_td">添加时间</td>
+										<td width="*" class="main_td">排序</td>
+										<td width="*" class="main_td">表单类型</td>
+										<td width="*" class="main_td">状态</td>
+										<td width="*" class="main_td">操作</td>
+									</tr>
+									<tr>
+										<td class="main_td1" align="center">1</td>
+										<td class="main_td1" align="center">借款人需要满足的年龄？</td>
+										<td class="main_td1" align="center">借款学习</td>
+										<td class="main_td1" align="center">2017-07-10</td>
+										<td class="main_td1" align="center">10</td>
+										<td class="main_td1" align="center">单选</td>
+										<td class="main_td1" align="center">显示</td>
+										<td class="main_td1" align="center">
+											<a href="?admin&amp;q=code/vote&amp;vote=1">管理答案</a>/
+											<a href="?admin&amp;q=code/vote&amp;edit=1">修改</a>/
+											<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/vote&amp;del=1'">删除</a>
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td class="main_td1" align="center">2</td>
+										<td class="main_td1" align="center">借款有哪些类别？</td>
+										<td class="main_td1" align="center">借款学习</td>
+										<td class="main_td1" align="center">2017-07-10</td>
+										<td class="main_td1" align="center">10</td>
+										<td class="main_td1" align="center">多选</td>
+										<td class="main_td1" align="center">关闭</td>
+										<td class="main_td1" align="center">
+											<a href="?admin&amp;q=code/vote&amp;vote=2">管理答案</a>/
+											<a href="?admin&amp;q=code/vote&amp;edit=2">修改</a>/
+											<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/vote&amp;del=2'">删除</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="main_td1" align="center">3</td>
+										<td class="main_td1" align="center">根据国家法律，民间借贷的利率只要不超过银行同期贷款利率的几倍就受到法律保护？</td>
+										<td class="main_td1" align="center">投资学习</td>
+										<td class="main_td1" align="center">2017-07-10</td>
+										<td class="main_td1" align="center">10</td>
+										<td class="main_td1" align="center">单选</td>
+										<td class="main_td1" align="center">显示</td>
+										<td class="main_td1" align="center">
+											<a href="?admin&amp;q=code/vote&amp;vote=3">管理答案</a>/
+											<a href="?admin&amp;q=code/vote&amp;edit=3">修改</a>/
+											<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/vote&amp;del=3'">删除</a>
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td class="main_td1" align="center">4</td>
+										<td class="main_td1" align="center">投资人在线的网络平台进行投资必须经过哪些环节？</td>
+										<td class="main_td1" align="center">借款学习</td>
+										<td class="main_td1" align="center">2017-07-10</td>
+										<td class="main_td1" align="center">10</td>
+										<td class="main_td1" align="center">多选</td>
+										<td class="main_td1" align="center">显示</td>
+										<td class="main_td1" align="center">
+											<a href="?admin&amp;q=code/vote&amp;vote=4">管理答案</a>/
+											<a href="?admin&amp;q=code/vote&amp;edit=4">修改</a>/
+											<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/vote&amp;del=4'">删除</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="main_td1" align="center">5</td>
+										<td class="main_td1" align="center">投资人分为哪几个等级？</td>
+										<td class="main_td1" align="center">投资学习</td>
+										<td class="main_td1" align="center">2017-07-10</td>
+										<td class="main_td1" align="center">10</td>
+										<td class="main_td1" align="center">多选</td>
+										<td class="main_td1" align="center">显示</td>
+										<td class="main_td1" align="center">
+											<a href="?admin&amp;q=code/vote&amp;vote=5">管理答案</a>/
+											<a href="?admin&amp;q=code/vote&amp;edit=5">修改</a>/
+											<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/vote&amp;del=5'">删除</a>
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td class="main_td1" align="center">6</td>
+										<td class="main_td1" align="center">借款标主要有哪几类？</td>
+										<td class="main_td1" align="center">借款学习</td>
+										<td class="main_td1" align="center">2017-07-10</td>
+										<td class="main_td1" align="center">10</td>
+										<td class="main_td1" align="center">多选</td>
+										<td class="main_td1" align="center">关闭</td>
+										<td class="main_td1" align="center">
+											<a href="?admin&amp;q=code/vote&amp;vote=6">管理答案</a>/
+											<a href="?admin&amp;q=code/vote&amp;edit=6">修改</a>/
+											<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/vote&amp;del=6'">删除</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="main_td1" align="center">7</td>
+										<td class="main_td1" align="center">在线的信用标和抵押借款标，只针对哪个等级的会员开放？</td>
+										<td class="main_td1" align="center">借款学习</td>
+										<td class="main_td1" align="center">2017-07-10</td>
+										<td class="main_td1" align="center">10</td>
+										<td class="main_td1" align="center">多选</td>
+										<td class="main_td1" align="center">关闭</td>
+										<td class="main_td1" align="center">
+											<a href="?admin&amp;q=code/vote&amp;vote=7">管理答案</a>/
+											<a href="?admin&amp;q=code/vote&amp;edit=7">修改</a>/
+											<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/vote&amp;del=7'">删除</a>
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td class="main_td1" align="center">8</td>
+										<td class="main_td1" align="center">投资人每次投标的最低额度是多少？</td>
+										<td class="main_td1" align="center">投资学习</td>
+										<td class="main_td1" align="center">2017-07-10</td>
+										<td class="main_td1" align="center">10</td>
+										<td class="main_td1" align="center">单选</td>
+										<td class="main_td1" align="center">显示</td>
+										<td class="main_td1" align="center">
+											<a href="?admin&amp;q=code/vote&amp;vote=8">管理答案</a>/
+											<a href="?admin&amp;q=code/vote&amp;edit=8">修改</a>/
+											<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/vote&amp;del=8'">删除</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="main_td1" align="center">9</td>
+										<td class="main_td1" align="center">是不是所有投资人的本金都享受本金保障计划？</td>
+										<td class="main_td1" align="center">借款学习</td>
+										<td class="main_td1" align="center">2017-07-10</td>
+										<td class="main_td1" align="center">10</td>
+										<td class="main_td1" align="center">单选</td>
+										<td class="main_td1" align="center">关闭</td>
+										<td class="main_td1" align="center">
+											<a href="?admin&amp;q=code/vote&amp;vote=9">管理答案</a>/
+											<a href="?admin&amp;q=code/vote&amp;edit=9">修改</a>/
+											<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/vote&amp;del=9'">删除</a>
+										</td>
+									</tr>
+									<tr class="tr2">
+										<td class="main_td1" align="center">10</td>
+										<td class="main_td1" align="center">VIP级别或以上级别的投资人同普通投资人相比，享受哪些政策？</td>
+										<td class="main_td1" align="center">借款学习</td>
+										<td class="main_td1" align="center">2017-07-10</td>
+										<td class="main_td1" align="center">10</td>
+										<td class="main_td1" align="center">多选</td>
+										<td class="main_td1" align="center">关闭</td>
+										<td class="main_td1" align="center">
+											<a href="?admin&amp;q=code/vote&amp;vote=10">管理答案</a>/
+											<a href="?admin&amp;q=code/vote&amp;edit=10">修改</a>/
+											<a href="#" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='?admin&amp;q=code/vote&amp;del=10'">删除</a>
+										</td>
+									</tr>
+									<tr align="center">
+										<td colspan="10" align="center">
+											<div align="center">共 20 条记录 <span class="">上一页</span> <span class="curr">1</span>
+												<a href="../index.html&amp;q=code/vote&amp;page=2">2</a>
+												<a href="../index.html&amp;q=code/vote&amp;page=2">下一页</a> 第
+												<select id="PB_Page_Select" onchange="window.location.href = './admin/index.html&amp;q=code/vote&amp;page='+this.value;">
+													<option value="1" selected="">1</option>
+													<option value="2">2</option>
+												</select>页</div>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<iframe name="notice" frameborder="0" style="height:0;width:0;"></iframe>
+		<div id="menu" style="display:none"></div>
+		<div id="showmenu" style="display:none"></div>
+	</body>
+
+</html>

@@ -1,0 +1,578 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>后台管理</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<!--<script src="../../plugins/editor/xheditor/xheditor-1.1.12-zh-cn.min.js"></script>-->
+		<script src="../../plugins/timepicker/WdatePicker.js"></script>
+		<script src="../../themes/youyidai_admin/images/common.js"></script>
+		<script src="../../themes/youyidai_admin/images/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/base.js"></script>
+		<script src="../../themes/youyidai_admin/js/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/select2.js"></script>
+		<script src="../../themes/youyidai_admin/js/tipswindown.js"></script>
+
+		<link href="../../themes/youyidai_admin/css/select2.css" rel="stylesheet" type="text/css">
+		<link href="../../themes/youyidai_admin/css/tipswindown.css" rel="stylesheet" type="text/css">
+		<link rel="icon" href="../../../afavico.GIF" type="image/gif">
+		<link rel="shortcut icon" href="../../../favicon.ico">
+
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/admin.css">
+		<link href="../../plugins/timepicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body scroll="no">
+		<table width="100%" height="97%" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="2" height="80" valign="top">
+					<div id="header">
+						<div class="logo" style="float:left; width:150px">
+							<div class="png">
+								<a href="../../#"><img src="../../themes/youyidai_admin/images/logo.png" /></a>
+							</div>
+							<div class="lun">
+								<a href="../../index.html" target="_blank">网站首页</a>&nbsp;&#8211;&nbsp;
+								<a href="../index.html">后台首页</a>
+							</div>
+						</div>
+						<!--重点导航-->
+						<ul class="nav" style="float:right">
+							<li><img src="../../themes/youyidai_admin/images/nav_03.jpg" /></li>
+							<li class="home">
+								<a href="../index.html" style="height:35px;display:block">管理首页</a>
+							</li>
+							<li id="attestations">
+								<a style="cursor:pointer" href="../attestations/index.html" style="height:35px;display:block">资料审核</a>
+							</li>
+							<li id="account">
+								<a style="cursor:pointer" href="../account/index.html" style="height:35px;display:block">资金管理</a>
+							</li>
+							<li id="borrow">
+								<a style="cursor:pointer" href="../borrow/index.html" style="height:35px;display:block">借款管理</a>
+							</li>
+							<li id="approve">
+								<a style="cursor:pointer" href="../approve/index.html" style="height:35px;display:block">认证管理</a>
+							</li>
+							<li id="scrollpic">
+								<a style="cursor:pointer" href="../scrollpic/index.html" style="height:35px;display:block">flash大图管理</a>
+							</li>
+							<li id="payment">
+								<a style="cursor:pointer" href="../payment/index.html" style="height:35px;display:block">支付管理</a>
+							</li>
+							<li id="system">
+								<a style="cursor:pointer" href="../system/index.html" style="height:35px;display:block">系统管理</a>
+							</li>
+							<li id="site">
+								<a style="cursor:pointer" href="../site/index.html" style="height:35px;display:block">站点管理</a>
+							</li>
+							<li id="users">
+								<a style="cursor:pointer" href="../users/index.html" style="height:35px;display:block">用户管理</a>
+							</li>
+							<li id="articles">
+								<a style="cursor:pointer" href="../articles/index.html" style="height:35px;display:block">文章管理</a>
+							</li>
+							<li id="other">
+								<a style="cursor:pointer" href="../other/index.html" onClick="return initguide('other');" style="height:35px;display:block">其他功能</a>
+							</li>
+							<li><img src="../../themes/youyidai_admin/images/nav_07.jpg" /></li>
+
+						</ul>
+						<!--头部信息导航-->
+						<div id="guide">
+							<div class="wei fl">
+								<a href="../index.html">首页</a>&nbsp;&gt;&nbsp;
+								<a href="index.html">资金管理</a>&nbsp;&gt;&nbsp;
+								<a href="#">提现管理</a>
+							</div>
+							<ul class="fr">
+								<li class="home">欢迎您，用户名：zuikc(超级管理员) (分管分公司：
+									<font style="color:red">未限制</font>)</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="document.location.reload();" title="刷新该页面">刷新</a>
+								</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="history.go(-1);" title="后退到前一页">后退</a>
+								</li>
+								<li>
+									<a href="../login.html">退出</a>
+								</li>
+
+							</ul>
+						</div>
+						<!--头部信息导航结束-->
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" id="main-fl">
+					<div id="left" style="overflow:auto">
+						<h1>首页</h1>
+						<div class="cc"></div>
+						<ul>
+							<li class="">
+								<a id="account_list" href="index.html">资金账号管理</a>
+							</li>
+							<li class="">
+								<a id="account_log" href="account_log.html">资金记录</a>
+							</li>
+							<li class="">
+								<a id="account_bank" href="account_bank.html">账号管理</a>
+							</li>
+							<li class="">
+								<a id="account_recharge" href="account_recharge.html">充值管理</a>
+							</li>
+							<li class="one">
+								<a id="account_cash" href="account_cash.html">提现管理</a>
+							</li>
+							<li class="">
+								<a id="account_recharge_new" href="account_recharge_new.html">添加充值</a>
+							</li>
+							<li class="">
+								<a id="account_web" href="account_web.html">网站费用</a>
+							</li>
+							<li class="">
+								<a id="account_users" href="account_users.html">用户费用</a>
+							</li>
+							<li class="">
+								<a id="account_fixed" href="account_fixed.html">固定用户收益计划</a>
+							</li>
+						</ul>
+					</div>
+
+				</td>
+				<td valign="top" id="mainright">
+					<!--右边开始-->
+					<div class="tt">
+
+						<!-- 
+ -->
+						<div class="admin_module">
+
+							<ul class="nav3">
+								<li style="background-color:white;border:1px solid #008C00;margin-right:0px;border-right:0px;">
+									<a>
+										<font style="color:#008C00;">请点击查看相应的提现：</font>
+									</a>
+								</li>
+								<li style="background-color:white;border:1px solid #008C00;margin-right:0px;border-right:0px;">
+									<a href="?admin&amp;q=code/account/cash" id="c_so">
+										<font style="color:red">全部提现</font>
+									</a>
+								</li>
+								<li style="background-color:white;border:1px solid #008C00;margin-right:0px;border-right:0px;">
+									<a href="?admin&amp;q=code/account/cash&amp;status=0">待审核</a>
+								</li>
+								<li style="background-color:white;border:1px solid #008C00;margin-right:0px;border-right:0px;">
+									<a href="?admin&amp;q=code/account/cash&amp;status=3">审核中</a>
+								</li>
+								<li style="background-color:white;border:1px solid #008C00;margin-right:0px;border-right:0px;">
+									<a href="?admin&amp;q=code/account/cash&amp;status=1">审核通过</a>
+								</li>
+								<li style="background-color:white;border:1px solid #008C00;margin-right:0px;">
+									<a href="?admin&amp;q=code/account/cash&amp;status=2">审核未通过</a>
+								</li>
+
+							</ul>
+							<div class="module_add">
+								<div class="module_title"><strong>提现管理
+	(状态：
+	全部提现					)
+					</strong>
+									<div style="float:right">
+										<a href="?admin&amp;q=code/account/cash&amp;type=excel&amp;page=1&amp;username=&amp;status=">导出当前</a>
+										<a href="?admin&amp;q=code/account/cash&amp;type=excel&amp;username=&amp;status=">导出全部</a>&nbsp;&nbsp;&nbsp;</div>
+								</div>
+							</div>
+							<form action="" method="post">
+								<table border="0" cellspacing="1" bgcolor="#CCCCCC" width="100%">
+									<tbody>
+										<tr>
+											<td class="main_td">ID</td>
+											<td class="main_td">用户名称</td>
+											<td class="main_td">真实姓名</td>
+											<td class="main_td">所属分公司</td>
+											<td class="main_td">提现银行</td>
+											<td class="main_td">提现账号</td>
+											<td class="main_td">提现总额</td>
+											<td class="main_td">到账金额</td>
+											<td class="main_td">手续费</td>
+											<td class="main_td">提现时间</td>
+											<td class="main_td">状态</td>
+											<td class="main_td">操作</td>
+										</tr>
+										<tr>
+											<td>23</td>
+											<td>
+												<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=21&amp;type=scene&quot;,700,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);">user12</a>(
+												<font style="color:red">固</font>)</td>
+											<td>
+												许栾 </td>
+											<td>
+												上海总公司 </td>
+											<td>
+												<a href="?admin&amp;q=code/account/bank&amp;user_id=&amp;username=user12" style="color:lightgray">暂未填写</a>
+											</td>
+											<td>
+												<a href="?admin&amp;q=code/account/bank&amp;user_id=&amp;username=user12" style="color:lightgray">暂未填写</a>
+											</td>
+											<td>￥10041.67</td>
+											<td>￥10041.67</td>
+											<td>￥0</td>
+											<td>2016-12-16 09:06</td>
+											<td>待审核</td>
+											<td>
+												<a href="?admin&amp;q=code/account/cash&amp;action=view&amp;id=23">审核/查看</a>
+											</td>
+										</tr>
+										<tr class="tr2">
+											<td>19</td>
+											<td>
+												<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=13&amp;type=scene&quot;,700,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);">user17</a>
+											</td>
+											<td>
+												王家兴 </td>
+											<td>
+												上海总公司 </td>
+											<td>
+												工商银行111111111111 </td>
+											<td>
+												111111111111 </td>
+											<td>￥88848.79</td>
+											<td>￥88848.79</td>
+											<td>￥0</td>
+											<td>2017-09-10 12:49</td>
+											<td>待审核</td>
+											<td>
+												<a href="?admin&amp;q=code/account/cash&amp;action=view&amp;id=19">审核/查看</a>
+											</td>
+										</tr>
+										<tr>
+											<td>20</td>
+											<td>
+												<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=21&amp;type=scene&quot;,700,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);">user12</a>(
+												<font style="color:red">固</font>)</td>
+											<td>
+												许栾 </td>
+											<td>
+												上海总公司 </td>
+											<td>
+												<a href="?admin&amp;q=code/account/bank&amp;user_id=&amp;username=user12" style="color:lightgray">暂未填写</a>
+											</td>
+											<td>
+												<a href="?admin&amp;q=code/account/bank&amp;user_id=&amp;username=user12" style="color:lightgray">暂未填写</a>
+											</td>
+											<td>￥10041.67</td>
+											<td>￥10041.67</td>
+											<td>￥0</td>
+											<td>2017-09-10 12:49</td>
+											<td>待审核</td>
+											<td>
+												<a href="?admin&amp;q=code/account/cash&amp;action=view&amp;id=20">审核/查看</a>
+											</td>
+										</tr>
+										<tr class="tr2">
+											<td>21</td>
+											<td>
+												<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=7&amp;type=scene&quot;,700,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);"></a>
+											</td>
+											<td>
+												<a href="../index.html&amp;q=code/approve/realname&amp;user_id=7&amp;username=" style="color:lightgray">暂未填写</a>
+											</td>
+											<td>
+												<a href="../index.html&amp;q=code/users/info_edit&amp;user_id=7" style="color:lightgray">未分配</a>
+											</td>
+											<td>
+												中信银行12312131 </td>
+											<td>
+												2123123123121323121 </td>
+											<td>￥0.01</td>
+											<td>￥0.01</td>
+											<td>￥0</td>
+											<td>2017-09-10 12:49</td>
+											<td>待审核</td>
+											<td>
+												<a href="?admin&amp;q=code/account/cash&amp;action=view&amp;id=21">审核/查看</a>
+											</td>
+										</tr>
+										<tr>
+											<td>22</td>
+											<td>
+												<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=7&amp;type=scene&quot;,700,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);"></a>
+											</td>
+											<td>
+												<a href="../index.html&amp;q=code/approve/realname&amp;user_id=7&amp;username=" style="color:lightgray">暂未填写</a>
+											</td>
+											<td>
+												<a href="../index.html&amp;q=code/users/info_edit&amp;user_id=7" style="color:lightgray">未分配</a>
+											</td>
+											<td>
+												中信银行12312131 </td>
+											<td>
+												2123123123121323121 </td>
+											<td>￥0.01</td>
+											<td>￥0.01</td>
+											<td>￥0</td>
+											<td>2017-09-10 12:49</td>
+											<td>待审核</td>
+											<td>
+												<a href="?admin&amp;q=code/account/cash&amp;action=view&amp;id=22">审核/查看</a>
+											</td>
+										</tr>
+										<tr class="tr2">
+											<td>17</td>
+											<td>
+												<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=26&amp;type=scene&quot;,700,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);"></a>
+											</td>
+											<td>
+												<a href="../index.html&amp;q=code/approve/realname&amp;user_id=26&amp;username=" style="color:lightgray">暂未填写</a>
+											</td>
+											<td>
+												<a href="../index.html&amp;q=code/users/info_edit&amp;user_id=26" style="color:lightgray">未分配</a>
+											</td>
+											<td>
+												<a href="?admin&amp;q=code/account/bank&amp;user_id=&amp;username=" style="color:lightgray">暂未填写</a>
+											</td>
+											<td>
+												<a href="?admin&amp;q=code/account/bank&amp;user_id=&amp;username=" style="color:lightgray">暂未填写</a>
+											</td>
+											<td>￥250.00</td>
+											<td>￥250.00</td>
+											<td>￥0</td>
+											<td>2017-11-04 12:46</td>
+											<td>成功</td>
+											<td>
+												<a href="?admin&amp;q=code/account/cash&amp;action=view&amp;id=17">审核/查看</a>
+											</td>
+										</tr>
+										<tr>
+											<td>18</td>
+											<td>
+												<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=26&amp;type=scene&quot;,700,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);"></a>
+											</td>
+											<td>
+												<a href="../index.html&amp;q=code/approve/realname&amp;user_id=26&amp;username=" style="color:lightgray">暂未填写</a>
+											</td>
+											<td>
+												<a href="../index.html&amp;q=code/users/info_edit&amp;user_id=26" style="color:lightgray">未分配</a>
+											</td>
+											<td>
+												<a href="?admin&amp;q=code/account/bank&amp;user_id=&amp;username=" style="color:lightgray">暂未填写</a>
+											</td>
+											<td>
+												<a href="?admin&amp;q=code/account/bank&amp;user_id=&amp;username=" style="color:lightgray">暂未填写</a>
+											</td>
+											<td>￥250.00</td>
+											<td>￥250.00</td>
+											<td>￥0</td>
+											<td>2017-11-04 12:46</td>
+											<td>成功</td>
+											<td>
+												<a href="?admin&amp;q=code/account/cash&amp;action=view&amp;id=18">审核/查看</a>
+											</td>
+										</tr>
+										<tr class="tr2">
+											<td>16</td>
+											<td>
+												<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=13&amp;type=scene&quot;,700,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);">user17</a>
+											</td>
+											<td>
+												王家兴 </td>
+											<td>
+												上海总公司 </td>
+											<td>
+												工商银行111111111111 </td>
+											<td>
+												111111111111 </td>
+											<td>￥1000.00</td>
+											<td>￥1000.00</td>
+											<td>￥0</td>
+											<td>2017-11-04 12:43</td>
+											<td>成功</td>
+											<td>
+												<a href="?admin&amp;q=code/account/cash&amp;action=view&amp;id=16">审核/查看</a>
+											</td>
+										</tr>
+										<tr>
+											<td>15</td>
+											<td>
+												<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=13&amp;type=scene&quot;,700,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);">user17</a>
+											</td>
+											<td>
+												王家兴 </td>
+											<td>
+												上海总公司 </td>
+											<td>
+												<a href="?admin&amp;q=code/account/bank&amp;user_id=&amp;username=user17" style="color:lightgray">暂未填写</a>
+											</td>
+											<td>
+												<a href="?admin&amp;q=code/account/bank&amp;user_id=&amp;username=user17" style="color:lightgray">暂未填写</a>
+											</td>
+											<td>￥15.00</td>
+											<td>￥15.00</td>
+											<td>￥0</td>
+											<td>2017-11-03 17:51</td>
+											<td>成功</td>
+											<td>
+												<a href="?admin&amp;q=code/account/cash&amp;action=view&amp;id=15">审核/查看</a>
+											</td>
+										</tr>
+										<tr class="tr2">
+											<td>14</td>
+											<td>
+												<a href="javascript:void(0)" onclick="tipsWindown(&quot;用户详细信息查看&quot;,&quot;url:get??admin&amp;q=code/users/view&amp;user_id=18&amp;type=scene&quot;,700,400,&quot;true&quot;,&quot;&quot;,&quot;true&quot;,&quot;text&quot;);"></a>
+											</td>
+											<td>
+												<a href="../index.html&amp;q=code/approve/realname&amp;user_id=18&amp;username=" style="color:lightgray">暂未填写</a>
+											</td>
+											<td>
+												<a href="../index.html&amp;q=code/users/info_edit&amp;user_id=18" style="color:lightgray">未分配</a>
+											</td>
+											<td>
+												中信银行4321432143214321 </td>
+											<td>
+												124323412432 </td>
+											<td>￥809.00</td>
+											<td>￥809.00</td>
+											<td>￥0</td>
+											<td>2017-11-03 13:45</td>
+											<td>成功</td>
+											<td>
+												<a href="?admin&amp;q=code/account/cash&amp;action=view&amp;id=14">审核/查看</a>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="14" class="action">
+												<div class="floatl">
+
+													充值列表数据总提现金额：<strong style="color:red">180836.15</strong>元 | 总手续费：<strong style="color:red">1020</strong> 元
+												</div>
+												<div class="floatr">
+													用户名：<input type="text" name="username" id="username" value="" size="10/"> 真实名：
+													<input type="text" name="realname" id="realname" value="" size="10/"> 状态：
+													<select id="status">
+														<option value="">全部</option>
+														<option value="0">待审核</option>
+														<option value="3">审核中</option>
+														<option value="1">已通过</option>
+														<option value="2">未通过</option>
+													</select>
+													操作时间：<input type="text" name="dotime1" id="dotime1" value="" size="8" onclick="change_picktime()"> 到 <input type="text" name="dotime2" value="" id="dotime2" size="8" onclick="change_picktime()"> 分公司：
+													<select name="assigned_branch_id_1" id="assigned_branch_id_1">
+														<option value="">全部</option>
+														<option value="1">上海总公司</option>
+														<option value="2">昌平分公司</option>
+													</select>
+													<input type="button" value="搜索" onclick="sousuo()">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="14" class="page">
+												共 23 条记录 <span class="">上一页</span> <span class="curr">1</span>
+												<a href="../index.html&amp;q=code/account/cash&amp;page=2">2</a>
+												<a href="../index.html&amp;q=code/account/cash&amp;page=3">3</a>
+												<a href="../index.html&amp;q=code/account/cash&amp;page=2">下一页</a> 第
+												<select id="PB_Page_Select" onchange="window.location.href = './admin/index.html&amp;q=code/account/cash&amp;page='+this.value;">
+													<option value="1" selected="">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+												</select>页
+											</td>
+										</tr>
+
+									</tbody>
+								</table>
+								<!--提现记录列表 结束-->
+								<script>
+									var url = '?admin&q=code/account/cash';
+
+									function sousuo(_url) {
+										var sou = "";
+										if($("#username")[0]) {
+											var username = $("#username").val();
+											if(username != "") {
+												sou += "&username=" + username;
+											}
+										}
+										if($("#realname")[0]) {
+											var realname = $("#realname").val();
+											if(realname != "") {
+												sou += "&realname=" + realname;
+											}
+										}
+										if($("#email")[0]) {
+											var email = $("#email").val();
+											if(email != "") {
+												sou += "&email=" + email;
+											}
+										}
+										if($("#status")[0]) {
+											var status = $("#status").val();
+											if(status != "" && status != null) {
+												sou += "&status=" + status;
+											}
+										}
+										if($("#p4f")[0]) {
+											var p4f = $("#p4f").val();
+											if(p4f != "" && p4f != null) {
+												sou += "&p4f=" + p4f;
+											}
+										}
+										if($("#fixed_status")[0]) {
+											var fixed_status = $("#fixed_status").val();
+											if(p4f != "" && fixed_status != null) {
+												sou += "&fixed_status=" + fixed_status;
+											}
+										}
+										var dotime1 = $("#dotime1").val();
+										var keywords = $("#keywords").val();
+										var username = $("#username").val();
+										var dotime2 = $("#dotime2").val();
+										var type = $("#type").val();
+										if(username != null) {
+											sou += "&username=" + username;
+										}
+										if(keywords != null) {
+											sou += "&keywords=" + keywords;
+										}
+										if(dotime1 != null) {
+											sou += "&dotime1=" + dotime1;
+										}
+										if(dotime2 != null) {
+											sou += "&dotime2=" + dotime2;
+										}
+										if(type != null) {
+											sou += "&type=" + type;
+										}
+										var assigned_branch_id_1 = $("#assigned_branch_id_1").val();
+										if(assigned_branch_id_1 != null) {
+											sou += "&assigned_branch_id_1=" + assigned_branch_id_1;
+										}
+										//	if (_url!=""){
+										//		url = _url;
+										//		
+										//	}
+										if(sou != "") {
+											location.href = url + sou;
+
+										}
+									}
+								</script>
+
+							</form>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<iframe name="notice" frameborder="0" style="height:0;width:0;"></iframe>
+		<div id="menu" style="display:none"></div>
+		<div id="showmenu" style="display:none"></div>
+	</body>
+
+</html>

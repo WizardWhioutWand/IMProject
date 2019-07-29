@@ -1,0 +1,464 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>后台管理</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<!--<script src="../../plugins/editor/xheditor/xheditor-1.1.12-zh-cn.min.js"></script>-->
+		<script src="../../plugins/timepicker/WdatePicker.js"></script>
+		<script src="../../themes/youyidai_admin/images/common.js"></script>
+		<script src="../../themes/youyidai_admin/images/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/base.js"></script>
+		<script src="../../themes/youyidai_admin/js/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/select2.js"></script>
+		<script src="../../themes/youyidai_admin/js/tipswindown.js"></script>
+
+		<link href="../../themes/youyidai_admin/css/select2.css" rel="stylesheet" type="text/css">
+		<link href="../../themes/youyidai_admin/css/tipswindown.css" rel="stylesheet" type="text/css">
+		<link rel="icon" href="../../../afavico.GIF" type="image/gif">
+		<link rel="shortcut icon" href="../../../favicon.ico">
+
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/admin.css">
+		<link href="../../plugins/timepicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body scroll="no">
+		<table width="100%" height="97%" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="2" height="80" valign="top">
+					<div id="header">
+						<div class="logo" style="float:left; width:150px">
+							<div class="png">
+								<a href="../../#"><img src="../../themes/youyidai_admin/images/logo.png" /></a>
+							</div>
+							<div class="lun">
+								<a href="../../index.html" target="_blank">网站首页</a>&nbsp;&#8211;&nbsp;
+								<a href="../index.html">后台首页</a>
+							</div>
+						</div>
+						<!--重点导航-->
+						<ul class="nav" style="float:right">
+							<li><img src="../../themes/youyidai_admin/images/nav_03.jpg" /></li>
+							<li class="home">
+								<a href="../index.html" style="height:35px;display:block">管理首页</a>
+							</li>
+							<li id="attestations">
+								<a style="cursor:pointer" href="../attestations/index.html" style="height:35px;display:block">资料审核</a>
+							</li>
+							<li id="account">
+								<a style="cursor:pointer" href="../account/index.html" style="height:35px;display:block">资金管理</a>
+							</li>
+							<li id="borrow">
+								<a style="cursor:pointer" href="../borrow/index.html" style="height:35px;display:block">借款管理</a>
+							</li>
+							<li id="approve">
+								<a style="cursor:pointer" href="../approve/index.html" style="height:35px;display:block">认证管理</a>
+							</li>
+							<li id="scrollpic">
+								<a style="cursor:pointer" href="../scrollpic/index.html" style="height:35px;display:block">flash大图管理</a>
+							</li>
+							<li id="payment">
+								<a style="cursor:pointer" href="../payment/index.html" style="height:35px;display:block">支付管理</a>
+							</li>
+							<li id="system">
+								<a style="cursor:pointer" href="../system/index.html" style="height:35px;display:block">系统管理</a>
+							</li>
+							<li id="site">
+								<a style="cursor:pointer" href="../site/index.html" style="height:35px;display:block">站点管理</a>
+							</li>
+							<li id="users">
+								<a style="cursor:pointer" href="../users/index.html" style="height:35px;display:block">用户管理</a>
+							</li>
+							<li id="articles">
+								<a style="cursor:pointer" href="../articles/index.html" style="height:35px;display:block">文章管理</a>
+							</li>
+							<li id="other">
+								<a style="cursor:pointer" href="../other/index.html" onClick="return initguide('other');" style="height:35px;display:block">其他功能</a>
+							</li>
+							<li><img src="../../themes/youyidai_admin/images/nav_07.jpg" /></li>
+
+						</ul>
+						<!--头部信息导航-->
+						<div id="guide">
+							<div class="wei fl">
+								<a href="../index.html">首页</a>&nbsp;&gt;&nbsp;
+								<a href="index.html">认证管理</a>&nbsp;&gt;&nbsp;
+								<a href="#">手机认证</a>
+							</div>
+							<ul class="fr">
+								<li class="home">欢迎您，用户名：zuikc(超级管理员) (分管分公司：
+									<font style="color:red">未限制</font>)</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="document.location.reload();" title="刷新该页面">刷新</a>
+								</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="history.go(-1);" title="后退到前一页">后退</a>
+								</li>
+								<li>
+									<a href="../login.html">退出</a>
+								</li>
+
+							</ul>
+						</div>
+						<!--头部信息导航结束-->
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" id="main-fl">
+					<div id="left" style="overflow:auto">
+						<h1>首页</h1>
+						<div class="cc"></div>
+						<ul>
+							<li class="">
+								<a id="approv_fixed" href="index.html">固定投资认证</a>
+							</li>
+							<li class="">
+								<a id="approv_realname" href="approv_realname.html">实名认证</a>
+							</li>
+							<li class="one">
+								<a id="approv_sms" href="approv_sms.html">手机认证</a>
+							</li>
+						</ul>
+					</div>
+
+				</td>
+				<td valign="top" id="mainright">
+					<!--右边开始-->
+					<div class="tt">
+
+						<!-- 
+ -->
+						<div class="admin_module">
+
+							<ul class="nav3">
+								<li>
+									<a href="?admin&amp;q=code/approve/sms" id="c_so">手机认证</a>
+								</li>
+								<!-- <li><a href="?admin&q=code/approve/sms_log">发送记录</a></li> 
+<li><a href="?admin&q=code/approve/sms_set">手机设置</a></li>  -->
+							</ul>
+							<div class="module_add">
+								<div class="module_title"><strong>手机短信认证 </strong></div>
+								<div style="margin-top:10px;">
+									<div style="float:right; width:25%;">
+
+										<div style="border:1px solid #CCCCCC; ">
+
+											<form action="?admin&amp;q=code/approve/sms" method="post">
+												<div class="module_title"><strong>添加手机短信认证</strong></div>
+
+												<div class="module_border">
+													<div class="c">
+														用 户 名 ：<input type="text" name="username" value=""> </div>
+												</div>
+
+												<div class="module_border">
+													<div class="c">
+														手机号码：<input type="text" name="phone" value="">
+													</div>
+												</div>
+
+												<div class="module_border_ajax">
+													<div class="c">
+														验 证 码 ：<input name="valicode" type="text" size="11" maxlength="4" data-novalid="no">
+
+														<img src="/?plugins&amp;q=imgcode" id="valicode" alt="点击刷新" title="点击刷新" onclick="this.src='/?plugins&amp;q=imgcode&amp;t=' + Math.random();" align="absmiddle" style="cursor:pointer">
+													</div>
+												</div>
+
+												<div class="module_submit"><input type="submit" value="确认提交" class="submit_button"></div>
+											</form>
+										</div>
+									</div>
+								</div>
+								<div style="float:left; width:70%; text-align:left">
+									<div class="module_add">
+										<div class="module_title"><strong><font color="#FF4500"> </font>手机短信认证列表
+				</strong></div>
+									</div>
+									<table border="0" cellspacing="1" bgcolor="#CCCCCC" width="100%">
+										<tbody>
+											<tr>
+												<td width="" class="main_td">ID</td>
+												<td width="" class="main_td">用户</td>
+												<td width="" class="main_td">真实姓名</td>
+												<td width="" class="main_td">所属分公司</td>
+												<td width="*" class="main_td">手机号码</td>
+												<td width="*" class="main_td">状态</td>
+												<td width="*" class="main_td">添加时间</td>
+												<td width="*" class="main_td">通过时间</td>
+												<td width="*" class="main_td">操作</td>
+											</tr>
+											<tr>
+												<td class="main_td1" align="center">
+													16 </td>
+												<td class="main_td1" align="center">user02</td>
+
+												<td class="main_td1" align="center">
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=10&amp;username=user02" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													<a href="../index.html&amp;q=code/users/info_edit&amp;user_id=10" style="color:lightgray">未分配</a>
+												</td>
+
+												<td class="main_td1" align="center">13980617973</td>
+												<td class="main_td1" align="center">审核成功</td>
+												<td class="main_td1" align="center">2017-09-27</td>
+												<td class="main_td1" align="center">2017-09-27</td>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;手机短信认证审核 (用户:user02)&quot;,&quot;url:get??admin&amp;q=code/approve/sms&amp;examine=16&quot;,500,230,&quot;true&quot;,&quot;&quot;,&quot;false&quot;,&quot;text&quot;);">审核</a> |
+													<a href="?admin&amp;q=code/approve/sms&amp;edit=16">修改</a>
+												</td>
+											</tr>
+											<tr class="tr2">
+												<td class="main_td1" align="center">
+													15 </td>
+												<td class="main_td1" align="center">user18</td>
+
+												<td class="main_td1" align="center">
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=9&amp;username=user18" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													上海总公司 </td>
+
+												<td class="main_td1" align="center">13973980619</td>
+												<td class="main_td1" align="center">审核成功</td>
+												<td class="main_td1" align="center">2017-09-27</td>
+												<td class="main_td1" align="center">2017-09-14</td>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;手机短信认证审核 (用户:user18)&quot;,&quot;url:get??admin&amp;q=code/approve/sms&amp;examine=15&quot;,500,230,&quot;true&quot;,&quot;&quot;,&quot;false&quot;,&quot;text&quot;);">审核</a> |
+													<a href="?admin&amp;q=code/approve/sms&amp;edit=15">修改</a>
+												</td>
+											</tr>
+											<tr>
+												<td class="main_td1" align="center">
+													14 </td>
+												<td class="main_td1" align="center">user16</td>
+
+												<td class="main_td1" align="center">
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=12&amp;username=user16" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													<a href="../index.html&amp;q=code/users/info_edit&amp;user_id=12" style="color:lightgray">未分配</a>
+												</td>
+
+												<td class="main_td1" align="center">13973980618</td>
+												<td class="main_td1" align="center">审核成功</td>
+												<td class="main_td1" align="center">2017-09-27</td>
+												<td class="main_td1" align="center">2017-09-14</td>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;手机短信认证审核 (用户:user16)&quot;,&quot;url:get??admin&amp;q=code/approve/sms&amp;examine=14&quot;,500,230,&quot;true&quot;,&quot;&quot;,&quot;false&quot;,&quot;text&quot;);">审核</a> |
+													<a href="?admin&amp;q=code/approve/sms&amp;edit=14">修改</a>
+												</td>
+											</tr>
+											<tr class="tr2">
+												<td class="main_td1" align="center">
+													13 </td>
+												<td class="main_td1" align="center">user17</td>
+
+												<td class="main_td1" align="center">
+													王家兴 </td>
+												<td>
+													上海总公司 </td>
+
+												<td class="main_td1" align="center">13081231200</td>
+												<td class="main_td1" align="center">审核成功</td>
+												<td class="main_td1" align="center">2017-09-27</td>
+												<td class="main_td1" align="center">2017-09-14</td>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;手机短信认证审核 (用户:user17)&quot;,&quot;url:get??admin&amp;q=code/approve/sms&amp;examine=13&quot;,500,230,&quot;true&quot;,&quot;&quot;,&quot;false&quot;,&quot;text&quot;);">审核</a> |
+													<a href="?admin&amp;q=code/approve/sms&amp;edit=13">修改</a>
+												</td>
+											</tr>
+											<tr>
+												<td class="main_td1" align="center">
+													12 </td>
+												<td class="main_td1" align="center">user22</td>
+
+												<td class="main_td1" align="center">
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=20&amp;username=user22" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													上海总公司 </td>
+
+												<td class="main_td1" align="center">13800312120</td>
+												<td class="main_td1" align="center">审核成功</td>
+												<td class="main_td1" align="center">2017-09-27</td>
+												<td class="main_td1" align="center">2017-09-14</td>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;手机短信认证审核 (用户:user22)&quot;,&quot;url:get??admin&amp;q=code/approve/sms&amp;examine=12&quot;,500,230,&quot;true&quot;,&quot;&quot;,&quot;false&quot;,&quot;text&quot;);">审核</a> |
+													<a href="?admin&amp;q=code/approve/sms&amp;edit=12">修改</a>
+												</td>
+											</tr>
+											<tr class="tr2">
+												<td class="main_td1" align="center">
+													11 </td>
+												<td class="main_td1" align="center">user12</td>
+
+												<td class="main_td1" align="center">
+													许栾 </td>
+												<td>
+													上海总公司 </td>
+
+												<td class="main_td1" align="center">18202125559</td>
+												<td class="main_td1" align="center">审核成功</td>
+												<td class="main_td1" align="center">2017-09-27</td>
+												<td class="main_td1" align="center">2017-09-14</td>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;手机短信认证审核 (用户:user12)&quot;,&quot;url:get??admin&amp;q=code/approve/sms&amp;examine=11&quot;,500,230,&quot;true&quot;,&quot;&quot;,&quot;false&quot;,&quot;text&quot;);">审核</a> |
+													<a href="?admin&amp;q=code/approve/sms&amp;edit=11">修改</a>
+												</td>
+											</tr>
+											<tr>
+												<td class="main_td1" align="center">
+													10 </td>
+												<td class="main_td1" align="center">user20</td>
+
+												<td class="main_td1" align="center">
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=22&amp;username=user20" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													上海总公司 </td>
+
+												<td class="main_td1" align="center">13962136759</td>
+												<td class="main_td1" align="center">审核成功</td>
+												<td class="main_td1" align="center">2017-09-27</td>
+												<td class="main_td1" align="center">2017-09-14</td>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;手机短信认证审核 (用户:user20)&quot;,&quot;url:get??admin&amp;q=code/approve/sms&amp;examine=10&quot;,500,230,&quot;true&quot;,&quot;&quot;,&quot;false&quot;,&quot;text&quot;);">审核</a> |
+													<a href="?admin&amp;q=code/approve/sms&amp;edit=10">修改</a>
+												</td>
+											</tr>
+											<tr class="tr2">
+												<td class="main_td1" align="center">
+													9 </td>
+												<td class="main_td1" align="center">user19</td>
+
+												<td class="main_td1" align="center">
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=23&amp;username=user19" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													上海总公司 </td>
+
+												<td class="main_td1" align="center">15000068562</td>
+												<td class="main_td1" align="center">审核成功</td>
+												<td class="main_td1" align="center">2017-09-27</td>
+												<td class="main_td1" align="center">2017-09-14</td>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;手机短信认证审核 (用户:user19)&quot;,&quot;url:get??admin&amp;q=code/approve/sms&amp;examine=9&quot;,500,230,&quot;true&quot;,&quot;&quot;,&quot;false&quot;,&quot;text&quot;);">审核</a> |
+													<a href="?admin&amp;q=code/approve/sms&amp;edit=9">修改</a>
+												</td>
+											</tr>
+											<tr>
+												<td class="main_td1" align="center">
+													8 </td>
+												<td class="main_td1" align="center">user23</td>
+
+												<td class="main_td1" align="center">
+													<a href="../index.html&amp;q=code/approve/realname&amp;user_id=27&amp;username=user23" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													昌平分公司 </td>
+
+												<td class="main_td1" align="center">13120815855</td>
+												<td class="main_td1" align="center">审核成功</td>
+												<td class="main_td1" align="center">2017-09-27</td>
+												<td class="main_td1" align="center">2017-09-14</td>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;手机短信认证审核 (用户:user23)&quot;,&quot;url:get??admin&amp;q=code/approve/sms&amp;examine=8&quot;,500,230,&quot;true&quot;,&quot;&quot;,&quot;false&quot;,&quot;text&quot;);">审核</a> |
+													<a href="?admin&amp;q=code/approve/sms&amp;edit=8">修改</a>
+												</td>
+											</tr>
+											<tr class="tr2">
+												<td class="main_td1" align="center">
+													7 </td>
+												<td class="main_td1" align="center">user03</td>
+
+												<td class="main_td1" align="center">
+													小俞 </td>
+												<td>
+													昌平分公司 </td>
+
+												<td class="main_td1" align="center">18306137130</td>
+												<td class="main_td1" align="center">审核成功</td>
+												<td class="main_td1" align="center">2017-09-27</td>
+												<td class="main_td1" align="center">2017-09-14</td>
+												<td class="main_td1" align="center">
+													<a href="javascript:void(0)" onclick="tipsWindown(&quot;手机短信认证审核 (用户:user03)&quot;,&quot;url:get??admin&amp;q=code/approve/sms&amp;examine=7&quot;,500,230,&quot;true&quot;,&quot;&quot;,&quot;false&quot;,&quot;text&quot;);">审核</a> |
+													<a href="?admin&amp;q=code/approve/sms&amp;edit=7">修改</a>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="11" class="action">
+													<div class="floatl">
+														<script>
+															var url = '?admin&q=code/approve/sms';
+
+															function sousuo() {
+																var username = $("#username").val();
+																var phone = $("#phone").val();
+																var status = $("#status").val();
+																var realname = $("#realname").val();
+																var assigned_branch_id_1 = $("#assigned_branch_id_1").val();
+																location.href = url + "&username=" + username + "&realname=" + realname + "&phone=" + phone + "&status=" + status + "&assigned_branch_id_1=" + assigned_branch_id_1;
+															}
+														</script>
+
+													</div>
+													<div class="floatr">
+														用户名：<input type="text" name="username" id="username" value="" size="10" autocomplete="off"> 真实名：
+														<input type="text" name="realname" id="realname" value="" size="10"> 手机号：
+														<input type="text" name="phone" id="phone" value="" size="10"> 状态：
+														<select name="status" id="status" style="">
+															<option value="">审核全部</option>
+															<option value="0">待审核</option>
+															<option value="1">审核成功</option>
+															<option value="2">审核失败</option>
+															<option value="3">过期审核</option>
+														</select>
+														分公司：
+														<select name="assigned_branch_id_1" id="assigned_branch_id_1">
+															<option value="">全部</option>
+															<option value="1">上海总公司</option>
+															<option value="2">昌平分公司</option>
+														</select>
+														<input type="button" value="搜索" onclick="sousuo()">
+													</div>
+												</td>
+											</tr>
+											<tr align="center">
+												<td colspan="10" align="center">
+													<div align="center">共 27 条记录 <span class="">上一页</span> <span class="curr">1</span>
+														<a href="../index.html&amp;q=code/approve/sms&amp;page=2">2</a>
+														<a href="../index.html&amp;q=code/approve/sms&amp;page=3">3</a>
+														<a href="../index.html&amp;q=code/approve/sms&amp;page=2">下一页</a> 第
+														<select id="PB_Page_Select" onchange="window.location.href = './admin/index.html&amp;q=code/approve/sms&amp;page='+this.value;">
+															<option value="1" selected="">1</option>
+															<option value="2">2</option>
+															<option value="3">3</option>
+														</select>页</div>
+												</td>
+											</tr>
+
+										</tbody>
+									</table>
+									<!--菜单列表 结束-->
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<iframe name="notice" frameborder="0" style="height:0;width:0;"></iframe>
+		<div id="menu" style="display:none"></div>
+		<div id="showmenu" style="display:none"></div>
+	</body>
+
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>后台管理</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<!--<script src="../../plugins/editor/xheditor/xheditor-1.1.12-zh-cn.min.js"></script>-->
+		<script src="../../plugins/timepicker/WdatePicker.js"></script>
+		<script src="../../themes/youyidai_admin/images/common.js"></script>
+		<script src="../../themes/youyidai_admin/images/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/base.js"></script>
+		<script src="../../themes/youyidai_admin/js/jquery.js"></script>
+		<script src="../../themes/youyidai_admin/js/select2.js"></script>
+		<script src="../../themes/youyidai_admin/js/tipswindown.js"></script>
+		<link href="../../themes/youyidai_admin/css/select2.css" rel="stylesheet" type="text/css">
+		<link href="../../themes/youyidai_admin/css/tipswindown.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/css/index.css">
+		<link rel="stylesheet" type="text/css" href="../../themes/youyidai_admin/admin.css">
+		<link href="../../plugins/timepicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+		<link rel="icon" href="../../../afavico.GIF" type="image/gif">
+		<link rel="shortcut icon" href="../../../favicon.ico">
+	</head>
+
+	<body scroll="no">
+		<table width="100%" height="97%" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="2" height="80" valign="top">
+					<div id="header">
+						<div class="logo" style="float:left; width:150px">
+							<div class="png">
+								<a href="../../#"><img src="../../themes/youyidai_admin/images/logo.png" /></a>
+							</div>
+							<div class="lun">
+								<a href="../../index.html" target="_blank">网站首页</a>&nbsp;&#8211;&nbsp;
+								<a href="../index.html">后台首页</a>
+							</div>
+						</div>
+						<!--重点导航-->
+						<ul class="nav" style="float:right">
+							<li><img src="../../themes/youyidai_admin/images/nav_03.jpg" /></li>
+							<li class="home">
+								<a href="../index.html" style="height:35px;display:block">管理首页</a>
+							</li>
+							<li id="attestations">
+								<a style="cursor:pointer" href="../attestations/index.html" style="height:35px;display:block">资料审核</a>
+							</li>
+							<li id="account">
+								<a style="cursor:pointer" href="../account/index.html" style="height:35px;display:block">资金管理</a>
+							</li>
+							<li id="borrow">
+								<a style="cursor:pointer" href="../borrow/index.html" style="height:35px;display:block">借款管理</a>
+							</li>
+							<li id="approve">
+								<a style="cursor:pointer" href="../approve/index.html" style="height:35px;display:block">认证管理</a>
+							</li>
+							<li id="scrollpic">
+								<a style="cursor:pointer" href="../scrollpic/index.html" style="height:35px;display:block">flash大图管理</a>
+							</li>
+							<li id="payment">
+								<a style="cursor:pointer" href="../payment/index.html" style="height:35px;display:block">支付管理</a>
+							</li>
+							<li id="system">
+								<a style="cursor:pointer" href="../system/index.html" style="height:35px;display:block">系统管理</a>
+							</li>
+							<li id="site">
+								<a style="cursor:pointer" href="../site/index.html" style="height:35px;display:block">站点管理</a>
+							</li>
+							<li id="users">
+								<a style="cursor:pointer" href="../users/index.html" style="height:35px;display:block">用户管理</a>
+							</li>
+							<li id="articles">
+								<a style="cursor:pointer" href="../articles/index.html" style="height:35px;display:block">文章管理</a>
+							</li>
+							<li id="other">
+								<a style="cursor:pointer" href="../other/index.html" onClick="return initguide('other');" style="height:35px;display:block">其他功能</a>
+							</li>
+							<li><img src="../../themes/youyidai_admin/images/nav_07.jpg" /></li>
+
+						</ul>
+						<!--头部信息导航-->
+						<div id="guide">
+							<div class="wei fl">
+								<a href="../index.html">首页</a>&nbsp;&gt;&nbsp;
+								<a href="index.html">资料审核</a>&nbsp;&gt;&nbsp;
+								<a href="#">资料审核</a>
+							</div>
+							<ul class="fr">
+								<li class="home">欢迎您，用户名：zuikc(超级管理员) (分管分公司：
+									<font style="color:red">未限制</font>)</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="document.location.reload();" title="刷新该页面">刷新</a>
+								</li>
+								<li>
+									<a class="s0" style="cursor:pointer" onclick="history.go(-1);" title="后退到前一页">后退</a>
+								</li>
+								<li>
+									<a href="../login.html">退出</a>
+								</li>
+
+							</ul>
+						</div>
+						<!--头部信息导航结束-->
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" id="main-fl">
+					<div id="left" style="overflow:auto">
+						<h1>首页</h1>
+						<div class="cc"></div>
+						<ul>
+							<li class="one">
+								<a href="index.html">资料审核</a>
+							</li>
+						</ul>
+					</div>
+
+				</td>
+				<td valign="top" id="mainright">
+					<!--右边开始-->
+
+					<div class="tt">
+
+						<div class="admin_module">
+
+							<div class="module_add">
+								<div class="module_title"><strong>上传单个图片</strong></div>
+								<div style="margin-top:10px;">
+									<div style="float:right; width:25%;">
+
+										<div style="border:1px solid #CCCCCC; ">
+
+											<form action="?admin&amp;q=code/attestations/upload" method="post">
+												<div class="module_title"><strong>查找用户</strong>(将按顺序进行搜索)<input type="hidden" name="type" value="user_id"></div>
+
+												<div class="module_border">
+													<div class="l">用户名：</div>
+													<div class="c">
+														<input type="text" name="username">
+													</div>
+												</div>
+
+												<div class="module_border">
+													<div class="l">用户ID：</div>
+													<div class="c">
+														<input type="text" name="user_id">
+													</div>
+												</div>
+
+												<div class="module_border">
+													<div class="l">邮箱：</div>
+													<div class="c">
+														<input type="text" name="email">
+													</div>
+												</div>
+
+												<div class="module_submit"><input type="submit" value="确认提交" class="submit_button"></div>
+											</form>
+										</div>
+									</div>
+								</div>
+								<div style="float:left; width:72%; text-align:left">
+									<div class="module_add">
+										<div class="module_title"><strong>图片列表 
+					(点击缩略图，将在新窗口展开大图)</strong></div>
+									</div>
+									<table border="0" cellspacing="1" bgcolor="#CCCCCC" width="100%">
+										<tbody>
+											<tr>
+												<td width="" class="main_td">ID</td>
+												<td width="" class="main_td">用户</td>
+												<td width="" class="main_td">真实名</td>
+												<td width="*" class="main_td">所属分公司</td>
+												<td width="" class="main_td">类型</td>
+												<td width="" class="main_td">缩略图</td>
+												<!-- <td width="*" class="main_td">名称</td> -->
+												<td width="*" class="main_td">排序</td>
+												<td width="*" class="main_td">状态</td>
+												<td width="*" class="main_td">添加时间</td>
+												<td width="*" class="main_td">操作</td>
+											</tr>
+											<tr>
+												<td class="main_td1" align="center">25</td>
+												<td class="main_td1" align="center">user02</td>
+												<td class="main_td1" align="center">
+													<a href="../../admin/login.html&amp;q=code/approve/realname&amp;user_id=10&amp;username=user02" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													<a href="../../admin/login.html&amp;q=code/users/info_edit&amp;user_id=10" style="color:lightgray">未分配</a>
+												</td>
+												<td class="main_td1" align="center">户口认证</td>
+												<td class="main_td1" align="center" onmouseover="ewmdo('tp25');" onmouseout="ewmdo_out('tp25');">
+													<a href="../../data/upfiles/images/2017-01/04/10_attestations_album_148351769140.jpg" target="_blank"><img src="../../data/upfiles/images/2017-01/04/10_attestations_album_148351769140.jpg" height="24" width="24" style="border:1px solid #C6C6C6"></a><br>
+													<a href="../../data/upfiles/images/2017-01/04/10_attestations_album_148351769140.jpg" target="_blank"><img src="../../data/upfiles/images/2017-01/04/10_attestations_album_148351769140.jpg" style="border:1px solid #C6C6C6;width:300px; position:absolute;float:left; margin-left:0px; margin-top:0px;  z-index:9999;display:none;" id="tp25"></a>
+												</td>
+												<!-- <td class="main_td1" align="center">xhxzy.jpg</td> -->
+												<td class="main_td1" align="center">0</td>
+												<td class="main_td1" align="center">审核通过</td>
+												<td class="main_td1" align="center">2017-01-04 16:14:51</td>
+												<td class="main_td1" align="center">
+													<a href="">重审</a>
+													|
+													<a href="">修改</a>
+													|
+													<a href="" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='">删除</a>
+												</td>
+											</tr>
+											<tr class="tr2">
+												<td class="main_td1" align="center">24</td>
+												<td class="main_td1" align="center">user01</td>
+												<td class="main_td1" align="center">
+													<a href="../../admin/login.html&amp;q=code/approve/realname&amp;user_id=365&amp;username=user01" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													<a href="../../admin/login.html&amp;q=code/users/info_edit&amp;user_id=365" style="color:lightgray">未分配</a>
+												</td>
+												<td class="main_td1" align="center">居住认证</td>
+												<td class="main_td1" align="center" onmouseover="ewmdo('tp24');" onmouseout="ewmdo_out('tp24');">
+													<a href="../../data/upfiles/images/2017-09/22/365_attestations_album_147710354000.jpg" target="_blank"><img src="../../data/upfiles/images/2017-09/22/365_attestations_album_147710354000.jpg" height="24" width="24" style="border:1px solid #C6C6C6"></a><br>
+													<a href="../../data/upfiles/images/2017-09/22/365_attestations_album_147710354000.jpg" target="_blank"><img src="../../data/upfiles/images/2017-09/22/365_attestations_album_147710354000.jpg" style="border:1px solid #C6C6C6;width:300px; position:absolute;float:left; margin-left:0px; margin-top:0px;  z-index:9999;display:none;" id="tp24"></a>
+												</td>
+												<!-- <td class="main_td1" align="center">6.jpg</td> -->
+												<td class="main_td1" align="center">0</td>
+												<td class="main_td1" align="center">审核通过</td>
+												<td class="main_td1" align="center">2017-09-22 10:32:20</td>
+												<td class="main_td1" align="center">
+													<a href="">重审</a>
+													|
+													<a href="">修改</a>
+													|
+													<a href="" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='">删除</a>
+												</td>
+											</tr>
+											<tr>
+												<td class="main_td1" align="center">23</td>
+												<td class="main_td1" align="center">user01</td>
+												<td class="main_td1" align="center">
+													<a href="../../admin/login.html&amp;q=code/approve/realname&amp;user_id=365&amp;username=user01" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													<a href="../../admin/login.html&amp;q=code/users/info_edit&amp;user_id=365" style="color:lightgray">未分配</a>
+												</td>
+												<td class="main_td1" align="center">央行信用报告</td>
+												<td class="main_td1" align="center" onmouseover="ewmdo('tp23');" onmouseout="ewmdo_out('tp23');">
+													<a href="../../data/upfiles/images/2017-09/22/365_attestations_album_147710352380.jpg" target="_blank"><img src="../../data/upfiles/images/2017-09/22/365_attestations_album_147710352380.jpg" height="24" width="24" style="border:1px solid #C6C6C6"></a><br>
+													<a href="../../data/upfiles/images/2017-09/22/365_attestations_album_147710352380.jpg" target="_blank"><img src="../../data/upfiles/images/2017-09/22/365_attestations_album_147710352380.jpg" style="border:1px solid #C6C6C6;width:300px; position:absolute;float:left; margin-left:0px; margin-top:0px;  z-index:9999;display:none;" id="tp23"></a>
+												</td>
+												<!-- <td class="main_td1" align="center">5.jpg</td> -->
+												<td class="main_td1" align="center">0</td>
+												<td class="main_td1" align="center">审核通过</td>
+												<td class="main_td1" align="center">2017-09-22 10:32:03</td>
+												<td class="main_td1" align="center">
+													<a href="">重审</a>
+													|
+													<a href="">修改</a>
+													|
+													<a href="" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='">删除</a>
+												</td>
+											</tr>
+											<tr class="tr2">
+												<td class="main_td1" align="center">22</td>
+												<td class="main_td1" align="center">user01</td>
+												<td class="main_td1" align="center">
+													<a href="../../admin/login.html&amp;q=code/approve/realname&amp;user_id=365&amp;username=user01" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													<a href="../../admin/login.html&amp;q=code/users/info_edit&amp;user_id=365" style="color:lightgray">未分配</a>
+												</td>
+												<td class="main_td1" align="center">近6个月银行资金流水</td>
+												<td class="main_td1" align="center" onmouseover="ewmdo('tp22');" onmouseout="ewmdo_out('tp22');">
+													<a href="../../data/upfiles/images/2017-09/22/365_attestations_album_147710351140.jpg" target="_blank"><img src="../../data/upfiles/images/2017-09/22/365_attestations_album_147710351140.jpg" height="24" width="24" style="border:1px solid #C6C6C6"></a><br>
+													<a href="../../data/upfiles/images/2017-09/22/365_attestations_album_147710351140.jpg" target="_blank"><img src="../../data/upfiles/images/2017-09/22/365_attestations_album_147710351140.jpg" style="border:1px solid #C6C6C6;width:300px; position:absolute;float:left; margin-left:0px; margin-top:0px;  z-index:9999;display:none;" id="tp22"></a>
+												</td>
+												<!-- <td class="main_td1" align="center">4.jpg</td> -->
+												<td class="main_td1" align="center">0</td>
+												<td class="main_td1" align="center">审核通过</td>
+												<td class="main_td1" align="center">2017-09-22 10:31:51</td>
+												<td class="main_td1" align="center">
+													<a href="">重审</a>
+													|
+													<a href="">修改</a>
+													|
+													<a href="" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='">删除</a>
+												</td>
+											</tr>
+											<tr>
+												<td class="main_td1" align="center">21</td>
+												<td class="main_td1" align="center">user01</td>
+												<td class="main_td1" align="center">
+													<a href="../../admin/login.html&amp;q=code/approve/realname&amp;user_id=365&amp;username=user01" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													<a href="../../admin/login.html&amp;q=code/users/info_edit&amp;user_id=365" style="color:lightgray">未分配</a>
+												</td>
+												<td class="main_td1" align="center">收入认证</td>
+												<td class="main_td1" align="center" onmouseover="ewmdo('tp21');" onmouseout="ewmdo_out('tp21');">
+													<a href="../../data/upfiles/images/2017-09/22/365_attestations_album_147710349820.jpg" target="_blank"><img src="../../data/upfiles/images/2017-09/22/365_attestations_album_147710349820.jpg" height="24" width="24" style="border:1px solid #C6C6C6"></a><br>
+													<a href="../../data/upfiles/images/2017-09/22/365_attestations_album_147710349820.jpg" target="_blank"><img src="../../data/upfiles/images/2017-09/22/365_attestations_album_147710349820.jpg" style="border:1px solid #C6C6C6;width:300px; position:absolute;float:left; margin-left:0px; margin-top:0px;  z-index:9999;display:none;" id="tp21"></a>
+												</td>
+												<!-- <td class="main_td1" align="center">3.jpg</td> -->
+												<td class="main_td1" align="center">0</td>
+												<td class="main_td1" align="center">审核通过</td>
+												<td class="main_td1" align="center">2017-09-22 10:31:38</td>
+												<td class="main_td1" align="center">
+													<a href="">重审</a>
+													|
+													<a href="">修改</a>
+													|
+													<a href="" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='">删除</a>
+												</td>
+											</tr>
+											<tr class="tr2">
+												<td class="main_td1" align="center">20</td>
+												<td class="main_td1" align="center">user01</td>
+												<td class="main_td1" align="center">
+													<a href="../../admin/login.html&amp;q=code/approve/realname&amp;user_id=365&amp;username=user01" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													<a href="../../admin/login.html&amp;q=code/users/info_edit&amp;user_id=365" style="color:lightgray">未分配</a>
+												</td>
+												<td class="main_td1" align="center">工作认证</td>
+												<td class="main_td1" align="center" onmouseover="ewmdo('tp20');" onmouseout="ewmdo_out('tp20');">
+													<a href="../../data/upfiles/images/2017-09/22/365_attestations_album_147710348400.jpg" target="_blank"><img src="../../data/upfiles/images/2017-09/22/365_attestations_album_147710348400.jpg" height="24" width="24" style="border:1px solid #C6C6C6"></a><br>
+													<a href="../../data/upfiles/images/2017-09/22/365_attestations_album_147710348400.jpg" target="_blank"><img src="../../data/upfiles/images/2017-09/22/365_attestations_album_147710348400.jpg" style="border:1px solid #C6C6C6;width:300px; position:absolute;float:left; margin-left:0px; margin-top:0px;  z-index:9999;display:none;" id="tp20"></a>
+												</td>
+												<!-- <td class="main_td1" align="center">2.jpg</td> -->
+												<td class="main_td1" align="center">0</td>
+												<td class="main_td1" align="center">审核通过</td>
+												<td class="main_td1" align="center">2017-09-22 10:31:24</td>
+												<td class="main_td1" align="center">
+													<a href="">重审</a>
+													|
+													<a href="">修改</a>
+													|
+													<a href="" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='">删除</a>
+												</td>
+											</tr>
+											<tr>
+												<td class="main_td1" align="center">19</td>
+												<td class="main_td1" align="center">user01</td>
+												<td class="main_td1" align="center">
+													<a href="../../admin/login.html&amp;q=code/approve/realname&amp;user_id=365&amp;username=user01" style="color:lightgray">暂未填写</a>
+												</td>
+												<td>
+													<a href="../../admin/login.html&amp;q=code/users/info_edit&amp;user_id=365" style="color:lightgray">未分配</a>
+												</td>
+												<td class="main_td1" align="center">户口认证</td>
+												<td class="main_td1" align="center" onmouseover="ewmdo('tp19');" onmouseout="ewmdo_out('tp19');">
+													<a href="../../data/upfiles/images/2017-09/22/365_attestations_album_147710346950.jpg" target="_blank"><img src="../../data/upfiles/images/2017-09/22/365_attestations_album_147710346950.jpg" height="24" width="24" style="border:1px solid #C6C6C6"></a><br>
+													<a href="../../data/upfiles/images/2017-09/22/365_attestations_album_147710346950.jpg" target="_blank"><img src="../../data/upfiles/images/2017-09/22/365_attestations_album_147710346950.jpg" style="border:1px solid #C6C6C6;width:300px; position:absolute;float:left; margin-left:0px; margin-top:0px;  z-index:9999;display:none;" id="tp19"></a>
+												</td>
+												<!-- <td class="main_td1" align="center">1.jpg</td> -->
+												<td class="main_td1" align="center">0</td>
+												<td class="main_td1" align="center">审核通过</td>
+												<td class="main_td1" align="center">2017-09-22 10:31:09</td>
+												<td class="main_td1" align="center">
+													<a href="">重审</a>
+													|
+													<a href="">修改</a>
+													|
+													<a href="" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='">删除</a>
+												</td>
+											</tr>
+											<tr class="tr2">
+												<td class="main_td1" align="center">12</td>
+												<td class="main_td1" align="center">user03</td>
+												<td class="main_td1" align="center"> 小俞 </td>
+												<td>
+													昌平分公司 </td>
+												<td class="main_td1" align="center">居住认证</td>
+												<td class="main_td1" align="center" onmouseover="ewmdo('tp12');" onmouseout="ewmdo_out('tp12');">
+													<a href="../../data/upfiles/images/2017-09/11/362_attestations_album_147617471070.jpg" target="_blank"><img src="../../data/upfiles/images/2017-09/11/362_attestations_album_147617471070.jpg" height="24" width="24" style="border:1px solid #C6C6C6"></a><br>
+													<a href="../../data/upfiles/images/2017-09/11/362_attestations_album_147617471070.jpg" target="_blank"><img src="../../data/upfiles/images/2017-09/11/362_attestations_album_147617471070.jpg" style="border:1px solid #C6C6C6;width:300px; position:absolute;float:left; margin-left:0px; margin-top:0px;  z-index:9999;display:none;" id="tp12"></a>
+												</td>
+												<!-- <td class="main_td1" align="center">24066_130156779281_2.jpg</td> -->
+												<td class="main_td1" align="center">0</td>
+												<td class="main_td1" align="center">审核通过</td>
+												<td class="main_td1" align="center">2017-09-11 16:31:50</td>
+												<td class="main_td1" align="center">
+													<a href="">重审</a>
+													|
+													<a href="">修改</a>
+													|
+													<a href="" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='">删除</a>
+												</td>
+											</tr>
+											<tr>
+												<td class="main_td1" align="center">11</td>
+												<td class="main_td1" align="center">user03</td>
+												<td class="main_td1" align="center"> 小俞 </td>
+												<td>
+													昌平分公司 </td>
+												<td class="main_td1" align="center">央行信用报告</td>
+												<td class="main_td1" align="center" onmouseover="ewmdo('tp11');" onmouseout="ewmdo_out('tp11');">
+													<a href="../../data/upfiles/images/2017-09/11/362_attestations_album_147617469590.jpg" target="_blank"><img src="../../data/upfiles/images/2017-09/11/362_attestations_album_147617469590.jpg" height="24" width="24" style="border:1px solid #C6C6C6"></a><br>
+													<a href="../../data/upfiles/images/2017-09/11/362_attestations_album_147617469590.jpg" target="_blank"><img src="../../data/upfiles/images/2017-09/11/362_attestations_album_147617469590.jpg" style="border:1px solid #C6C6C6;width:300px; position:absolute;float:left; margin-left:0px; margin-top:0px;  z-index:9999;display:none;" id="tp11"></a>
+												</td>
+												<!-- <td class="main_td1" align="center">24066_130156779281_2.jpg</td> -->
+												<td class="main_td1" align="center">0</td>
+												<td class="main_td1" align="center">审核通过</td>
+												<td class="main_td1" align="center">2017-09-11 16:31:36</td>
+												<td class="main_td1" align="center">
+													<a href="">重审</a>
+													|
+													<a href="">修改</a>
+													|
+													<a href="" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='">删除</a>
+												</td>
+											</tr>
+											<tr class="tr2">
+												<td class="main_td1" align="center">10</td>
+												<td class="main_td1" align="center">user03</td>
+												<td class="main_td1" align="center"> 小俞 </td>
+												<td>
+													昌平分公司 </td>
+												<td class="main_td1" align="center">近6个月银行资金流水</td>
+												<td class="main_td1" align="center" onmouseover="ewmdo('tp10');" onmouseout="ewmdo_out('tp10');">
+													<a href="../../data/upfiles/images/2017-09/11/362_attestations_album_147617467950.jpg" target="_blank"><img src="../../data/upfiles/images/2017-09/11/362_attestations_album_147617467950.jpg" height="24" width="24" style="border:1px solid #C6C6C6"></a><br>
+													<a href="../../data/upfiles/images/2017-09/11/362_attestations_album_147617467950.jpg" target="_blank"><img src="../../data/upfiles/images/2017-09/11/362_attestations_album_147617467950.jpg" style="border:1px solid #C6C6C6;width:300px; position:absolute;float:left; margin-left:0px; margin-top:0px;  z-index:9999;display:none;" id="tp10"></a>
+												</td>
+												<!-- <td class="main_td1" align="center">24066_130156779281_2.jpg</td> -->
+												<td class="main_td1" align="center">0</td>
+												<td class="main_td1" align="center">审核通过</td>
+												<td class="main_td1" align="center">2017-09-11 16:31:19</td>
+												<td class="main_td1" align="center">
+													<a href="">重审</a>
+													|
+													<a href="">修改</a>
+													|
+													<a href="" onclick="javascript:if(confirm('确定要删除吗?删除后将不可恢复')) location.href='">删除</a>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="11" class="action">
+													<div class="floatl">
+														<script>
+															var url = '?admin&q=code/attestations/upload';
+
+															function sousuo() {
+
+																var sou = "";
+
+																var username = $("#username").val();
+																if(username != "" && username != null) {
+																	sou += "&username=" + username;
+																}
+																var realname = $("#realname").val();
+																if(realname != "" && realname != null) {
+																	sou += "&realname=" + realname;
+																}
+																var assigned_branch_id_1 = $("#assigned_branch_id_1").val();
+																if(assigned_branch_id_1 != null) {
+																	sou += "&assigned_branch_id_1=" + assigned_branch_id_1;
+																}
+																location.href = url + sou;
+															}
+
+															function ewmdo(str) {
+																$("#" + str).show();
+															}
+
+															function ewmdo_out(str) {
+																$("#" + str).hide();
+															}
+														</script>
+
+													</div>
+													<div class="floatr">
+														用户名：<input type="text" name="username" id="username" value="" size="10"> 真实姓名：
+														<input type="text" name="realname" id="realname" value="" size="10"> 分公司：
+														<select name="assigned_branch_id_1" id="assigned_branch_id_1">
+															<option value="">全部</option>
+															<option value="1">上海总公司</option>
+															<option value="2">昌平分公司</option>
+														</select>
+														<input type="button" value="搜索" class="submit" onclick="sousuo()">
+
+													</div>
+												</td>
+											</tr>
+											<tr align="center">
+												<td colspan="10" align="center">
+													<div align="center">共 19 条记录 <span class="">上一页</span> <span class="curr">1</span>
+														<a href="#">2</a>
+														<a href="#">下一页</a> 第
+														<select id="PB_Page_Select" onchange="window.location.href = './admin/index.html&amp;q=code/attestations/upload&amp;page='+this.value;">
+															<option value="1" selected="">1</option>
+															<option value="2">2</option>
+														</select>页</div>
+												</td>
+											</tr>
+
+										</tbody>
+									</table>
+									<!--菜单列表 结束-->
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</td>
+			</tr>
+		</table>
+		<iframe name="notice" frameborder="0" style="height:0;width:0;"></iframe>
+		<div id="menu" style="display:none"></div>
+		<div id="showmenu" style="display:none"></div>
+	</body>
+
+</html>
